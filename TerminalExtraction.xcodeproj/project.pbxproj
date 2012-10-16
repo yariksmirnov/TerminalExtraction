@@ -12,10 +12,12 @@
 		9D9042E9162D9F1A003BB5FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E8162D9F1A003BB5FF /* CoreGraphics.framework */; };
 		9D9042EF162D9F1A003BB5FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042ED162D9F1A003BB5FF /* InfoPlist.strings */; };
 		9D9042F1162D9F1A003BB5FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9042F0162D9F1A003BB5FF /* main.m */; };
-		9D9042F5162D9F1A003BB5FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9042F4162D9F1A003BB5FF /* AppDelegate.m */; };
+		9D9042F5162D9F1A003BB5FF /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */; };
 		9D9042F7162D9F1A003BB5FF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042F6162D9F1A003BB5FF /* Default.png */; };
 		9D9042F9162D9F1A003BB5FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042F8162D9F1A003BB5FF /* Default@2x.png */; };
 		9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */; };
+		9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D904312162DA7ED003BB5FF /* OpenGLES.framework */; };
+		9D904318162DB254003BB5FF /* UContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D904316162DB254003BB5FF /* UContainer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,14 @@
 		9D9042F0162D9F1A003BB5FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9D9042F2162D9F1A003BB5FF /* TerminalExtraction-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TerminalExtraction-Prefix.pch"; sourceTree = "<group>"; };
 		9D9042F3162D9F1A003BB5FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9D9042F4162D9F1A003BB5FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		9D9042F6162D9F1A003BB5FF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9D9042F8162D9F1A003BB5FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9D904312162DA7ED003BB5FF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9D904316162DB254003BB5FF /* UContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UContainer.cpp; path = Sources/Utils/UContainer.cpp; sourceTree = "<group>"; };
+		9D904317162DB254003BB5FF /* UContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UContainer.h; path = Sources/Utils/UContainer.h; sourceTree = "<group>"; };
+		9D904319162DB867003BB5FF /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/Utils/Utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */,
 				9D9042E5162D9F1A003BB5FF /* UIKit.framework in Frameworks */,
 				9D9042E7162D9F1A003BB5FF /* Foundation.framework in Frameworks */,
 				9D9042E9162D9F1A003BB5FF /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +75,7 @@
 		9D9042E3162D9F1A003BB5FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D904312162DA7ED003BB5FF /* OpenGLES.framework */,
 				9D9042E4162D9F1A003BB5FF /* UIKit.framework */,
 				9D9042E6162D9F1A003BB5FF /* Foundation.framework */,
 				9D9042E8162D9F1A003BB5FF /* CoreGraphics.framework */,
@@ -78,8 +86,9 @@
 		9D9042EA162D9F1A003BB5FF /* TerminalExtraction */ = {
 			isa = PBXGroup;
 			children = (
+				9D904315162DB1E1003BB5FF /* Utils */,
 				9D9042F3162D9F1A003BB5FF /* AppDelegate.h */,
-				9D9042F4162D9F1A003BB5FF /* AppDelegate.m */,
+				9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */,
 				9D9042EB162D9F1A003BB5FF /* Supporting Files */,
 			);
 			path = TerminalExtraction;
@@ -97,6 +106,16 @@
 				9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D904315162DB1E1003BB5FF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9D904319162DB867003BB5FF /* Utils.h */,
+				9D904317162DB254003BB5FF /* UContainer.h */,
+				9D904316162DB254003BB5FF /* UContainer.cpp */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9042F1162D9F1A003BB5FF /* main.m in Sources */,
-				9D9042F5162D9F1A003BB5FF /* AppDelegate.m in Sources */,
+				9D9042F5162D9F1A003BB5FF /* AppDelegate.mm in Sources */,
+				9D904318162DB254003BB5FF /* UContainer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +296,7 @@
 				9D904300162D9F1A003BB5FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
