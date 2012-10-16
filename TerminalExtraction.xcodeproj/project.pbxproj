@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D83B95A162E225700B216AD /* TEEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D83B958162E225700B216AD /* TEEngine.cpp */; };
 		9D9042E5162D9F1A003BB5FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E4162D9F1A003BB5FF /* UIKit.framework */; };
 		9D9042E7162D9F1A003BB5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E6162D9F1A003BB5FF /* Foundation.framework */; };
 		9D9042E9162D9F1A003BB5FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E8162D9F1A003BB5FF /* CoreGraphics.framework */; };
 		9D9042EF162D9F1A003BB5FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042ED162D9F1A003BB5FF /* InfoPlist.strings */; };
-		9D9042F1162D9F1A003BB5FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9042F0162D9F1A003BB5FF /* main.m */; };
 		9D9042F5162D9F1A003BB5FF /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */; };
 		9D9042F7162D9F1A003BB5FF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042F6162D9F1A003BB5FF /* Default.png */; };
 		9D9042F9162D9F1A003BB5FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042F8162D9F1A003BB5FF /* Default@2x.png */; };
@@ -21,13 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D83B958162E225700B216AD /* TEEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TEEngine.cpp; path = Sources/Engine/TEEngine.cpp; sourceTree = "<group>"; };
+		9D83B959162E225700B216AD /* TEEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEEngine.h; path = Sources/Engine/TEEngine.h; sourceTree = "<group>"; };
 		9D9042E0162D9F1A003BB5FF /* TerminalExtraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerminalExtraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9042E4162D9F1A003BB5FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9D9042E6162D9F1A003BB5FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9D9042E8162D9F1A003BB5FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9D9042EC162D9F1A003BB5FF /* TerminalExtraction-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TerminalExtraction-Info.plist"; sourceTree = "<group>"; };
 		9D9042EE162D9F1A003BB5FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9D9042F0162D9F1A003BB5FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9D9042F2162D9F1A003BB5FF /* TerminalExtraction-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TerminalExtraction-Prefix.pch"; sourceTree = "<group>"; };
 		9D9042F3162D9F1A003BB5FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -55,6 +56,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D83B954162E214C00B216AD /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				9D83B959162E225700B216AD /* TEEngine.h */,
+				9D83B958162E225700B216AD /* TEEngine.cpp */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		9D83B956162E215A00B216AD /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Renderer;
+			sourceTree = "<group>";
+		};
+		9D83B957162E216500B216AD /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		9D83B95B162E240D00B216AD /* Sys */ = {
+			isa = PBXGroup;
+			children = (
+				9D83B95C162E241C00B216AD /* ios */,
+			);
+			name = Sys;
+			sourceTree = "<group>";
+		};
+		9D83B95C162E241C00B216AD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				9D9042F3162D9F1A003BB5FF /* AppDelegate.h */,
+				9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */,
+			);
+			name = ios;
+			sourceTree = "<group>";
+		};
 		9D9042D5162D9F19003BB5FF = {
 			isa = PBXGroup;
 			children = (
@@ -86,9 +127,11 @@
 		9D9042EA162D9F1A003BB5FF /* TerminalExtraction */ = {
 			isa = PBXGroup;
 			children = (
+				9D83B95B162E240D00B216AD /* Sys */,
+				9D83B957162E216500B216AD /* Game */,
+				9D83B956162E215A00B216AD /* Renderer */,
+				9D83B954162E214C00B216AD /* Engine */,
 				9D904315162DB1E1003BB5FF /* Utils */,
-				9D9042F3162D9F1A003BB5FF /* AppDelegate.h */,
-				9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */,
 				9D9042EB162D9F1A003BB5FF /* Supporting Files */,
 			);
 			path = TerminalExtraction;
@@ -99,7 +142,6 @@
 			children = (
 				9D9042EC162D9F1A003BB5FF /* TerminalExtraction-Info.plist */,
 				9D9042ED162D9F1A003BB5FF /* InfoPlist.strings */,
-				9D9042F0162D9F1A003BB5FF /* main.m */,
 				9D9042F2162D9F1A003BB5FF /* TerminalExtraction-Prefix.pch */,
 				9D9042F6162D9F1A003BB5FF /* Default.png */,
 				9D9042F8162D9F1A003BB5FF /* Default@2x.png */,
@@ -182,9 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D9042F1162D9F1A003BB5FF /* main.m in Sources */,
 				9D9042F5162D9F1A003BB5FF /* AppDelegate.mm in Sources */,
 				9D904318162DB254003BB5FF /* UContainer.cpp in Sources */,
+				9D83B95A162E225700B216AD /* TEEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
