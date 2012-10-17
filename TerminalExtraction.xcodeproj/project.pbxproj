@@ -39,6 +39,18 @@
 		9D904316162DB254003BB5FF /* UContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UContainer.cpp; path = Sources/Utils/UContainer.cpp; sourceTree = "<group>"; };
 		9D904317162DB254003BB5FF /* UContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UContainer.h; path = Sources/Utils/UContainer.h; sourceTree = "<group>"; };
 		9D904319162DB867003BB5FF /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/Utils/Utils.h; sourceTree = "<group>"; };
+		9DCE1539162F28A1002EBD95 /* GLKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMath.h; sourceTree = "<group>"; };
+		9DCE153A162F28A1002EBD95 /* GLKMathTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMathTypes.h; sourceTree = "<group>"; };
+		9DCE153B162F28A1002EBD95 /* GLKMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMathUtils.h; sourceTree = "<group>"; };
+		9DCE153C162F28A1002EBD95 /* GLKMatrix3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMatrix3.h; sourceTree = "<group>"; };
+		9DCE153D162F28A1002EBD95 /* GLKMatrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMatrix4.h; sourceTree = "<group>"; };
+		9DCE153E162F28A1002EBD95 /* GLKMatrixStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMatrixStack.h; sourceTree = "<group>"; };
+		9DCE153F162F28A1002EBD95 /* GLKQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKQuaternion.h; sourceTree = "<group>"; };
+		9DCE1540162F28A1002EBD95 /* GLKVector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKVector2.h; sourceTree = "<group>"; };
+		9DCE1541162F28A1002EBD95 /* GLKVector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKVector3.h; sourceTree = "<group>"; };
+		9DCE1542162F28A1002EBD95 /* GLKVector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKVector4.h; sourceTree = "<group>"; };
+		9DCE1543162F291A002EBD95 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		9DCE1544162F291A002EBD95 /* MyMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMath.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,11 +165,32 @@
 		9D904315162DB1E1003BB5FF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9DCE1537162F284D002EBD95 /* MathKit */,
 				9D904319162DB867003BB5FF /* Utils.h */,
 				9D904317162DB254003BB5FF /* UContainer.h */,
 				9D904316162DB254003BB5FF /* UContainer.cpp */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		9DCE1537162F284D002EBD95 /* MathKit */ = {
+			isa = PBXGroup;
+			children = (
+				9DCE1543162F291A002EBD95 /* Matrix.h */,
+				9DCE1544162F291A002EBD95 /* MyMath.h */,
+				9DCE1539162F28A1002EBD95 /* GLKMath.h */,
+				9DCE153A162F28A1002EBD95 /* GLKMathTypes.h */,
+				9DCE153B162F28A1002EBD95 /* GLKMathUtils.h */,
+				9DCE153C162F28A1002EBD95 /* GLKMatrix3.h */,
+				9DCE153D162F28A1002EBD95 /* GLKMatrix4.h */,
+				9DCE153E162F28A1002EBD95 /* GLKMatrixStack.h */,
+				9DCE153F162F28A1002EBD95 /* GLKQuaternion.h */,
+				9DCE1540162F28A1002EBD95 /* GLKVector2.h */,
+				9DCE1541162F28A1002EBD95 /* GLKVector3.h */,
+				9DCE1542162F28A1002EBD95 /* GLKVector4.h */,
+			);
+			name = MathKit;
+			path = Sources/Utils/MathKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
