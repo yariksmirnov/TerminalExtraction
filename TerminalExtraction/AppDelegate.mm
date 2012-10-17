@@ -7,16 +7,14 @@
 //
 
 #import "AppDelegate.h"
-
+#include "TEEngine.h"
 #include "Utils.h"
 
 
 @implementation AppDelegate
 
 - (void)initEnviroment {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor blackColor];
-    [self.window makeKeyAndVisible];
+    engine->Init();
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

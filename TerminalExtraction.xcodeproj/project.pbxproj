@@ -18,6 +18,12 @@
 		9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */; };
 		9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D904312162DA7ED003BB5FF /* OpenGLES.framework */; };
 		9D904318162DB254003BB5FF /* UContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D904316162DB254003BB5FF /* UContainer.cpp */; };
+		9DE33AB9162F4CC30027565E /* RenderSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AB7162F4CC30027565E /* RenderSystem.cpp */; };
+		9DE33ABE162F51830027565E /* Display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33ABC162F51830027565E /* Display.cpp */; };
+		9DE33AC1162F55350027565E /* ios_display.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33ABF162F55340027565E /* ios_display.mm */; };
+		9DE33AC4162F5A7E0027565E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC3162F5A7D0027565E /* ViewController.m */; };
+		9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC6162F5AD40027565E /* GLSurface.m */; };
+		9DE33AC9162F5B5A0027565E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE33AC8162F5B5A0027565E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +57,17 @@
 		9DCE1542162F28A1002EBD95 /* GLKVector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKVector4.h; sourceTree = "<group>"; };
 		9DCE1543162F291A002EBD95 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		9DCE1544162F291A002EBD95 /* MyMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMath.h; sourceTree = "<group>"; };
+		9DE33AB7162F4CC30027565E /* RenderSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderSystem.cpp; path = Sources/Renderer/RenderSystem.cpp; sourceTree = "<group>"; };
+		9DE33AB8162F4CC30027565E /* RenderSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderSystem.h; path = Sources/Renderer/RenderSystem.h; sourceTree = "<group>"; };
+		9DE33ABC162F51830027565E /* Display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Display.cpp; path = Sources/Renderer/Display/Display.cpp; sourceTree = "<group>"; };
+		9DE33ABD162F51830027565E /* Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Display.h; path = Sources/Renderer/Display/Display.h; sourceTree = "<group>"; };
+		9DE33ABF162F55340027565E /* ios_display.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ios_display.mm; path = os/ios/ios_display.mm; sourceTree = "<group>"; };
+		9DE33AC0162F55350027565E /* ios_display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ios_display.h; path = os/ios/ios_display.h; sourceTree = "<group>"; };
+		9DE33AC2162F5A7D0027565E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = os/ios/ViewController.h; sourceTree = "<group>"; };
+		9DE33AC3162F5A7D0027565E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = os/ios/ViewController.m; sourceTree = "<group>"; };
+		9DE33AC5162F5AD40027565E /* GLSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLSurface.h; path = os/ios/GLSurface.h; sourceTree = "<group>"; };
+		9DE33AC6162F5AD40027565E /* GLSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLSurface.m; path = os/ios/GLSurface.m; sourceTree = "<group>"; };
+		9DE33AC8162F5B5A0027565E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE33AC9162F5B5A0027565E /* QuartzCore.framework in Frameworks */,
 				9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */,
 				9D9042E5162D9F1A003BB5FF /* UIKit.framework in Frameworks */,
 				9D9042E7162D9F1A003BB5FF /* Foundation.framework in Frameworks */,
@@ -80,6 +98,9 @@
 		9D83B956162E215A00B216AD /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
+				9DE33ABB162F515C0027565E /* Display */,
+				9DE33AB8162F4CC30027565E /* RenderSystem.h */,
+				9DE33AB7162F4CC30027565E /* RenderSystem.cpp */,
 			);
 			name = Renderer;
 			sourceTree = "<group>";
@@ -104,6 +125,12 @@
 			children = (
 				9D9042F3162D9F1A003BB5FF /* AppDelegate.h */,
 				9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */,
+				9DE33AC0162F55350027565E /* ios_display.h */,
+				9DE33ABF162F55340027565E /* ios_display.mm */,
+				9DE33AC2162F5A7D0027565E /* ViewController.h */,
+				9DE33AC3162F5A7D0027565E /* ViewController.m */,
+				9DE33AC5162F5AD40027565E /* GLSurface.h */,
+				9DE33AC6162F5AD40027565E /* GLSurface.m */,
 			);
 			name = ios;
 			sourceTree = "<group>";
@@ -128,6 +155,7 @@
 		9D9042E3162D9F1A003BB5FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9DE33AC8162F5B5A0027565E /* QuartzCore.framework */,
 				9D904312162DA7ED003BB5FF /* OpenGLES.framework */,
 				9D9042E4162D9F1A003BB5FF /* UIKit.framework */,
 				9D9042E6162D9F1A003BB5FF /* Foundation.framework */,
@@ -191,6 +219,15 @@
 			);
 			name = MathKit;
 			path = Sources/Utils/MathKit;
+			sourceTree = "<group>";
+		};
+		9DE33ABB162F515C0027565E /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				9DE33ABD162F51830027565E /* Display.h */,
+				9DE33ABC162F51830027565E /* Display.cpp */,
+			);
+			name = Display;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +297,11 @@
 				9D9042F5162D9F1A003BB5FF /* AppDelegate.mm in Sources */,
 				9D904318162DB254003BB5FF /* UContainer.cpp in Sources */,
 				9D83B95A162E225700B216AD /* TEEngine.cpp in Sources */,
+				9DE33AB9162F4CC30027565E /* RenderSystem.cpp in Sources */,
+				9DE33ABE162F51830027565E /* Display.cpp in Sources */,
+				9DE33AC1162F55350027565E /* ios_display.mm in Sources */,
+				9DE33AC4162F5A7E0027565E /* ViewController.m in Sources */,
+				9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +375,7 @@
 		9D9042FF162D9F1A003BB5FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TerminalExtraction/TerminalExtraction-Prefix.pch";
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
@@ -344,6 +387,7 @@
 		9D904300162D9F1A003BB5FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TerminalExtraction/TerminalExtraction-Prefix.pch";
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";

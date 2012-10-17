@@ -50,8 +50,34 @@ static __inline__ GLKQuaternion GLKQuaternionMakeWithAngleAndAxis(float radians,
  */
 static __inline__ GLKQuaternion GLKQuaternionMakeWithAngleAndVector3Axis(float radians, GLKVector3 axisVector);
     
-GLKQuaternion GLKQuaternionMakeWithMatrix3(GLKMatrix3 matrix);
-GLKQuaternion GLKQuaternionMakeWithMatrix4(GLKMatrix4 matrix);
+static __inline__ GLKQuaternion GLKQuaternionMakeWithMatrix3(GLKMatrix3 matrix) {
+        typedef float mtx_elm[3][3];
+        const mtx_elm& m = mtx.m;
+        float n4; // the norm of quaternion multiplied by 4
+        float tr = m[0][0] + m[1][1] + m[2][2]; // trace of martix
+        if (tr > 0.0f){
+            q.set( m[1][2] - m[2][1], m[2][0] - m[0][2], m[0][1] - m[1][0], tr+1.0f          );
+            n4 = q.w;
+        } else if( (m[0][0] > m[1][1] ) && ( m[0][0] > m[2][2]) ) {
+            q.set( 1.0f + m[0][0] - m[1][1] - m[2][2], m[1][0] + m[0][1],
+                  m[2][0] + m[0][2], m[1][2] - m[2][1] );
+            n4 = q.x;
+        }else if ( m[1][1] > m[2][2] ){
+            q.set( m[1][0] + m[0][1], 1.0f + m[1][1] - m[0][0] - m[2][2],
+                  m[2][1] + m[1][2], m[2][0] - m[0][2] );
+            n4 = q.y;
+        }else {
+            q.set( m[2][0] + m[0][2], m[2][1] + m[1][2],
+                  1.0f + m[2][2] - m[0][0] - m[1][1], m[0][1] - m[1][0] );
+            n4 = q.z;
+        }
+        q.scale( 0.5f/(float)sqrt(n4) );
+    }
+}
+
+static __inline__ GLKQuaternion GLKQuaternionMakeWithMatrix4(GLKMatrix4 matrix) {
+    
+}
 
 /*
  Calculate and return the angle component of the angle and axis form.

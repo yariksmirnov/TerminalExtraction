@@ -10,11 +10,16 @@
 #define __TerminalExtraction__TEEngine__
 
 #include <iostream>
+#include "RenderSystem.h"
 
 class TEEngine {
-    
+    RenderSystem        *_renderSystem;
     
 public:
+    TEEngine();
+    ~TEEngine();
+    
+    void Init();
     void EngineMain();
 };
 

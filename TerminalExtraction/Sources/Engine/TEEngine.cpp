@@ -12,3 +12,21 @@
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
+
+TEEngine::TEEngine() {
+    _renderSystem = new RenderSystem();
+}
+
+void TEEngine::Init() {
+    
+    _renderSystem->Init();
+    
+}
+
+void TEEngine::EngineMain() {
+    
+}
+
+TEEngine::~TEEngine() {
+    delete _renderSystem;
+}
