@@ -25,6 +25,8 @@ void TEEngine::Init() {
 
 void TEEngine::EngineMain() {
     
+    _renderSystem->InitOpenGL();
+    
 }
 
 TEEngine::~TEEngine() {
