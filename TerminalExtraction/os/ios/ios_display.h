@@ -16,6 +16,9 @@ class iosDisplay : public Display {
     
 public:
     virtual void InitGLSurface();
+    
+    virtual GLfloat GetDisplayHeight();
+    virtual GLfloat GetDisplayWidth();
 };
 
 #endif /* defined(__TerminalExtraction__ios_display__) */

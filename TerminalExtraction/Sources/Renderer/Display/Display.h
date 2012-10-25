@@ -8,9 +8,10 @@
 
 #ifndef __TerminalExtraction__Display__
 #define __TerminalExtraction__Display__
+#include "GlobalConstants.h"
 
 #include <iostream>
-
+#include GLES2
 
 class Display {
     static Display * _current;
@@ -18,7 +19,11 @@ class Display {
 public:
     static Display * currentDisplay();
     
-    virtual void InitGLSurface();
+    virtual void  InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat);
+    
+    virtual GLfloat GetDisplayHeight();
+    virtual GLfloat GetDisplayWidth();
+
 };
 
 #endif /* defined(__TerminalExtraction__Display__) */

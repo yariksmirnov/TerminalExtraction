@@ -10,14 +10,14 @@
 #include "ios_display.h"
 
 Display * Display::currentDisplay() {
-//    if (!_current) {
+    if (!_current) {
 //#ifdef TARGET_OS_IPHONE
-//        _current = new iosDisplay();
+        _current = new iosDisplay();
 //#else
-//        
+        
 //#endif
-//    }
-    return new iosDisplay();
+    }
+    return _current;
 }
 
 void Display::InitGLSurface() {

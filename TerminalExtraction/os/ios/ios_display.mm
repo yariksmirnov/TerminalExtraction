@@ -19,3 +19,11 @@ void iosDisplay::InitGLSurface() {
     [window makeKeyAndVisible];
     
 }
+
+GLfloat iosDisplay::GetDisplayHeight() {
+    return [[ViewController instance] view].layer.bounds.size.height;
+}
+
+GLfloat iosDisplay::GetDisplayWidth() {
+    return [[ViewController instance] view].layer.bounds.size.width;
+}

@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D2C461E1632140F000EC193 /* GlobalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GlobalConstants.h; path = Sources/Utils/GlobalConstants.h; sourceTree = "<group>"; };
 		9D83B958162E225700B216AD /* TEEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TEEngine.cpp; path = Sources/Engine/TEEngine.cpp; sourceTree = "<group>"; };
 		9D83B959162E225700B216AD /* TEEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEEngine.h; path = Sources/Engine/TEEngine.h; sourceTree = "<group>"; };
 		9D9042E0162D9F1A003BB5FF /* TerminalExtraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerminalExtraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +198,7 @@
 				9D904319162DB867003BB5FF /* Utils.h */,
 				9D904317162DB254003BB5FF /* UContainer.h */,
 				9D904316162DB254003BB5FF /* UContainer.cpp */,
+				9D2C461E1632140F000EC193 /* GlobalConstants.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";

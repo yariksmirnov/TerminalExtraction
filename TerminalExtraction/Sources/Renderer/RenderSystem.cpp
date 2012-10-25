@@ -14,9 +14,10 @@ RenderSystem::RenderSystem() {
 }
 
 void RenderSystem::Init() {
-    _deviceDisplay->InitGLSurface();
+    _deviceDisplay->InitGLSurface(GL_RGB565, GL_RGB);
 }
 
 void RenderSystem::InitOpenGL() {
     
 }
+
