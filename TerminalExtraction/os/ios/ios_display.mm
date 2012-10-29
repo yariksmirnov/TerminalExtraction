@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-void iosDisplay::InitGLSurface() {
+void iosDisplay::Display::InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat) {
     
     UIScreen *iphoneScreen = [UIScreen mainScreen];
     

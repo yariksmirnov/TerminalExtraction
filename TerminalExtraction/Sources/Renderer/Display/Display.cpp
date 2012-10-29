@@ -20,6 +20,6 @@ Display * Display::currentDisplay() {
     return _current;
 }
 
-void Display::InitGLSurface() {
+void Display::InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat) {
     throw "Virtual method";
 }
