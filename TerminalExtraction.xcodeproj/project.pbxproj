@@ -61,6 +61,7 @@
 		9DCE1544162F291A002EBD95 /* MyMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMath.h; sourceTree = "<group>"; };
 		9DD218A716403E3800E2CFA2 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Sources/Engine/Camera.cpp; sourceTree = "<group>"; };
 		9DD218A816403E3800E2CFA2 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Sources/Engine/Camera.h; sourceTree = "<group>"; };
+		9DD218AA164044C500E2CFA2 /* Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		9DE33AB7162F4CC30027565E /* RenderSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderSystem.cpp; path = Sources/Renderer/RenderSystem.cpp; sourceTree = "<group>"; };
 		9DE33AB8162F4CC30027565E /* RenderSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderSystem.h; path = Sources/Renderer/RenderSystem.h; sourceTree = "<group>"; };
 		9DE33ABC162F51830027565E /* Display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Display.cpp; path = Sources/Renderer/Display/Display.cpp; sourceTree = "<group>"; };
@@ -224,6 +225,7 @@
 				9DCE1540162F28A1002EBD95 /* GLKVector2.h */,
 				9DCE1541162F28A1002EBD95 /* GLKVector3.h */,
 				9DCE1542162F28A1002EBD95 /* GLKVector4.h */,
+				9DD218AA164044C500E2CFA2 /* Geometry.h */,
 			);
 			name = MathKit;
 			path = Sources/Utils/MathKit;

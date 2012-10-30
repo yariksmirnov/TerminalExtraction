@@ -6,9 +6,7 @@
 //  Copyright (c) 2012 SoftFacade. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <GLKit/GLKit.h>
-
+#include "Geometry.h"
 
 #ifndef __clang__
 static __inline__ GLKMatrix4 GLKMatrix4MakeBillboard(GLKMatrix4 view, GLKVector3 objectPositon)
@@ -151,9 +149,9 @@ static float GLKVector3LengthSquired(GLKVector3 vector)
 //} 
 
 #ifndef __clang__
-static __inline__ GLKVector3 UnprojectPointWIdent(GLKVector3 screenSpace, GLKMatrix4 projection, GLKMatrix4 view, float minDepth, float maxDepth, CGSize screenSize)  
+static __inline__ GLKVector3 UnprojectPointWIdent(GLKVector3 screenSpace, GLKMatrix4 projection, GLKMatrix4 view, float minDepth, float maxDepth, GSize2D screenSize)
 #else
-static GLKVector3 UnprojectPointWIdent(GLKVector3 screenSpace, GLKMatrix4 projection, GLKMatrix4 view, float minDepth, float maxDepth, CGSize screenSize)
+static GLKVector3 UnprojectPointWIdent(GLKVector3 screenSpace, GLKMatrix4 projection, GLKMatrix4 view, float minDepth, float maxDepth, GSize2D screenSize)
 #endif
 { 
     //First, convert raw screen coords to unprojectable ones 

@@ -24,7 +24,6 @@
 // Converts radians to degrees.
 #define radiansToDegrees(x) (x * k180PI)
 
-#import "Matrix.h"
-
+#include "Matrix.h"
 
 #endif
