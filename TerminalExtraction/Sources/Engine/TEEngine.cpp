@@ -19,25 +19,16 @@ TEEngine::TEEngine() {
 }
 
 void TEEngine::Init() {
-    
     _renderSystem->Init();
-    
     _renderSystem->InitOpenGL();
-    
-    _renderSystem->InitOpenGL();
-    
 }
 
 void TEEngine::RunLoop(double delta) {
-    
     _elapsedTime = delta;
-    
     _fullTime += _elapsedTime;
     
     this->Update();
-        
     this->Draw();
-    
 }
 
 void TEEngine::Update() {
@@ -45,13 +36,10 @@ void TEEngine::Update() {
 }
 
 void TEEngine::Draw() {
-    
     _renderSystem->Draw();
-    
 }
 
-float TEEngine::ElapsedTime()
-{
+float TEEngine::ElapsedTime() {
     return _elapsedTime;
 }
 

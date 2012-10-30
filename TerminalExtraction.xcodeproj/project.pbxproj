@@ -18,6 +18,7 @@
 		9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */; };
 		9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D904312162DA7ED003BB5FF /* OpenGLES.framework */; };
 		9D904318162DB254003BB5FF /* UContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D904316162DB254003BB5FF /* UContainer.cpp */; };
+		9DD218A916403E3800E2CFA2 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DD218A716403E3800E2CFA2 /* Camera.cpp */; };
 		9DE33AB9162F4CC30027565E /* RenderSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AB7162F4CC30027565E /* RenderSystem.cpp */; };
 		9DE33ABE162F51830027565E /* Display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33ABC162F51830027565E /* Display.cpp */; };
 		9DE33AC1162F55350027565E /* ios_display.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33ABF162F55340027565E /* ios_display.mm */; };
@@ -58,6 +59,8 @@
 		9DCE1542162F28A1002EBD95 /* GLKVector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKVector4.h; sourceTree = "<group>"; };
 		9DCE1543162F291A002EBD95 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		9DCE1544162F291A002EBD95 /* MyMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMath.h; sourceTree = "<group>"; };
+		9DD218A716403E3800E2CFA2 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Sources/Engine/Camera.cpp; sourceTree = "<group>"; };
+		9DD218A816403E3800E2CFA2 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Sources/Engine/Camera.h; sourceTree = "<group>"; };
 		9DE33AB7162F4CC30027565E /* RenderSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderSystem.cpp; path = Sources/Renderer/RenderSystem.cpp; sourceTree = "<group>"; };
 		9DE33AB8162F4CC30027565E /* RenderSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderSystem.h; path = Sources/Renderer/RenderSystem.h; sourceTree = "<group>"; };
 		9DE33ABC162F51830027565E /* Display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Display.cpp; path = Sources/Renderer/Display/Display.cpp; sourceTree = "<group>"; };
@@ -90,8 +93,11 @@
 		9D83B954162E214C00B216AD /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				9D83B956162E215A00B216AD /* Renderer */,
 				9D83B959162E225700B216AD /* TEEngine.h */,
 				9D83B958162E225700B216AD /* TEEngine.cpp */,
+				9DD218A816403E3800E2CFA2 /* Camera.h */,
+				9DD218A716403E3800E2CFA2 /* Camera.cpp */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -101,8 +107,6 @@
 			children = (
 				9DE33AB8162F4CC30027565E /* RenderSystem.h */,
 				9DE33AB7162F4CC30027565E /* RenderSystem.cpp */,
-				9DE33ABD162F51830027565E /* Display.h */,
-				9DE33ABC162F51830027565E /* Display.cpp */,
 			);
 			name = Renderer;
 			sourceTree = "<group>";
@@ -117,6 +121,8 @@
 		9D83B95B162E240D00B216AD /* Sys */ = {
 			isa = PBXGroup;
 			children = (
+				9DE33ABD162F51830027565E /* Display.h */,
+				9DE33ABC162F51830027565E /* Display.cpp */,
 				9D83B95C162E241C00B216AD /* ios */,
 			);
 			name = Sys;
@@ -171,7 +177,6 @@
 			children = (
 				9D83B95B162E240D00B216AD /* Sys */,
 				9D83B957162E216500B216AD /* Game */,
-				9D83B956162E215A00B216AD /* Renderer */,
 				9D83B954162E214C00B216AD /* Engine */,
 				9D904315162DB1E1003BB5FF /* Utils */,
 				9D9042EB162D9F1A003BB5FF /* Supporting Files */,
@@ -296,6 +301,7 @@
 				9DE33AC1162F55350027565E /* ios_display.mm in Sources */,
 				9DE33AC4162F5A7E0027565E /* ViewController.m in Sources */,
 				9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */,
+				9DD218A916403E3800E2CFA2 /* Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
