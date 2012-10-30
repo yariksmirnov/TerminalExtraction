@@ -14,7 +14,8 @@
 
 class TEEngine {
     RenderSystem        *_renderSystem;
-    
+    float                _elapsedTime;
+    float                _fullTime;
 public:
     TEEngine();
     ~TEEngine();
@@ -22,7 +23,12 @@ public:
     void Init();
     void EngineMain();
     
-    void StartRunLoop();
+    void RunLoop(double delta);
+    
+    float ElapsedTime();
+    
+    void Update();
+    void Draw();
 
 };
 

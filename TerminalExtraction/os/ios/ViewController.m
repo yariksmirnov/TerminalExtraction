@@ -26,7 +26,7 @@ ViewController      *_g_Controller = nil;
 - (void)loadView {
     UIScreen *screen = [UIScreen mainScreen];
     
-    self.view = [[GLSurface alloc] initWithFrame:screen.bounds];
+    self.view = [[GLSurface alloc] initWithFrame:screen.bounds andDepthFormat:_depthFormat andPixelFormat:_pixelFormat];
 }
 
 - (void)viewDidLoad {

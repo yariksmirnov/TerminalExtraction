@@ -10,14 +10,26 @@
 #include "ios_display.h"
 
 Display * Display::currentDisplay() {
-    if (!_current) {
+//    if (!_current) {
 //#ifdef TARGET_OS_IPHONE
-        _current = new iosDisplay();
+//        _current = new iosDisplay();
 //#else
-        
+//        
 //#endif
-    }
-    return _current;
+//    }
+    return new iosDisplay();
+}
+
+GLfloat Display::GetDisplayHeight() {
+    throw "Virtual method";
+}
+
+GLfloat Display::GetDisplayWidth() {
+    throw "Virtual method";
+}
+
+void Display::SwapBuffers() {
+    throw "Virtual method";
 }
 
 void Display::InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat) {

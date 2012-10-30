@@ -15,10 +15,12 @@
 class iosDisplay : public Display {
     
 public:
-    virtual void InitGLSurface();
+    virtual void InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat);
     
     virtual GLfloat GetDisplayHeight();
     virtual GLfloat GetDisplayWidth();
+    
+    virtual void SwapBuffers();
 };
 
 #endif /* defined(__TerminalExtraction__ios_display__) */

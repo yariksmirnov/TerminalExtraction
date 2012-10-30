@@ -14,6 +14,8 @@
 @private
     GLSurface           *_glView;
 }
+@property (nonatomic, assign) GLuint depthFormat;
+@property (nonatomic, assign) GLuint pixelFormat;
 
 + (ViewController *)instance;
 

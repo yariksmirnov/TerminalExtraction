@@ -99,9 +99,10 @@
 		9D83B956162E215A00B216AD /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
-				9DE33ABB162F515C0027565E /* Display */,
 				9DE33AB8162F4CC30027565E /* RenderSystem.h */,
 				9DE33AB7162F4CC30027565E /* RenderSystem.cpp */,
+				9DE33ABD162F51830027565E /* Display.h */,
+				9DE33ABC162F51830027565E /* Display.cpp */,
 			);
 			name = Renderer;
 			sourceTree = "<group>";
@@ -221,15 +222,6 @@
 			);
 			name = MathKit;
 			path = Sources/Utils/MathKit;
-			sourceTree = "<group>";
-		};
-		9DE33ABB162F515C0027565E /* Display */ = {
-			isa = PBXGroup;
-			children = (
-				9DE33ABD162F51830027565E /* Display.h */,
-				9DE33ABC162F51830027565E /* Display.cpp */,
-			);
-			name = Display;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

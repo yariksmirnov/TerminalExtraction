@@ -8,6 +8,7 @@
 
 #include "TEEngine.h"
 #include <time.h>
+#include <math.h>
 
 
 TEEngine globalEngine;
@@ -21,44 +22,37 @@ void TEEngine::Init() {
     
     _renderSystem->Init();
     
-}
-
-void TEEngine::EngineMain() {
+    _renderSystem->InitOpenGL();
     
     _renderSystem->InitOpenGL();
     
-    StartRunLoop();
 }
 
-void TEEngine::StartRunLoop() {
+void TEEngine::RunLoop(double delta) {
     
-    double t = 0.0;
-    const double dt = 0.01;
+    _elapsedTime = delta;
     
-    time_t currentTime = time(NULL);
-    double accumulator = 0.0;
+    _fullTime += _elapsedTime;
     
-    while ( true ) {
-        time_t newTime = time(NULL);
-        double frameTime = newTime - currentTime;
-        if ( frameTime > 0.25 )
-            frameTime = 0.25;	  // note: max frame time to avoid spiral of death
-        currentTime = newTime;
+    this->Update();
         
-        accumulator += frameTime;
-        
-        while ( accumulator >= dt )
-        {
-            t += dt;
-            accumulator -= dt;
-        }
-        
-        //const double alpha = accumulator / dt;
-        
-        
-        
-    }
+    this->Draw();
     
+}
+
+void TEEngine::Update() {
+    _renderSystem-> SetColor(sinf(_fullTime/20.0) / 2 + 0.5);
+}
+
+void TEEngine::Draw() {
+    
+    _renderSystem->Draw();
+    
+}
+
+float TEEngine::ElapsedTime()
+{
+    return _elapsedTime;
 }
 
 TEEngine::~TEEngine() {

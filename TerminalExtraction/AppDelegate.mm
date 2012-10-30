@@ -10,12 +10,31 @@
 #include "TEEngine.h"
 #include "Utils.h"
 
+#import <QuartzCore/QuartzCore.h>
+
+@interface AppDelegate ()
+
+- (void)frameCallback:(CADisplayLink *)link;
+
+@end
+
 
 @implementation AppDelegate
 
 - (void)initEnviroment {
+    
+    CADisplayLink *link = [CADisplayLink displayLinkWithTarget:self selector:@selector(frameCallback:)];
+    [link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    
     engine->Init();
 }
+
+- (void)frameCallback:(CADisplayLink *)link {
+    
+    engine->RunLoop(link.timestamp);
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     

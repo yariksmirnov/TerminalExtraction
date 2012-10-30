@@ -18,13 +18,15 @@
 
 class RenderSystem {
     Display             *_deviceDisplay;
-    
+    float _color;
 public:
     RenderSystem();
     
     void Init();
     void InitOpenGL();
     
+    void Draw();
+    void SetColor(float color);
 };
 
 #endif /* defined(__TerminalExtraction__RenderSystem__) */

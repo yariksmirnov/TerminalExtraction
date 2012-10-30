@@ -10,11 +10,15 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-void iosDisplay::Display::InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat) {
+void iosDisplay::InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat) {
     
     UIScreen *iphoneScreen = [UIScreen mainScreen];
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:iphoneScreen.bounds];
+    
+    [ViewController instance].pixelFormat = pixelFormat;
+    [ViewController instance].depthFormat = depthFormat;
+    
     window.rootViewController = [ViewController instance];
     [window makeKeyAndVisible];
     
@@ -26,4 +30,10 @@ GLfloat iosDisplay::GetDisplayHeight() {
 
 GLfloat iosDisplay::GetDisplayWidth() {
     return [[ViewController instance] view].layer.bounds.size.width;
+}
+
+void iosDisplay::SwapBuffers() {
+    EAGLContext* context = [EAGLContext currentContext];
+    
+    [context presentRenderbuffer:GL_RENDERBUFFER];
 }

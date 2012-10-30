@@ -23,11 +23,16 @@
         NSLog(@"Initializing iOS GL Surface");
         CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
         
+        NSString *_iosPixelFormat = kEAGLColorFormatRGBA8;
+        if (pixelFormat == GL_RGB565) {
+            _iosPixelFormat = kEAGLColorFormatRGB565;
+        }
+        
         eaglLayer.opaque = YES;
         eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
                                         [NSNumber numberWithBool:YES], kEAGLDrawablePropertyRetainedBacking,
-                                        kEAGLColorFormatRGB565, kEAGLDrawablePropertyColorFormat, nil];
-
+                                        _iosPixelFormat, kEAGLDrawablePropertyColorFormat, nil];
+        
         
         _glContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
         
