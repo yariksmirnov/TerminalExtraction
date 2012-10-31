@@ -19,6 +19,7 @@
 		9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D904312162DA7ED003BB5FF /* OpenGLES.framework */; };
 		9D904318162DB254003BB5FF /* UContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D904316162DB254003BB5FF /* UContainer.cpp */; };
 		9DD218A916403E3800E2CFA2 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DD218A716403E3800E2CFA2 /* Camera.cpp */; };
+		9DD218B816417F3300E2CFA2 /* PivotObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DD218B616417F3300E2CFA2 /* PivotObject.cpp */; };
 		9DE33AB9162F4CC30027565E /* RenderSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AB7162F4CC30027565E /* RenderSystem.cpp */; };
 		9DE33ABE162F51830027565E /* Display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33ABC162F51830027565E /* Display.cpp */; };
 		9DE33AC1162F55350027565E /* ios_display.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33ABF162F55340027565E /* ios_display.mm */; };
@@ -62,6 +63,9 @@
 		9DD218A716403E3800E2CFA2 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Camera.cpp; path = Sources/Engine/Camera.cpp; sourceTree = "<group>"; };
 		9DD218A816403E3800E2CFA2 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = Sources/Engine/Camera.h; sourceTree = "<group>"; };
 		9DD218AA164044C500E2CFA2 /* Geometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
+		9DD218B616417F3300E2CFA2 /* PivotObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PivotObject.cpp; path = Sources/Engine/Objects/PivotObject.cpp; sourceTree = "<group>"; };
+		9DD218B716417F3300E2CFA2 /* PivotObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PivotObject.h; path = Sources/Engine/Objects/PivotObject.h; sourceTree = "<group>"; };
+		9DD218B91641801B00E2CFA2 /* TranslateableObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TranslateableObject.h; path = Sources/Engine/Objects/TranslateableObject.h; sourceTree = "<group>"; };
 		9DE33AB7162F4CC30027565E /* RenderSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderSystem.cpp; path = Sources/Renderer/RenderSystem.cpp; sourceTree = "<group>"; };
 		9DE33AB8162F4CC30027565E /* RenderSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderSystem.h; path = Sources/Renderer/RenderSystem.h; sourceTree = "<group>"; };
 		9DE33ABC162F51830027565E /* Display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Display.cpp; path = Sources/Renderer/Display/Display.cpp; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		9D83B954162E214C00B216AD /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				9DD218B516417EDD00E2CFA2 /* Objects */,
 				9D83B956162E215A00B216AD /* Renderer */,
 				9D83B959162E225700B216AD /* TEEngine.h */,
 				9D83B958162E225700B216AD /* TEEngine.cpp */,
@@ -231,6 +236,16 @@
 			path = Sources/Utils/MathKit;
 			sourceTree = "<group>";
 		};
+		9DD218B516417EDD00E2CFA2 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				9DD218B716417F3300E2CFA2 /* PivotObject.h */,
+				9DD218B616417F3300E2CFA2 /* PivotObject.cpp */,
+				9DD218B91641801B00E2CFA2 /* TranslateableObject.h */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +319,7 @@
 				9DE33AC4162F5A7E0027565E /* ViewController.m in Sources */,
 				9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */,
 				9DD218A916403E3800E2CFA2 /* Camera.cpp in Sources */,
+				9DD218B816417F3300E2CFA2 /* PivotObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
