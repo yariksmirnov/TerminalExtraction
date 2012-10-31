@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D6A84371641D1C300E322C3 /* EditorData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A84351641D1C300E322C3 /* EditorData.cpp */; };
+		9D6A843B1641D46A00E322C3 /* IdGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A84391641D46A00E322C3 /* IdGenerator.cpp */; };
+		9D6A843F1641D83B00E322C3 /* ObjectBehaviourModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A843D1641D83B00E322C3 /* ObjectBehaviourModel.cpp */; };
+		9D6A84431641DB0F00E322C3 /* RenderMatrixController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A84411641DB0F00E322C3 /* RenderMatrixController.cpp */; };
 		9D83B95A162E225700B216AD /* TEEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D83B958162E225700B216AD /* TEEngine.cpp */; };
 		9D9042E5162D9F1A003BB5FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E4162D9F1A003BB5FF /* UIKit.framework */; };
 		9D9042E7162D9F1A003BB5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E6162D9F1A003BB5FF /* Foundation.framework */; };
@@ -30,6 +34,14 @@
 
 /* Begin PBXFileReference section */
 		9D2C461E1632140F000EC193 /* GlobalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GlobalConstants.h; path = Sources/Utils/GlobalConstants.h; sourceTree = "<group>"; };
+		9D6A84351641D1C300E322C3 /* EditorData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EditorData.cpp; path = Sources/Engine/Objects/EditorData.cpp; sourceTree = "<group>"; };
+		9D6A84361641D1C300E322C3 /* EditorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorData.h; path = Sources/Engine/Objects/EditorData.h; sourceTree = "<group>"; };
+		9D6A84391641D46A00E322C3 /* IdGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdGenerator.cpp; path = Sources/Utils/IdGenerator.cpp; sourceTree = "<group>"; };
+		9D6A843A1641D46A00E322C3 /* IdGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IdGenerator.h; path = Sources/Utils/IdGenerator.h; sourceTree = "<group>"; };
+		9D6A843D1641D83B00E322C3 /* ObjectBehaviourModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectBehaviourModel.cpp; path = Sources/Engine/Objects/ObjectBehaviourModel/ObjectBehaviourModel.cpp; sourceTree = "<group>"; };
+		9D6A843E1641D83B00E322C3 /* ObjectBehaviourModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectBehaviourModel.h; path = Sources/Engine/Objects/ObjectBehaviourModel/ObjectBehaviourModel.h; sourceTree = "<group>"; };
+		9D6A84411641DB0F00E322C3 /* RenderMatrixController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderMatrixController.cpp; path = Sources/Engine/Objects/MatrixControllers/RenderMatrixController.cpp; sourceTree = "<group>"; };
+		9D6A84421641DB0F00E322C3 /* RenderMatrixController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderMatrixController.h; path = Sources/Engine/Objects/MatrixControllers/RenderMatrixController.h; sourceTree = "<group>"; };
 		9D83B958162E225700B216AD /* TEEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TEEngine.cpp; path = Sources/Engine/TEEngine.cpp; sourceTree = "<group>"; };
 		9D83B959162E225700B216AD /* TEEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEEngine.h; path = Sources/Engine/TEEngine.h; sourceTree = "<group>"; };
 		9D9042E0162D9F1A003BB5FF /* TerminalExtraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerminalExtraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +107,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D6A843C1641D80300E322C3 /* ObjectBehaviourModel */ = {
+			isa = PBXGroup;
+			children = (
+				9D6A843D1641D83B00E322C3 /* ObjectBehaviourModel.cpp */,
+				9D6A843E1641D83B00E322C3 /* ObjectBehaviourModel.h */,
+			);
+			name = ObjectBehaviourModel;
+			sourceTree = "<group>";
+		};
+		9D6A84401641DAD200E322C3 /* MatrixControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D6A84411641DB0F00E322C3 /* RenderMatrixController.cpp */,
+				9D6A84421641DB0F00E322C3 /* RenderMatrixController.h */,
+			);
+			name = MatrixControllers;
+			sourceTree = "<group>";
+		};
 		9D83B954162E214C00B216AD /* Engine */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +241,8 @@
 				9D904317162DB254003BB5FF /* UContainer.h */,
 				9D904316162DB254003BB5FF /* UContainer.cpp */,
 				9D2C461E1632140F000EC193 /* GlobalConstants.h */,
+				9D6A84391641D46A00E322C3 /* IdGenerator.cpp */,
+				9D6A843A1641D46A00E322C3 /* IdGenerator.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -239,9 +271,13 @@
 		9DD218B516417EDD00E2CFA2 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				9D6A84401641DAD200E322C3 /* MatrixControllers */,
+				9D6A843C1641D80300E322C3 /* ObjectBehaviourModel */,
 				9DD218B716417F3300E2CFA2 /* PivotObject.h */,
 				9DD218B616417F3300E2CFA2 /* PivotObject.cpp */,
 				9DD218B91641801B00E2CFA2 /* TranslateableObject.h */,
+				9D6A84361641D1C300E322C3 /* EditorData.h */,
+				9D6A84351641D1C300E322C3 /* EditorData.cpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -320,6 +356,10 @@
 				9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */,
 				9DD218A916403E3800E2CFA2 /* Camera.cpp in Sources */,
 				9DD218B816417F3300E2CFA2 /* PivotObject.cpp in Sources */,
+				9D6A84371641D1C300E322C3 /* EditorData.cpp in Sources */,
+				9D6A843B1641D46A00E322C3 /* IdGenerator.cpp in Sources */,
+				9D6A843F1641D83B00E322C3 /* ObjectBehaviourModel.cpp in Sources */,
+				9D6A84431641DB0F00E322C3 /* RenderMatrixController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

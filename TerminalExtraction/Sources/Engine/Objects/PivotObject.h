@@ -12,6 +12,12 @@
 #include <iostream>
 #include "TranslateableObject.h"
 
+class EditorData;
+class ObjectBehaviourModel;
+class RenderMatrixController;
+class RenderObject;
+class Material;
+
 enum {
     PivotMaterialType_Stone,
     PivotMaterialType_Metal,
@@ -25,8 +31,10 @@ enum {
 typedef unsigned int PivotMaterialType;
 
 class PivotObject : public TranslateableObject {
-    GLKMatrix3          _renderMatrix;
-    GLKMatrix4          _transformMatrix;
+    GLKMatrix3              _renderMatrix;
+    GLKMatrix4              _transformMatrix;
+    
+    ObjectBehaviourModel    *_objectBehaviourModel;
     
     bool                _unloaded;
     
@@ -41,10 +49,31 @@ public:
     GLKVector3 objectConstrAxis;
     GLKVector3 objectConstrForward;
     
+    EditorData *editorAspect;
+    
+    RenderMatrixController      *matrixController;
+    
     bool        moved;
+    
+    
+    PivotObject(ObjectBehaviourModel *behaviourModel);
+    ~PivotObject();
 
-    GLKMatrix3 renderMatrix();
-    GLKMatrix4 transformMatrix();
+    GLKMatrix3 GetRenderMatrix();
+    GLKMatrix4 GetTransformMatrix();
+    
+    ObjectBehaviourModel *GetObjectBehaviourModel();
+    
+    void Update();
+    void AfterUpdate();
+    void Frame(double time);
+    void BeginFrame();
+    void EndFrame();
+    
+    void SetGlobalPosition(GLKMatrix4 globalPosition, void * aditionalData, PivotObject *parent, bool afterUpdate);
+    
+    RenderObject * GetRenderAspect();
+    Material * GetMaterial();
     
 };
 
