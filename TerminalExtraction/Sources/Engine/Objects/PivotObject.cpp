@@ -7,4 +7,10 @@
 //
 
 #include "PivotObject.h"
+#include "RenderMatrixController.h"
+#include "RenderObject.h"
+#include "Material.h"
 
+PivotObject::PivotObject(ObjectBehaviourModel *behaviourModel) {
+    
+}
