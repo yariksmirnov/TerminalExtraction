@@ -131,6 +131,22 @@ void EngineMesh::Unbind() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 
+void EngineMesh::Dispose()
+{
+    if(_disposed)
+        return;
+    
+    
+    glDeleteBuffers(1, &_vertexBuffer);
+    glDeleteBuffers(1, &_indexBuffer);
+    _disposed = true;
+}
+
+EngineMesh::~EngineMesh()
+{
+    Dispose();
+}
+
 void EngineMesh::Render() {
     glDrawElements(GL_TRIANGLES, _primitivesCount, GL_UNSIGNED_SHORT, (void*)0);
 }

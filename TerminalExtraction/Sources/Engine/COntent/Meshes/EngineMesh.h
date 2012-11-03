@@ -32,6 +32,9 @@ public:
     void Bind();
     void Render();
     void Unbind();
+    void Dispose();
+    
+    ~EngineMesh();
     
     static const EngineMesh * CreateCube(void);
     static const EngineMesh * CreateFullscreenQuad(void);
