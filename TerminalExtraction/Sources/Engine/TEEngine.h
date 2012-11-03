@@ -12,10 +12,19 @@
 #include <iostream>
 #include "RenderSystem.h"
 
+class LevelObject;
+class Camera;
+
 class TEEngine {
+    
     RenderSystem        *_renderSystem;
     float                _elapsedTime;
     float                _fullTime;
+    
+    LevelObject         *_cube;
+    
+    Camera              *_camera;
+    
 public:
     TEEngine();
     ~TEEngine();

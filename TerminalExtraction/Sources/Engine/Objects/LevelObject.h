@@ -23,7 +23,7 @@ public:
     
     LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behaviorModel, Material *material);
     
-    LevelObject * CreateCude();
+    static LevelObject * CreateCube();
     
 };
 

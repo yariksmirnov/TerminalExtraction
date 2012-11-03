@@ -9,7 +9,8 @@
 #include "TEEngine.h"
 #include <time.h>
 #include <math.h>
-
+#include "LevelObject.h"
+#include "Camera.h"
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
@@ -21,6 +22,12 @@ TEEngine::TEEngine() {
 void TEEngine::Init() {
     _renderSystem->Init();
     _renderSystem->InitOpenGL();
+    
+    
+    GRect2D screen = GRect2DMake(0, 0, _renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight());
+    _camera = new Camera(GLKVector3Make(5, 5, 5), GLKVector3Make(0, 0, 0), screen);
+    
+    _cube = LevelObject::CreateCube();
 }
 
 void TEEngine::RunLoop(double delta) {
@@ -37,6 +44,9 @@ void TEEngine::Update() {
 
 void TEEngine::Draw() {
     _renderSystem->Draw();
+    
+    _cube->BeginFrame();
+    _cube->EndFrame();
 }
 
 float TEEngine::ElapsedTime() {

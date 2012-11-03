@@ -11,6 +11,8 @@
 
 #include <iostream>
 
+class Material;
+
 using namespace std;
 
 class RenderObject {
@@ -31,7 +33,7 @@ public:
     
     RenderObject();
     
-    
+    virtual void Render(int lod, Material *material) = 0;
 };
 
 

@@ -28,13 +28,14 @@ public:
     
     EngineMesh();
     EngineMesh(void * vertices, long vSize, void *indices, long iSize);
-    
-    void Bind();
-    void Render();
-    void Unbind();
-    void Dispose();
+
     
     ~EngineMesh();
+
+    void Bind() const;
+    void Render() const;
+    void Unbind() const;
+    void Dispose();
     
     static const EngineMesh * CreateCube(void);
     static const EngineMesh * CreateFullscreenQuad(void);

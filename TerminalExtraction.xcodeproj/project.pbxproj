@@ -40,6 +40,7 @@
 		9DE33AC4162F5A7E0027565E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC3162F5A7D0027565E /* ViewController.m */; };
 		9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC6162F5AD40027565E /* GLSurface.m */; };
 		9DE33AC9162F5B5A0027565E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE33AC8162F5B5A0027565E /* QuartzCore.framework */; };
+		9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,8 @@
 		9DE33AC5162F5AD40027565E /* GLSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLSurface.h; path = os/ios/GLSurface.h; sourceTree = "<group>"; };
 		9DE33AC6162F5AD40027565E /* GLSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLSurface.m; path = os/ios/GLSurface.m; sourceTree = "<group>"; };
 		9DE33AC8162F5B5A0027565E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UnAnimRenderObject.cpp; path = Sources/Engine/Objects/UnAnimRenderObject.cpp; sourceTree = "<group>"; };
+		9DE6A9FB16458EE700AF9280 /* UnAnimRenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnAnimRenderObject.h; path = Sources/Engine/Objects/UnAnimRenderObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +363,8 @@
 				9D6A84351641D1C300E322C3 /* EditorData.cpp */,
 				9D60B5451642D1FD0074081D /* RenderObject.cpp */,
 				9D60B5461642D1FD0074081D /* RenderObject.h */,
+				9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */,
+				9DE6A9FB16458EE700AF9280 /* UnAnimRenderObject.h */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -452,6 +457,7 @@
 				9D60B589164540750074081D /* Shader.cpp in Sources */,
 				9D60B5921645473B0074081D /* FileManger.cpp in Sources */,
 				9D60B5951645488C0074081D /* ios_fileManager.mm in Sources */,
+				9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

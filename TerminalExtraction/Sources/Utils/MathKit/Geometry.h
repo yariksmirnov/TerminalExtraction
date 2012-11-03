@@ -33,6 +33,16 @@ typedef struct __GPoint2D GPoint2D;
 typedef struct __GRect2D GRect2D;
 typedef struct __GSize2D GSize2D;
 
+
+static __inline__ GRect2D GRect2DMake(GLfloat x, GLfloat y, GLfloat width, GLfloat height) {
+    GRect2D rect;
+    rect.origin.x = x;
+    rect.origin.y = y;
+    rect.size.width = width;
+    rect.size.height = height;
+    return rect;
+};
+
 #include "GLKMath.h"
 #include "MyMath.h"
 

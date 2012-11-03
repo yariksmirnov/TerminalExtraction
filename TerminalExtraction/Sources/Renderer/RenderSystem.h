@@ -22,6 +22,8 @@ class RenderSystem {
 public:
     RenderSystem();
     
+    Display * GetDisplay();
+    
     void Init();
     void InitOpenGL();
     
