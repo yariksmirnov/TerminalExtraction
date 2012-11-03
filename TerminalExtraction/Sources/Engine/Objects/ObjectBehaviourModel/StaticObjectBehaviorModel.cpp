@@ -9,6 +9,6 @@
 #include "StaticObjectBehaviorModel.h"
 
 
-void StaticObjectBehaviourModel::ObjectBehaviourModel::SetGlobalPosition(GLKMatrix4 globalPosition, void *aditionalData, PivotObject *parent, bool afterUpdate) {
+void StaticObjectBehaviourModel::SetGlobalPosition(GLKMatrix4 globalPosition, void *aditionalData, PivotObject *parent, bool afterUpdate) {
     
 }

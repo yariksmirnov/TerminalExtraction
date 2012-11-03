@@ -13,7 +13,7 @@
 #include "ObjectBehaviourModel.h"
 
 class StaticObjectBehaviourModel : public ObjectBehaviourModel  {
-    
+    virtual void SetGlobalPosition(GLKMatrix4 globalPosition, void * aditionalData, PivotObject *parent, bool afterUpdate);
 };
 
 
