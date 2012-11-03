@@ -29,7 +29,7 @@ extern "C" {
 #pragma mark Prototypes
 #pragma mark -
     
-extern const GLKMatrix4 GLKMatrix4Identity;
+static __inline__ GLKMatrix4 GLKMatrix4Identity();
 
 /*
  m30, m31, and m32 correspond to the translation values tx, ty, tz, respectively.
@@ -211,6 +211,14 @@ static __inline__ void GLKMatrix4MultiplyVector4Array(GLKMatrix4 matrix, GLKVect
 #pragma mark -
 #pragma mark Implementations
 #pragma mark -
+    
+static __inline__ GLKMatrix4 GLKMatrix4Identity()
+{
+    return GLKMatrix4Make(1, 0, 0, 0,
+                          0, 1, 0, 0,
+                          0, 0, 1, 0,
+                          0, 0, 0, 1);
+}
     
 static __inline__ GLKMatrix4 GLKMatrix4Make(float m00, float m01, float m02, float m03,
                                             float m10, float m11, float m12, float m13,
