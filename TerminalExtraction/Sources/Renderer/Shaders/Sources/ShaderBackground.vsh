@@ -14,7 +14,7 @@ uniform mat4 modelMatrix;
 uniform mat4 viewMatrix;
 uniform mat4 projectionMatrix;
 
-varying highp vec2 tcoordVarying;
+varying mediump vec2 tcoordVarying;
 
 void main()
 {

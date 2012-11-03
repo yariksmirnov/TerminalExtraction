@@ -78,6 +78,14 @@ Material * PivotObject::GetMaterial() {
     return NULL;
 }
 
+GLKMatrix4 PivotObject::GetRenderMatrix() {
+    return _renderMatrix;
+}
+
+GLKMatrix4 PivotObject::GetTransformMatrix() {
+    return _transformMatrix;
+}
+
 GLKVector3 PivotObject::GetPosition() {
     return GLKMatrix4GetTranslation(_transformMatrix);
 }

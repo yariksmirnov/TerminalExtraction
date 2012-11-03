@@ -16,4 +16,5 @@ UnAnimRenderObject::UnAnimRenderObject(const EngineMesh *mesh) {
 void UnAnimRenderObject::Render(int lod, Material *material) {
     _mesh->Bind();
     _mesh->Render();
+    _mesh->Unbind();
 }

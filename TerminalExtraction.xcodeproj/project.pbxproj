@@ -374,15 +374,15 @@
 				9D6A843C1641D80300E322C3 /* ObjectBehaviourModel */,
 				9DD218B716417F3300E2CFA2 /* PivotObject.h */,
 				9DD218B616417F3300E2CFA2 /* PivotObject.cpp */,
-				9D60B56E1645346B0074081D /* LevelObject.cpp */,
 				9D60B56F1645346C0074081D /* LevelObject.h */,
+				9D60B56E1645346B0074081D /* LevelObject.cpp */,
 				9DD218B91641801B00E2CFA2 /* TranslateableObject.h */,
 				9D6A84361641D1C300E322C3 /* EditorData.h */,
 				9D6A84351641D1C300E322C3 /* EditorData.cpp */,
-				9D60B5451642D1FD0074081D /* RenderObject.cpp */,
 				9D60B5461642D1FD0074081D /* RenderObject.h */,
-				9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */,
+				9D60B5451642D1FD0074081D /* RenderObject.cpp */,
 				9DE6A9FB16458EE700AF9280 /* UnAnimRenderObject.h */,
+				9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */,
 			);
 			name = Objects;
 			sourceTree = "<group>";

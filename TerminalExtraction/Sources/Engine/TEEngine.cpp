@@ -34,13 +34,10 @@ void TEEngine::Init() {
     _cube = LevelObject::CreateCube();
     _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
     
-    float *m = (float *)GLKMatrix4Identity.m;
-     
-    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m);
+  
+       
     
-    glUseProgram(_shader->GetProgram());
-    _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
-    _shader->SetMatrixValue(UNIFORM_PROJECTION_MATRIX, _camera->projection.m);
+  
 }
 
 void TEEngine::RunLoop(double delta) {
@@ -52,14 +49,21 @@ void TEEngine::RunLoop(double delta) {
 }
 
 void TEEngine::Update() {
-    _renderSystem-> SetColor(sinf(_fullTime/20.0) / 2 + 0.5);
+    
 }
 
 void TEEngine::Draw() {
+
     _renderSystem->Draw();
     
-    _cube->GetRenderAspect()->Render(0, nullptr);
     
+    glUseProgram(_shader->GetProgram());
+    _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
+    _shader->SetMatrixValue(UNIFORM_PROJECTION_MATRIX, _camera->projection.m);
+    GLKMatrix4 m = GLKMatrix4Identity;
+    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m.m);
+    _cube->GetRenderAspect()->Render(0, nullptr);
+    glUseProgram(0);
     _renderSystem->EndFrame();
 }
 
