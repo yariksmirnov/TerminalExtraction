@@ -31,7 +31,7 @@ enum {
 typedef unsigned int PivotMaterialType;
 
 class PivotObject : public TranslateableObject {
-    GLKMatrix3              _renderMatrix;
+    GLKMatrix4              _renderMatrix;
     GLKMatrix4              _transformMatrix;
     
     ObjectBehaviourModel    *_objectBehaviourModel;
@@ -43,6 +43,8 @@ class PivotObject : public TranslateableObject {
     bool                _needMouseCast;
     bool                _needBulletCast;
     bool                _needCalcAcxis;
+    
+    bool                _isOnScreen;
     
 public:
     
@@ -70,10 +72,15 @@ public:
     void BeginFrame();
     void EndFrame();
     
+    void SetIsOnScreen(bool isOnScreen);
+    
     void SetGlobalPosition(GLKMatrix4 globalPosition, void * aditionalData, PivotObject *parent, bool afterUpdate);
     
     RenderObject * GetRenderAspect();
     Material * GetMaterial();
+    
+    virtual GLKVector3 GetPosition();
+    virtual void SetPosition(GLKVector3 position);
     
 };
 
