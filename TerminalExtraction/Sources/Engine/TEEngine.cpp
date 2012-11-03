@@ -12,7 +12,9 @@
 #include "LevelObject.h"
 #include "Camera.h"
 #include "UnAnimRenderObject.h"
-#include "Geometry.h"
+#include "RenderSystem.h"
+#include "Shader.h"
+#include "Display.h"
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;

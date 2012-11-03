@@ -7,6 +7,7 @@
 //
 
 #include "RenderSystem.h"
+#include "Display.h"
 
 RenderSystem::RenderSystem() {
     _deviceDisplay = Display::currentDisplay();

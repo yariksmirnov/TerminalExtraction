@@ -10,8 +10,10 @@
 #define __TerminalExtraction__TEEngine__
 
 #include <iostream>
-#include "RenderSystem.h"
-#include "Shader.h"
+
+class RenderSystem;
+class Shader;
+
 
 class LevelObject;
 class Camera;

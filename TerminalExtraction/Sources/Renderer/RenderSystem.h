@@ -11,7 +11,8 @@
 
 #include "GlobalConstants.h"
 #include <iostream>
-#include "Display.h"
+
+class Display;
 
 
 #include GLES2

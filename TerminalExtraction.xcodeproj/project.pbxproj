@@ -45,6 +45,17 @@
 		9DE6AA0716459E5500AF9280 /* ShaderBackground.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		9DE6AA081645AB1600AF9280 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = "com.apple.build-tasks.copy-strings-file";
+			fileType = sourcecode.glsl;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
 		9D2C461E1632140F000EC193 /* GlobalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GlobalConstants.h; path = Sources/Utils/GlobalConstants.h; sourceTree = "<group>"; };
 		9D60B5451642D1FD0074081D /* RenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderObject.cpp; path = Sources/Engine/Objects/RenderObject.cpp; sourceTree = "<group>"; };
@@ -395,6 +406,7 @@
 				9D9042DE162D9F19003BB5FF /* Resources */,
 			);
 			buildRules = (
+				9DE6AA081645AB1600AF9280 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
