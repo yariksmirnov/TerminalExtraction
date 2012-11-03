@@ -13,12 +13,13 @@
 #include <iostream>
 #include "Display.h"
 
+
 #include GLES2
 #include Glext
 
 class RenderSystem {
     Display             *_deviceDisplay;
-    float _color;
+    float               _color;
 public:
     RenderSystem();
     
@@ -28,6 +29,7 @@ public:
     void InitOpenGL();
     
     void Draw();
+    void EndFrame();
     void SetColor(float color);
 };
 

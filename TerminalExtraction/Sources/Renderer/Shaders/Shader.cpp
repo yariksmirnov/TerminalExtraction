@@ -38,6 +38,10 @@ void Shader::SetFloatValue(int uniformCode, float value) {
     glUniform1f(_shaderUniforms[uniformCode], value);
 }
 
+GLuint Shader::GetProgram() {
+    return _program;
+}
+
 
 bool Shader::LoadShader(string vertexName, string fragmentName) {
     GLuint vertShader, fragShader;

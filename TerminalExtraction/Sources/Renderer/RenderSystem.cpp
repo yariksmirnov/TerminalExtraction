@@ -27,8 +27,13 @@ void RenderSystem::SetColor(float color){
 }
 
 void RenderSystem::Draw(){
-    glClearColor(_color,_color,_color,1);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glDisable(GL_BLEND);
+    
+}
+
+void RenderSystem::EndFrame() {
     _deviceDisplay->SwapBuffers();
 }
 

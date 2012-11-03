@@ -147,7 +147,7 @@ EngineMesh::~EngineMesh()
     Dispose();
 }
 
-void EngineMesh::Render() {
+void EngineMesh::Render() const {
     glDrawElements(GL_TRIANGLES, _primitivesCount, GL_UNSIGNED_SHORT, (void*)0);
 }
 

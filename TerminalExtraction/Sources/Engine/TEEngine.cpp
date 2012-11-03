@@ -11,6 +11,8 @@
 #include <math.h>
 #include "LevelObject.h"
 #include "Camera.h"
+#include "UnAnimRenderObject.h"
+#include "Geometry.h"
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
@@ -28,6 +30,15 @@ void TEEngine::Init() {
     _camera = new Camera(GLKVector3Make(5, 5, 5), GLKVector3Make(0, 0, 0), screen);
     
     _cube = LevelObject::CreateCube();
+    _shader = new Shader("ShaderBackground", "ShaderBackground");
+    
+    float *m = (float *)GLKMatrix4Identity.m;
+    
+    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m);
+    
+    glUseProgram(_shader->GetProgram());
+    _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
+    _shader->SetMatrixValue(UNIFORM_PROJECTION_MATRIX, _camera->projection.m);
 }
 
 void TEEngine::RunLoop(double delta) {
@@ -45,8 +56,9 @@ void TEEngine::Update() {
 void TEEngine::Draw() {
     _renderSystem->Draw();
     
-    _cube->BeginFrame();
-    _cube->EndFrame();
+    _cube->GetRenderAspect()->Render(0, nullptr);
+    
+    _renderSystem->EndFrame();
 }
 
 float TEEngine::ElapsedTime() {

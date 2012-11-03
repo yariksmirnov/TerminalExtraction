@@ -41,6 +41,8 @@
 		9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC6162F5AD40027565E /* GLSurface.m */; };
 		9DE33AC9162F5B5A0027565E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE33AC8162F5B5A0027565E /* QuartzCore.framework */; };
 		9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */; };
+		9DE6AA0616459E5500AF9280 /* ShaderBackground.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */; };
+		9DE6AA0716459E5500AF9280 /* ShaderBackground.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		9DE33AC8162F5B5A0027565E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UnAnimRenderObject.cpp; path = Sources/Engine/Objects/UnAnimRenderObject.cpp; sourceTree = "<group>"; };
 		9DE6A9FB16458EE700AF9280 /* UnAnimRenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnAnimRenderObject.h; path = Sources/Engine/Objects/UnAnimRenderObject.h; sourceTree = "<group>"; };
+		9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = ShaderBackground.fsh; path = Sources/Renderer/Shaders/Sources/ShaderBackground.fsh; sourceTree = "<group>"; };
+		9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = ShaderBackground.vsh; path = Sources/Renderer/Shaders/Sources/ShaderBackground.vsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 		9D60B5861645405E0074081D /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				9DE6AA0216459DC700AF9280 /* ShaderSources */,
 				9D60B587164540750074081D /* Shader.cpp */,
 				9D60B588164540750074081D /* Shader.h */,
 			);
@@ -369,6 +374,15 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		9DE6AA0216459DC700AF9280 /* ShaderSources */ = {
+			isa = PBXGroup;
+			children = (
+				9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */,
+				9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */,
+			);
+			name = ShaderSources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -458,6 +472,8 @@
 				9D60B5921645473B0074081D /* FileManger.cpp in Sources */,
 				9D60B5951645488C0074081D /* ios_fileManager.mm in Sources */,
 				9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */,
+				9DE6AA0616459E5500AF9280 /* ShaderBackground.fsh in Sources */,
+				9DE6AA0716459E5500AF9280 /* ShaderBackground.vsh in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

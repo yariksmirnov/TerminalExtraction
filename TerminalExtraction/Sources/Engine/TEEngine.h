@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "RenderSystem.h"
+#include "Shader.h"
 
 class LevelObject;
 class Camera;
@@ -24,6 +25,8 @@ class TEEngine {
     LevelObject         *_cube;
     
     Camera              *_camera;
+    
+    Shader              *_shader;
     
 public:
     TEEngine();

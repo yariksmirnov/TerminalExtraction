@@ -29,6 +29,8 @@ public:
     Shader(string vertexName, string fragmentName);
     void SetMatrixValue(int uniformCode, float *value);
     void SetFloatValue(int uniformCode, float value);
+    
+    GLuint  GetProgram();
 };
 
 #endif /* defined(__TerminalExtraction__Shader__) */

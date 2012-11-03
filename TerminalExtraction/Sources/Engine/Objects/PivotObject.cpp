@@ -11,6 +11,7 @@
 #include "RenderObject.h"
 #include "ObjectBehaviourModel.h"
 #include "Material.h"
+#include "Geometry.h"
 
 PivotObject::PivotObject(ObjectBehaviourModel *behaviourModel) {
     _objectBehaviourModel = behaviourModel;

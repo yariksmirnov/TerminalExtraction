@@ -12,3 +12,7 @@
 FileManager * FileManager::CreateManager() {
     return new iosFileManager();
 }
+
+string FileManager::GetContent(string filename) {
+    return "";
+}
