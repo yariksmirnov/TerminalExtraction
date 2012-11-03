@@ -14,5 +14,47 @@
     #define Glext    <OpenGLES/ES2/glext.h>
 //#endif
 
+#include GLES2
+#include "wchar.h"
+
+typedef struct _vertexStruct
+{
+    GLfloat position[3];
+    GLfloat normal[3];
+    GLfloat tcoord[2];
+} vertexStruct;
+
+
+enum
+{
+    ATTRIB_VERTEX,
+    ATTRIB_NORMAL,
+    ATTRIB_TCOORD,
+    NUM_ATTRIBUTES
+};
+
+#define MAX_UNIFORMS 256
+
+// Uniform index.
+enum
+{
+    UNIFORM_MODEL_MATRIX,
+    UNIFORM_VIEW_MATRIX,
+    UNIFORM_PROJECTION_MATRIX,
+    UNIFORM_NORMAL_MATRIX,
+    UNIFORM_COLOR_TEXTURE,
+    UNIFORM_ALPHA,
+    UNIFORM_VECTOR1,
+    UNIFORM_VECTOR2,
+    UNIFORM_COLOR_TEXTURE1,
+    UNIFORM_LIGHTPOSITION,
+    NUM_UNIFORMS
+};
+
+int vertexSize;
+size_t vertexPositionOffset;
+size_t vertexNormalOffset;
+size_t vertexTcoordOffset;
+
 
 #endif

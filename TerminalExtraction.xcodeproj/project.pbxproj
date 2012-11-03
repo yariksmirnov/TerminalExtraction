@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
+		9D60B5701645346E0074081D /* LevelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B56E1645346B0074081D /* LevelObject.cpp */; };
+		9D60B573164536050074081D /* StaticObjectBehaviorModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B571164536050074081D /* StaticObjectBehaviorModel.cpp */; };
+		9D60B5791645367A0074081D /* EngineMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5771645367A0074081D /* EngineMesh.cpp */; };
+		9D60B57F16453DC10074081D /* TextureMaterial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B57D16453DC10074081D /* TextureMaterial.cpp */; };
+		9D60B58516453FB20074081D /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B58316453FB20074081D /* Texture.cpp */; };
+		9D60B589164540750074081D /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B587164540750074081D /* Shader.cpp */; };
+		9D60B5921645473B0074081D /* FileManger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5901645473B0074081D /* FileManger.cpp */; };
+		9D60B5951645488C0074081D /* ios_fileManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5931645488B0074081D /* ios_fileManager.mm */; };
 		9D6A84371641D1C300E322C3 /* EditorData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A84351641D1C300E322C3 /* EditorData.cpp */; };
 		9D6A843B1641D46A00E322C3 /* IdGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A84391641D46A00E322C3 /* IdGenerator.cpp */; };
 		9D6A843F1641D83B00E322C3 /* ObjectBehaviourModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A843D1641D83B00E322C3 /* ObjectBehaviourModel.cpp */; };
@@ -40,6 +48,22 @@
 		9D60B5461642D1FD0074081D /* RenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderObject.h; path = Sources/Engine/Objects/RenderObject.h; sourceTree = "<group>"; };
 		9D60B5491642D6A20074081D /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Sources/Engine/Materials/Material.cpp; sourceTree = "<group>"; };
 		9D60B54A1642D6A20074081D /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Material.h; path = Sources/Engine/Materials/Material.h; sourceTree = "<group>"; };
+		9D60B56E1645346B0074081D /* LevelObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LevelObject.cpp; path = Sources/Engine/Objects/LevelObject.cpp; sourceTree = "<group>"; };
+		9D60B56F1645346C0074081D /* LevelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelObject.h; path = Sources/Engine/Objects/LevelObject.h; sourceTree = "<group>"; };
+		9D60B571164536050074081D /* StaticObjectBehaviorModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StaticObjectBehaviorModel.cpp; path = Sources/Engine/Objects/ObjectBehaviourModel/StaticObjectBehaviorModel.cpp; sourceTree = "<group>"; };
+		9D60B572164536050074081D /* StaticObjectBehaviorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StaticObjectBehaviorModel.h; path = Sources/Engine/Objects/ObjectBehaviourModel/StaticObjectBehaviorModel.h; sourceTree = "<group>"; };
+		9D60B5771645367A0074081D /* EngineMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineMesh.cpp; path = Sources/Engine/COntent/Meshes/EngineMesh.cpp; sourceTree = "<group>"; };
+		9D60B5781645367A0074081D /* EngineMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineMesh.h; path = Sources/Engine/COntent/Meshes/EngineMesh.h; sourceTree = "<group>"; };
+		9D60B57D16453DC10074081D /* TextureMaterial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextureMaterial.cpp; path = Sources/Engine/Materials/TextureMaterial.cpp; sourceTree = "<group>"; };
+		9D60B57E16453DC10074081D /* TextureMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureMaterial.h; path = Sources/Engine/Materials/TextureMaterial.h; sourceTree = "<group>"; };
+		9D60B58316453FB20074081D /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Texture.cpp; path = Sources/Engine/COntent/Texture.cpp; sourceTree = "<group>"; };
+		9D60B58416453FB20074081D /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = Sources/Engine/COntent/Texture.h; sourceTree = "<group>"; };
+		9D60B587164540750074081D /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shader.cpp; path = Sources/Renderer/Shaders/Shader.cpp; sourceTree = "<group>"; };
+		9D60B588164540750074081D /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = Sources/Renderer/Shaders/Shader.h; sourceTree = "<group>"; };
+		9D60B5901645473B0074081D /* FileManger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileManger.cpp; path = Sources/Sys/FileManger.cpp; sourceTree = "<group>"; };
+		9D60B5911645473B0074081D /* FileManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileManger.h; path = Sources/Sys/FileManger.h; sourceTree = "<group>"; };
+		9D60B5931645488B0074081D /* ios_fileManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ios_fileManager.mm; path = os/ios/ios_fileManager.mm; sourceTree = "<group>"; };
+		9D60B5941645488B0074081D /* ios_fileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ios_fileManager.h; path = os/ios/ios_fileManager.h; sourceTree = "<group>"; };
 		9D6A84351641D1C300E322C3 /* EditorData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EditorData.cpp; path = Sources/Engine/Objects/EditorData.cpp; sourceTree = "<group>"; };
 		9D6A84361641D1C300E322C3 /* EditorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorData.h; path = Sources/Engine/Objects/EditorData.h; sourceTree = "<group>"; };
 		9D6A84391641D46A00E322C3 /* IdGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IdGenerator.cpp; path = Sources/Utils/IdGenerator.cpp; sourceTree = "<group>"; };
@@ -118,8 +142,38 @@
 			children = (
 				9D60B5491642D6A20074081D /* Material.cpp */,
 				9D60B54A1642D6A20074081D /* Material.h */,
+				9D60B57D16453DC10074081D /* TextureMaterial.cpp */,
+				9D60B57E16453DC10074081D /* TextureMaterial.h */,
 			);
 			name = Materials;
+			sourceTree = "<group>";
+		};
+		9D60B575164536320074081D /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				9D60B576164536400074081D /* Meshes */,
+				9D60B58316453FB20074081D /* Texture.cpp */,
+				9D60B58416453FB20074081D /* Texture.h */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		9D60B576164536400074081D /* Meshes */ = {
+			isa = PBXGroup;
+			children = (
+				9D60B5771645367A0074081D /* EngineMesh.cpp */,
+				9D60B5781645367A0074081D /* EngineMesh.h */,
+			);
+			name = Meshes;
+			sourceTree = "<group>";
+		};
+		9D60B5861645405E0074081D /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				9D60B587164540750074081D /* Shader.cpp */,
+				9D60B588164540750074081D /* Shader.h */,
+			);
+			name = Shaders;
 			sourceTree = "<group>";
 		};
 		9D6A843C1641D80300E322C3 /* ObjectBehaviourModel */ = {
@@ -127,6 +181,8 @@
 			children = (
 				9D6A843D1641D83B00E322C3 /* ObjectBehaviourModel.cpp */,
 				9D6A843E1641D83B00E322C3 /* ObjectBehaviourModel.h */,
+				9D60B571164536050074081D /* StaticObjectBehaviorModel.cpp */,
+				9D60B572164536050074081D /* StaticObjectBehaviorModel.h */,
 			);
 			name = ObjectBehaviourModel;
 			sourceTree = "<group>";
@@ -143,6 +199,7 @@
 		9D83B954162E214C00B216AD /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				9D60B575164536320074081D /* Content */,
 				9D60B5481642D68D0074081D /* Materials */,
 				9DD218B516417EDD00E2CFA2 /* Objects */,
 				9D83B956162E215A00B216AD /* Renderer */,
@@ -157,6 +214,7 @@
 		9D83B956162E215A00B216AD /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
+				9D60B5861645405E0074081D /* Shaders */,
 				9DE33AB8162F4CC30027565E /* RenderSystem.h */,
 				9DE33AB7162F4CC30027565E /* RenderSystem.cpp */,
 			);
@@ -175,6 +233,8 @@
 			children = (
 				9DE33ABD162F51830027565E /* Display.h */,
 				9DE33ABC162F51830027565E /* Display.cpp */,
+				9D60B5901645473B0074081D /* FileManger.cpp */,
+				9D60B5911645473B0074081D /* FileManger.h */,
 				9D83B95C162E241C00B216AD /* ios */,
 			);
 			name = Sys;
@@ -187,6 +247,8 @@
 				9D9042F4162D9F1A003BB5FF /* AppDelegate.mm */,
 				9DE33AC0162F55350027565E /* ios_display.h */,
 				9DE33ABF162F55340027565E /* ios_display.mm */,
+				9D60B5931645488B0074081D /* ios_fileManager.mm */,
+				9D60B5941645488B0074081D /* ios_fileManager.h */,
 				9DE33AC2162F5A7D0027565E /* ViewController.h */,
 				9DE33AC3162F5A7D0027565E /* ViewController.m */,
 				9DE33AC5162F5AD40027565E /* GLSurface.h */,
@@ -291,6 +353,8 @@
 				9D6A843C1641D80300E322C3 /* ObjectBehaviourModel */,
 				9DD218B716417F3300E2CFA2 /* PivotObject.h */,
 				9DD218B616417F3300E2CFA2 /* PivotObject.cpp */,
+				9D60B56E1645346B0074081D /* LevelObject.cpp */,
+				9D60B56F1645346C0074081D /* LevelObject.h */,
 				9DD218B91641801B00E2CFA2 /* TranslateableObject.h */,
 				9D6A84361641D1C300E322C3 /* EditorData.h */,
 				9D6A84351641D1C300E322C3 /* EditorData.cpp */,
@@ -380,6 +444,14 @@
 				9D6A84431641DB0F00E322C3 /* RenderMatrixController.cpp in Sources */,
 				9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */,
 				9D60B54B1642D6A20074081D /* Material.cpp in Sources */,
+				9D60B5701645346E0074081D /* LevelObject.cpp in Sources */,
+				9D60B573164536050074081D /* StaticObjectBehaviorModel.cpp in Sources */,
+				9D60B5791645367A0074081D /* EngineMesh.cpp in Sources */,
+				9D60B57F16453DC10074081D /* TextureMaterial.cpp in Sources */,
+				9D60B58516453FB20074081D /* Texture.cpp in Sources */,
+				9D60B589164540750074081D /* Shader.cpp in Sources */,
+				9D60B5921645473B0074081D /* FileManger.cpp in Sources */,
+				9D60B5951645488C0074081D /* ios_fileManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,7 @@ public:
     ObjectBehaviourModel();
     
     GLKMatrix4 GetGlobalPosition();
-    void SetGlobalPosition(GLKMatrix4 globalPosition, void * aditionalData, PivotObject *parent, bool afterUpdate);
+    virtual void SetGlobalPosition(GLKMatrix4 globalPosition, void * aditionalData, PivotObject *parent, bool afterUpdate);
     void SetParentObject(PivotObject *parent);
     
     void SetPosition(GLKMatrix4 position);
@@ -41,7 +41,7 @@ public:
     void Disale();
     
     void Rotate(float angle);
-    void Move(GLKVector3 displacement);
+    virtual void Move(GLKVector3 displacement);
 
     void MakeJolt(GLKVector3 point, GLKVector3 direction, float mass);
 
