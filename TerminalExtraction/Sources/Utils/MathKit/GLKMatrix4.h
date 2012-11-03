@@ -16,10 +16,10 @@
 #include <arm_neon.h>
 #endif
 
-#include <GLKit/GLKMathTypes.h>
-#include <GLKit/GLKVector3.h>
-#include <GLKit/GLKVector4.h>
-#include <GLKit/GLKQuaternion.h>
+#include "GLKMathTypes.h"
+#include "GLKVector3.h"
+#include "GLKVector4.h"
+#include "GLKQuaternion.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -29,7 +29,11 @@ extern "C" {
 #pragma mark Prototypes
 #pragma mark -
     
-static __inline__ GLKMatrix4 GLKMatrix4Identity();
+const GLKMatrix4 GLKMatrix4Identity =  {1, 0, 0, 0,
+                                        0, 1, 0, 0,
+                                        0, 0, 1, 0,
+                                        0, 0, 0, 1};
+      
 
 /*
  m30, m31, and m32 correspond to the translation values tx, ty, tz, respectively.
@@ -211,14 +215,6 @@ static __inline__ void GLKMatrix4MultiplyVector4Array(GLKMatrix4 matrix, GLKVect
 #pragma mark -
 #pragma mark Implementations
 #pragma mark -
-    
-static __inline__ GLKMatrix4 GLKMatrix4Identity()
-{
-    return GLKMatrix4Make(1, 0, 0, 0,
-                          0, 1, 0, 0,
-                          0, 0, 1, 0,
-                          0, 0, 0, 1);
-}
     
 static __inline__ GLKMatrix4 GLKMatrix4Make(float m00, float m01, float m02, float m03,
                                             float m10, float m11, float m12, float m13,

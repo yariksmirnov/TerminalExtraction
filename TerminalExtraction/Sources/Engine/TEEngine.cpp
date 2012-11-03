@@ -33,7 +33,7 @@ void TEEngine::Init() {
     _shader = new Shader("ShaderBackground", "ShaderBackground");
     
     float *m = (float *)GLKMatrix4Identity.m;
-    
+     
     _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m);
     
     glUseProgram(_shader->GetProgram());
