@@ -7,7 +7,7 @@
 //
 
 #include "ObjectBehaviourModel.h"
-
+#include "Geometry.h"
 
 ObjectBehaviourModel::ObjectBehaviourModel() {
     _currentPosition = GLKMatrix4Identity;
