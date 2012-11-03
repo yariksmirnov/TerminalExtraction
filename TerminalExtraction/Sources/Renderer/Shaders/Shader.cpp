@@ -116,12 +116,13 @@ bool Shader::LoadShader(string vertexName, string fragmentName) {
 bool Shader::CompileShader(GLuint *shader, GLenum type, string file) {
     
     GLint status;
+    string *source_str;
     const GLchar *source;
     
     FileManager * manager = FileManager::CreateManager();
-    
-    source = (GLchar *)manager->GetContent(file).c_str();
-    delete manager;
+    source_str = manager->GetContent(file);
+    source = (GLchar *)source_str->c_str();
+    cout << "Shader source code: \n " << source << endl;
     if (!source) {
         cout << "Failed to load shader" << endl;
         return false;
@@ -143,6 +144,8 @@ bool Shader::CompileShader(GLuint *shader, GLenum type, string file) {
     }
 #endif
     
+    delete manager;
+    delete source_str;
     glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
     if (status == 0)
     {

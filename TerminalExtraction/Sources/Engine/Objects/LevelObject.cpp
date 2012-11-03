@@ -26,3 +26,13 @@ LevelObject * LevelObject::CreateCube() {
     
     return new LevelObject(renderObject, obmm, material);
 }
+
+RenderObject * LevelObject::GetRenderAspect()
+{
+    return _renderAspect;
+}
+
+Material * LevelObject::GetMaterial()
+{
+    return material;
+}

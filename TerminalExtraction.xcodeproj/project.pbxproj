@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B7F451F1645B2D00041897F /* ShaderBackground.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */; };
+		8B7F45201645B2D00041897F /* ShaderBackground.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */; };
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
 		9D60B5701645346E0074081D /* LevelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B56E1645346B0074081D /* LevelObject.cpp */; };
@@ -445,6 +447,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7F451F1645B2D00041897F /* ShaderBackground.vsh in Resources */,
+				8B7F45201645B2D00041897F /* ShaderBackground.fsh in Resources */,
 				9D9042EF162D9F1A003BB5FF /* InfoPlist.strings in Resources */,
 				9D9042F7162D9F1A003BB5FF /* Default.png in Resources */,
 				9D9042F9162D9F1A003BB5FF /* Default@2x.png in Resources */,

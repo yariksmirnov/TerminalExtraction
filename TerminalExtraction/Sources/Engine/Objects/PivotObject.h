@@ -76,8 +76,8 @@ public:
     
     void SetGlobalPosition(GLKMatrix4 globalPosition, void * aditionalData, PivotObject *parent, bool afterUpdate);
     
-    RenderObject * GetRenderAspect();
-    Material * GetMaterial();
+    virtual RenderObject * GetRenderAspect();
+    virtual Material * GetMaterial();
     
     virtual GLKVector3 GetPosition();
     virtual void SetPosition(GLKVector3 position);

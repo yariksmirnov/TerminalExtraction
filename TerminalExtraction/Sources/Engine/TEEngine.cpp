@@ -32,7 +32,7 @@ void TEEngine::Init() {
     _camera = new Camera(GLKVector3Make(5, 5, 5), GLKVector3Make(0, 0, 0), screen);
     
     _cube = LevelObject::CreateCube();
-    _shader = new Shader("ShaderBackground", "ShaderBackground");
+    _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
     
     float *m = (float *)GLKMatrix4Identity.m;
      

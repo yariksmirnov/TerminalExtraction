@@ -19,7 +19,7 @@ public:
     
     static FileManager *CreateManager();
     
-    virtual string GetContent(string filename);
+    virtual string* GetContent(string filename);
 };
 
 #endif /* defined(__TerminalExtraction__FileManger__) */

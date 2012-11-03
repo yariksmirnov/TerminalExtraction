@@ -23,6 +23,9 @@ public:
     
     LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behaviorModel, Material *material);
     
+    virtual RenderObject * GetRenderAspect();
+    virtual Material * GetMaterial();
+    
     static LevelObject * CreateCube();
     
 };

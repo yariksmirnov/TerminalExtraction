@@ -17,7 +17,7 @@ class iosFileManager : public FileManager {
     
 public:
     
-    virtual string GetContent(string filename);
+    virtual string* GetContent(string filename);
     
 };
 
