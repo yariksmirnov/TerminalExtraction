@@ -51,10 +51,7 @@ enum
     NUM_UNIFORMS
 };
 
-int vertexSize;
-size_t vertexPositionOffset;
-size_t vertexNormalOffset;
-size_t vertexTcoordOffset;
+
 
 
 #endif

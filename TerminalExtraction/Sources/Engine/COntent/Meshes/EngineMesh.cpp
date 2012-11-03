@@ -8,6 +8,12 @@
 
 #include "EngineMesh.h"
 
+
+const int vertexSize = sizeof(vertexStruct);
+const size_t vertexPositionOffset = offsetof(vertexStruct,position);
+const size_t vertexNormalOffset = offsetof(vertexStruct,normal);
+const size_t vertexTcoordOffset = offsetof(vertexStruct,tcoord);
+
 GLfloat cubeVertexData[288] =
 {
     // Data layout for each line below is:
@@ -99,7 +105,8 @@ GLushort planeIndexData[6] =
 
 
 EngineMesh::EngineMesh(void * vertices, long vSize, void *indices, long iSize):_vSize(vSize), _iSize(iSize)
-{    
+{
+    
     glEnable(GL_DEPTH_TEST);
     
     glGenBuffers(1, &_vertexBuffer);
