@@ -30,7 +30,7 @@ void TEEngine::Init() {
     
     
     GRect2D screen = GRect2DMake(0, 0, _renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight());
-    _camera = new Camera(GLKVector3Make(1, 0, 0), GLKVector3Make(0, 0, 0), screen);
+    _camera = new Camera(GLKVector3Make(2, 2, 2), GLKVector3Make(0, 0, 0), screen);
     
     _cube = LevelObject::CreateCube();
     _plane = LevelObject::CreatePlane();
@@ -59,21 +59,44 @@ void TEEngine::Update() {
 void TEEngine::Draw() {
 
     
-    _renderSystem->Draw();
+    glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
     glDisable(GL_BLEND);
+    glDisable(GL_CULL_FACE);
     
     glUseProgram(_shader1->GetProgram());
-  //  _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
- //   _shader->SetMatrixValue(UNIFORM_PROJECTION_MATRIX, _camera->projection.m);
- //   GLKMatrix4 m = GLKMatrix4Identity;
- //   _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m.m);
-    _plane->GetRenderAspect()->Render(0, nullptr);
+    _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
+    {
+        GLenum err = glGetError();
+        if (err != GL_NO_ERROR)
+            printf(" glError: 0x%04X", err);
+    }
+    
+    _shader->SetMatrixValue(UNIFORM_PROJECTION_MATRIX, _camera->projection.m);
+    {
+        GLenum err = glGetError();
+        if (err != GL_NO_ERROR)
+            printf(" glError: 0x%04X", err);
+    }
+    
+    GLKMatrix4 m = GLKMatrix4Identity;
+    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m.m);
+    {
+        GLenum err = glGetError();
+        if (err != GL_NO_ERROR)
+            printf(" glError: 0x%04X", err);
+    }
+    
+    _cube->GetRenderAspect()->Render(0, nullptr);
+    {
+        GLenum err = glGetError();
+        if (err != GL_NO_ERROR)
+            printf(" glError: 0x%04X", err);
+    }
     glUseProgram(0);
     
-    GLenum err = glGetError();
-    if (err != GL_NO_ERROR)
-        printf(" glError: 0x%04X", err);
+    
     
     _renderSystem->EndFrame();
 }

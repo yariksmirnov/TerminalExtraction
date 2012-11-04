@@ -30,7 +30,8 @@
 }
 
 - (void)frameCallback:(CADisplayLink *)link {
-    
+    EAGLContext* c = [EAGLContext currentContext];
+    c=c;
     engine->RunLoop(link.timestamp);
     
 }

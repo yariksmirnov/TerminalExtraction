@@ -122,7 +122,7 @@ bool Shader::CompileShader(GLuint *shader, GLenum type, string file) {
     FileManager * manager = FileManager::CreateManager();
     source_str = manager->GetContent(file);
     source = (GLchar *)source_str->c_str();
-    cout << "Shader source code: \n " << source << endl;
+    //cout << "Shader source code: \n " << source << endl;
     if (!source) {
         cout << "Failed to load shader" << endl;
         return false;

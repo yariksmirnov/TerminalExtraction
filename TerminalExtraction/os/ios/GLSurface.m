@@ -22,7 +22,8 @@
     if (self) {
         NSLog(@"Initializing iOS GL Surface");
         CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
-        
+        //we don't want a transparent surface
+        eaglLayer.opaque = TRUE;
         NSString *_iosPixelFormat = kEAGLColorFormatRGB565;
         if (pixelFormat != GL_RGB565) {
             _iosPixelFormat = kEAGLColorFormatRGBA8;

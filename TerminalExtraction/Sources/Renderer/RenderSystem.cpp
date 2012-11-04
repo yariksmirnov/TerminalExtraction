@@ -18,6 +18,9 @@ void RenderSystem::Init() {
 }
 
 void RenderSystem::InitOpenGL() {
+    
+    glViewport(0, 0, _deviceDisplay->GetDisplayWidth(), _deviceDisplay->GetDisplayHeight());
+
     glClearColor(1,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     _deviceDisplay->SwapBuffers();
@@ -28,8 +31,7 @@ void RenderSystem::SetColor(float color){
 }
 
 void RenderSystem::Draw(){
-    glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
    // glDisable(GL_BLEND);
     
 }
