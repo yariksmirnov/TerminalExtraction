@@ -65,7 +65,7 @@ void TEEngine::Draw() {
     glDisable(GL_BLEND);
     glDisable(GL_CULL_FACE);
     
-    glUseProgram(_shader1->GetProgram());
+    glUseProgram(_shader->GetProgram());
     _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
     {
         GLenum err = glGetError();
