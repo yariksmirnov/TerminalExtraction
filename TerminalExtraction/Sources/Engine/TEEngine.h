@@ -17,6 +17,7 @@ class Shader;
 
 class LevelObject;
 class Camera;
+class EngineMesh;
 
 class TEEngine {
     
@@ -25,10 +26,13 @@ class TEEngine {
     float                _fullTime;
     
     LevelObject         *_cube;
+    LevelObject         *_plane;
+    
     
     Camera              *_camera;
     
     Shader              *_shader;
+    Shader              *_shader1;
     
 public:
     TEEngine();

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		8B7F451F1645B2D00041897F /* ShaderBackground.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */; };
 		8B7F45201645B2D00041897F /* ShaderBackground.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */; };
+		8B7F452B16463EF30041897F /* ShaderPostQuad.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F452916463EF20041897F /* ShaderPostQuad.vsh */; };
+		8B7F452C16463EF30041897F /* ShaderPostQuad.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */; };
+		8B7F452D16463F320041897F /* ShaderPostQuad.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F452916463EF20041897F /* ShaderPostQuad.vsh */; };
+		8B7F452E16463F320041897F /* ShaderPostQuad.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */; };
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
 		9D60B5701645346E0074081D /* LevelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B56E1645346B0074081D /* LevelObject.cpp */; };
@@ -59,6 +63,8 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
+		8B7F452916463EF20041897F /* ShaderPostQuad.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.vsh; sourceTree = "<group>"; };
+		8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.fsh; sourceTree = "<group>"; };
 		9D2C461E1632140F000EC193 /* GlobalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GlobalConstants.h; path = Sources/Utils/GlobalConstants.h; sourceTree = "<group>"; };
 		9D60B5451642D1FD0074081D /* RenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderObject.cpp; path = Sources/Engine/Objects/RenderObject.cpp; sourceTree = "<group>"; };
 		9D60B5461642D1FD0074081D /* RenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderObject.h; path = Sources/Engine/Objects/RenderObject.h; sourceTree = "<group>"; };
@@ -392,6 +398,8 @@
 			children = (
 				9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */,
 				9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */,
+				8B7F452916463EF20041897F /* ShaderPostQuad.vsh */,
+				8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */,
 			);
 			name = ShaderSources;
 			sourceTree = "<group>";
@@ -447,6 +455,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7F452D16463F320041897F /* ShaderPostQuad.vsh in Resources */,
+				8B7F452E16463F320041897F /* ShaderPostQuad.fsh in Resources */,
 				8B7F451F1645B2D00041897F /* ShaderBackground.vsh in Resources */,
 				8B7F45201645B2D00041897F /* ShaderBackground.fsh in Resources */,
 				9D9042EF162D9F1A003BB5FF /* InfoPlist.strings in Resources */,
@@ -490,6 +500,8 @@
 				9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */,
 				9DE6AA0616459E5500AF9280 /* ShaderBackground.fsh in Sources */,
 				9DE6AA0716459E5500AF9280 /* ShaderBackground.vsh in Sources */,
+				8B7F452B16463EF30041897F /* ShaderPostQuad.vsh in Sources */,
+				8B7F452C16463EF30041897F /* ShaderPostQuad.fsh in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

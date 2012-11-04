@@ -14,7 +14,7 @@ RenderSystem::RenderSystem() {
 }
 
 void RenderSystem::Init() {
-    _deviceDisplay->InitGLSurface(GL_DEPTH_COMPONENT24_OES, GL_RGBA8_OES);
+    _deviceDisplay->InitGLSurface(GL_DEPTH_COMPONENT24_OES, GL_RGB565);
 }
 
 void RenderSystem::InitOpenGL() {
@@ -28,9 +28,9 @@ void RenderSystem::SetColor(float color){
 }
 
 void RenderSystem::Draw(){
-    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+    glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glDisable(GL_BLEND);
+   // glDisable(GL_BLEND);
     
 }
 

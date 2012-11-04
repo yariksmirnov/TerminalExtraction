@@ -105,7 +105,7 @@ GLushort planeIndexData[6] =
 
 
 EngineMesh::EngineMesh(void * vertices, long vSize, void *indices, long iSize):_vSize(vSize), _iSize(iSize)
-{
+{ 
     
     glEnable(GL_DEPTH_TEST);
     
@@ -124,12 +124,12 @@ EngineMesh::EngineMesh(void * vertices, long vSize, void *indices, long iSize):_
 
 void EngineMesh::Bind() const {
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
-    glVertexAttribPointer(ATTRIB_VERTEX, 3, GL_FLOAT, GL_FALSE, vertexSize, (void*)vertexPositionOffset);
     glEnableVertexAttribArray(ATTRIB_VERTEX);
-    glVertexAttribPointer(ATTRIB_NORMAL, 3, GL_FLOAT, GL_FALSE, vertexSize, (void*)vertexNormalOffset);
+    glVertexAttribPointer(ATTRIB_VERTEX, 3, GL_FLOAT, GL_FALSE, vertexSize, (void*)vertexPositionOffset);
     glEnableVertexAttribArray(ATTRIB_NORMAL);
-    glVertexAttribPointer(ATTRIB_TCOORD, 2, GL_FLOAT, GL_FALSE, vertexSize, (void*)vertexTcoordOffset);
+    glVertexAttribPointer(ATTRIB_NORMAL, 3, GL_FLOAT, GL_FALSE, vertexSize, (void*)vertexNormalOffset);
     glEnableVertexAttribArray(ATTRIB_TCOORD);
+    glVertexAttribPointer(ATTRIB_TCOORD, 2, GL_FLOAT, GL_FALSE, vertexSize, (void*)vertexTcoordOffset);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _indexBuffer);
 }
 
@@ -156,14 +156,14 @@ EngineMesh::~EngineMesh()
 
 void EngineMesh::Render() const {
     glDrawElements(GL_TRIANGLES, _primitivesCount, GL_UNSIGNED_SHORT, (void*)0);
+  //  glDrawArrays(GL_TRIANGLES, 0, 4);
 }
 
 const EngineMesh * EngineMesh::CreateCube() {
     return const_cast<const EngineMesh *>(new  EngineMesh(cubeVertexData, sizeof(cubeVertexData), cubeIndexData, sizeof(cubeIndexData)));
 }
 
-const EngineMesh * EngineMesh::CreateFullscreenQuad()
-{
+const EngineMesh * EngineMesh::CreateFullscreenQuad() {
     return const_cast<const EngineMesh *>(new EngineMesh(screenQuadVertexData, sizeof(screenQuadVertexData), planeIndexData, sizeof(planeIndexData)));
 }
 

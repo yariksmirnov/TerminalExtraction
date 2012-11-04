@@ -15,6 +15,7 @@
 #include "RenderSystem.h"
 #include "Shader.h"
 #include "Display.h"
+#include "EngineMesh.h"
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
@@ -29,12 +30,15 @@ void TEEngine::Init() {
     
     
     GRect2D screen = GRect2DMake(0, 0, _renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight());
-    _camera = new Camera(GLKVector3Make(5, 5, 5), GLKVector3Make(0, 0, 0), screen);
+    _camera = new Camera(GLKVector3Make(1, 0, 0), GLKVector3Make(0, 0, 0), screen);
     
     _cube = LevelObject::CreateCube();
-    _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
+    _plane = LevelObject::CreatePlane();
     
-  
+    _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
+    _shader1 = new Shader("ShaderPostQuad.vsh", "ShaderPostQuad.fsh");
+    
+    
        
     
   
@@ -54,16 +58,23 @@ void TEEngine::Update() {
 
 void TEEngine::Draw() {
 
+    
     _renderSystem->Draw();
+    glEnable(GL_DEPTH_TEST);
+    glDisable(GL_BLEND);
     
-    
-    glUseProgram(_shader->GetProgram());
-    _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
-    _shader->SetMatrixValue(UNIFORM_PROJECTION_MATRIX, _camera->projection.m);
-    GLKMatrix4 m = GLKMatrix4Identity;
-    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m.m);
-    _cube->GetRenderAspect()->Render(0, nullptr);
+    glUseProgram(_shader1->GetProgram());
+  //  _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
+ //   _shader->SetMatrixValue(UNIFORM_PROJECTION_MATRIX, _camera->projection.m);
+ //   GLKMatrix4 m = GLKMatrix4Identity;
+ //   _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m.m);
+    _plane->GetRenderAspect()->Render(0, nullptr);
     glUseProgram(0);
+    
+    GLenum err = glGetError();
+    if (err != GL_NO_ERROR)
+        printf(" glError: 0x%04X", err);
+    
     _renderSystem->EndFrame();
 }
 

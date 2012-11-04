@@ -27,6 +27,17 @@ LevelObject * LevelObject::CreateCube() {
     return new LevelObject(renderObject, obmm, material);
 }
 
+LevelObject * LevelObject::CreatePlane() {
+    const EngineMesh * mesh = EngineMesh::CreateFullscreenQuad();
+    Material *material = nullptr;
+    
+    ObjectBehaviourModel *obmm = new StaticObjectBehaviourModel();
+    
+    RenderObject *renderObject = new UnAnimRenderObject(mesh);
+    
+    return new LevelObject(renderObject, obmm, material);
+}
+
 RenderObject * LevelObject::GetRenderAspect()
 {
     return _renderAspect;

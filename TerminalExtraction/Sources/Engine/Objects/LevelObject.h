@@ -27,6 +27,7 @@ public:
     virtual Material * GetMaterial();
     
     static LevelObject * CreateCube();
+    static LevelObject * CreatePlane();
     
 };
 
