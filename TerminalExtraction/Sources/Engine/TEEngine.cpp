@@ -80,6 +80,7 @@ void TEEngine::Draw() {
             printf(" glError: 0x%04X", err);
     }
     
+    
     GLKMatrix4 m = GLKMatrix4Identity;
     _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m.m);
     {
