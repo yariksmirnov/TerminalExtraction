@@ -13,6 +13,7 @@
 		8B7F452E16463F320041897F /* ShaderPostQuad.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */; };
 		9D4349B11646CFED008394DE /* TextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349AF1646CFED008394DE /* TextureCache.cpp */; };
 		9D4349B816470617008394DE /* woodbox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D4349B716470616008394DE /* woodbox.jpg */; };
+		9D4349C31647F793008394DE /* SceneSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349C11647F78C008394DE /* SceneSystem.cpp */; };
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
 		9D60B5701645346E0074081D /* LevelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B56E1645346B0074081D /* LevelObject.cpp */; };
@@ -68,6 +69,8 @@
 		9D4349B01646CFED008394DE /* TextureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureCache.h; path = Sources/Engine/COntent/TextureCache.h; sourceTree = "<group>"; };
 		9D4349B31646D6F7008394DE /* TextureCacheAsyncObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureCacheAsyncObserver.h; path = Sources/Engine/COntent/TextureCacheAsyncObserver.h; sourceTree = "<group>"; };
 		9D4349B716470616008394DE /* woodbox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woodbox.jpg; sourceTree = "<group>"; };
+		9D4349C11647F78C008394DE /* SceneSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSystem.cpp; path = Sources/Engine/SceneSystem.cpp; sourceTree = "<group>"; };
+		9D4349C21647F78F008394DE /* SceneSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSystem.h; path = Sources/Engine/SceneSystem.h; sourceTree = "<group>"; };
 		9D60B5451642D1FD0074081D /* RenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderObject.cpp; path = Sources/Engine/Objects/RenderObject.cpp; sourceTree = "<group>"; };
 		9D60B5461642D1FD0074081D /* RenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderObject.h; path = Sources/Engine/Objects/RenderObject.h; sourceTree = "<group>"; };
 		9D60B5491642D6A20074081D /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Sources/Engine/Materials/Material.cpp; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				9D83B956162E215A00B216AD /* Renderer */,
 				9D83B959162E225700B216AD /* TEEngine.h */,
 				9D83B958162E225700B216AD /* TEEngine.cpp */,
+				9D4349C11647F78C008394DE /* SceneSystem.cpp */,
+				9D4349C21647F78F008394DE /* SceneSystem.h */,
 				9DD218A816403E3800E2CFA2 /* Camera.h */,
 				9DD218A716403E3800E2CFA2 /* Camera.cpp */,
 			);
@@ -522,6 +527,7 @@
 				9D60B5951645488C0074081D /* ios_fileManager.mm in Sources */,
 				9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */,
 				9D4349B11646CFED008394DE /* TextureCache.cpp in Sources */,
+				9D4349C31647F793008394DE /* SceneSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
