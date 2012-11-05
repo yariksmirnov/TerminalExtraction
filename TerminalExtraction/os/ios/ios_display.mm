@@ -16,6 +16,8 @@ void iosDisplay::InitGLSurface(unsigned int depthFormat, unsigned int pixelForma
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:iphoneScreen.bounds];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIBarStyleBlack];
+    
     [ViewController instance].pixelFormat = pixelFormat;
     [ViewController instance].depthFormat = depthFormat;
     
