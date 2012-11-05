@@ -56,7 +56,7 @@
 }
 
 - (void)layoutSubviews {
-    
+    [self setContentScaleFactor:[UIScreen mainScreen].scale];
     glBindRenderbuffer(GL_RENDERBUFFER, _renderbuffer);
     
     [_glContext renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer *)[self layer]];
@@ -79,6 +79,8 @@
         
 		glBindRenderbuffer(GL_RENDERBUFFER, _renderbuffer);
 	}
+    
+    
 }
 
 - (void)dealloc {

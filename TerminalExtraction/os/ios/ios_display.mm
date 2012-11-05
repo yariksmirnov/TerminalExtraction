@@ -27,11 +27,11 @@ void iosDisplay::InitGLSurface(unsigned int depthFormat, unsigned int pixelForma
 }
 
 GLfloat iosDisplay::GetDisplayHeight() {
-    return [[ViewController instance] view].layer.bounds.size.height;
+    return [[ViewController instance] view].layer.bounds.size.height * [UIScreen mainScreen].scale;
 }
 
 GLfloat iosDisplay::GetDisplayWidth() {
-    return [[ViewController instance] view].layer.bounds.size.width;
+    return [[ViewController instance] view].layer.bounds.size.width * [UIScreen mainScreen].scale;
 }
 
 void iosDisplay::SwapBuffers() {
