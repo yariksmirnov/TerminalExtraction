@@ -47,3 +47,16 @@ GLuint Texture::SetupTexture(GLubyte *spriteData) {
 GLuint Texture::GetTextureName() {
     return _name;
 }
+
+void Texture::Dispose() {
+    if(_disposed)
+        return;
+    
+    
+   glDeleteTextures(1, &_name);
+    _disposed = true;
+}
+
+Texture::~Texture() {
+    Dispose();
+}

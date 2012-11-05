@@ -17,6 +17,7 @@ using namespace std;
 
 class Texture {
     
+    bool            _disposed;
     GLuint          _name;
     bool            _fromFile;
     
@@ -33,6 +34,9 @@ public:
     
     GLuint GetTextureName();
     
+    
+    void Dispose();
+    ~Texture();
 };
 
 #endif /* defined(__TerminalExtraction__Texture__) */
