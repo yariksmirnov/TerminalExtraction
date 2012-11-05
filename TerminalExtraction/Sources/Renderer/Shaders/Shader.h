@@ -31,6 +31,8 @@ public:
     void SetFloatValue(int uniformCode, float value);
     
     GLuint  GetProgram();
+    
+    GLuint * GetShaderUniforms();
 };
 
 #endif /* defined(__TerminalExtraction__Shader__) */

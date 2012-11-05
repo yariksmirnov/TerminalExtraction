@@ -16,3 +16,6 @@ bool Material::IsMultiFrame() {
 bool Material::UseBackgroundLoading() {
     return false;
 }
+
+Material::~Material() {
+}

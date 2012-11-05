@@ -11,8 +11,14 @@
 
 #include <iostream>
 
+class Shader;
+
 class Material {
 public:
+    
+    virtual ~Material();
+    
+    virtual void ApplyLod(int lod, Shader *shader) = 0;
     
     virtual void SetFrame(int frame) = 0;
     virtual bool UseBackgroundLoading();

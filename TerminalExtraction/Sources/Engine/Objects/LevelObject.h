@@ -16,15 +16,16 @@
 class LevelObject : public PivotObject {
     
     RenderObject        *_renderAspect;
-    
+    Material            *_material;
 public:
     
-    Material            *material;
+
     
     LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behaviorModel, Material *material);
+    ~LevelObject();
     
-    virtual RenderObject * GetRenderAspect();
-    virtual Material * GetMaterial();
+    RenderObject * GetRenderAspect();
+    Material * GetMaterial();
     
     static LevelObject * CreateCube();
     static LevelObject * CreatePlane();

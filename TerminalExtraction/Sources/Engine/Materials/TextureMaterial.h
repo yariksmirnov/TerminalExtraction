@@ -23,10 +23,14 @@ class TextureMaterial : public Material {
 public:
     
     TextureMaterial(string name);
+    ~TextureMaterial();
     
     void ApplyLod(int lod, Shader *shader);
     
     Texture *GetTexture();
+    
+    virtual void SetFrame(int frame);
+    virtual void StopBackgroundLoading();
 };
 
 #endif /* defined(__TerminalExtraction__TextureMaterial__) */

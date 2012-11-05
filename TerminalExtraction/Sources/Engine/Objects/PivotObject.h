@@ -59,7 +59,7 @@ public:
     
     
     PivotObject(ObjectBehaviourModel *behaviourModel);
-    ~PivotObject();
+    virtual ~PivotObject();
 
     GLKMatrix4 GetRenderMatrix();
     GLKMatrix4 GetTransformMatrix();

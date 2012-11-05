@@ -10,16 +10,22 @@
 #define __TerminalExtraction__FileManger__
 
 #include <iostream>
+#include "Geometry.h"
 
 using namespace std;
 
 class FileManager {
     
+protected:
+
+    const char *  GetFilePath(string filename);
+    
 public:
     
     static FileManager *CreateManager();
     
-    virtual string* GetContent(string filename);
+    virtual string * GetContent(string filename);
+    virtual GLubyte * CreateBitmapData(string filename, GLfloat *width, GLfloat *heigth);
 };
 
 #endif /* defined(__TerminalExtraction__FileManger__) */

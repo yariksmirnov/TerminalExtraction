@@ -13,6 +13,14 @@ FileManager * FileManager::CreateManager() {
     return new iosFileManager();
 }
 
-string* FileManager::GetContent(string filename) {
+const char * FileManager::GetFilePath(string filename) {
+    return NULL;
+}
+
+string * FileManager::GetContent(string filename) {
     return new string("");
+}
+
+GLubyte * FileManager::CreateBitmapData(string filename, GLfloat *width, GLfloat *heigth) {
+    return NULL;
 }

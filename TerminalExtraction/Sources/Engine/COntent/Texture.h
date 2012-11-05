@@ -13,10 +13,25 @@
 
 #include "Geometry.h"
 
+using namespace std;
+
 class Texture {
     
+    GLuint          _name;
+    bool            _fromFile;
+    
+    GLfloat         _texWidth;
+    GLfloat         _texHeight;
+    
+    string          _textureFilename;
+    
+    GLuint SetupTexture(GLubyte *spriteData);
     
 public:
+    
+    Texture(string filename);
+    
+    GLuint GetTextureName();
     
 };
 

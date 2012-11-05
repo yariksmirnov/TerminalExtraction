@@ -21,3 +21,7 @@ RenderObject::RenderObject() {
     isTransparent = false;
     isSelfIllumination = false;
 }
+
+RenderObject::~RenderObject() {
+}
+

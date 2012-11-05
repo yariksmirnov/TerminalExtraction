@@ -47,6 +47,9 @@ public:
     
     void Update();
     void Draw();
+    
+    
+    Shader * GetShader();
 
 };
 

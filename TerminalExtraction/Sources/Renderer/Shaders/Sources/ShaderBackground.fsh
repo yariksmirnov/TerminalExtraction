@@ -14,8 +14,8 @@ uniform mediump float alpha;
 
 void main()
 {
-    mediump vec4 color = vec4(1.0, 1.0, 1.0, 1.0);//texture2D(colorTexture, tcoordVarying);
-   // highp vec4 color1 = texture2D(colorTexture1, tcoordVarying);
+    //mediump vec4 color = vec4(1.0, 1.0, 1.0, 1.0);//texture2D(colorTexture, tcoordVarying);
+    highp vec4 color1 = texture2D(colorTexture1, tcoordVarying);
     
-    gl_FragColor = color;//color*alpha + color1*(1.0 - alpha);
+    gl_FragColor = color1;//color*alpha + color1*(1.0 - alpha);
 }

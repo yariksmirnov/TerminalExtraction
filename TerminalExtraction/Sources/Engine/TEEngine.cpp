@@ -44,6 +44,11 @@ void TEEngine::Init() {
   
 }
 
+
+Shader * TEEngine::GetShader() {
+    return _shader;
+}
+
 void TEEngine::RunLoop(double delta) {
     _elapsedTime = delta;
     _fullTime += _elapsedTime;
@@ -89,7 +94,7 @@ void TEEngine::Draw() {
             printf(" glError: 0x%04X", err);
     }
     
-    _cube->GetRenderAspect()->Render(0, nullptr);
+    _cube->GetRenderAspect()->Render(0, _cube->GetMaterial());
     {
         GLenum err = glGetError();
         if (err != GL_NO_ERROR)
@@ -108,4 +113,8 @@ float TEEngine::ElapsedTime() {
 
 TEEngine::~TEEngine() {
     delete _renderSystem;
+    delete _cube;
+    delete _shader;
+    delete _shader1;
+    delete _plane;
 }

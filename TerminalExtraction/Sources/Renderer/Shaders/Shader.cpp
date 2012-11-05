@@ -42,6 +42,9 @@ GLuint Shader::GetProgram() {
     return _program;
 }
 
+GLuint * Shader::GetShaderUniforms() {
+    return _shaderUniforms;
+}
 
 bool Shader::LoadShader(string vertexName, string fragmentName) {
     GLuint vertShader, fragShader;

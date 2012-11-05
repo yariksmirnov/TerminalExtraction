@@ -21,6 +21,7 @@ class UnAnimRenderObject : public RenderObject {
 public:
     
     UnAnimRenderObject(const EngineMesh *mesh);
+    ~UnAnimRenderObject();
     
     virtual void Render(int lod, Material *material);
 };

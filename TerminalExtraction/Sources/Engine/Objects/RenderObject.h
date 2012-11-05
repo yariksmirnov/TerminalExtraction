@@ -32,6 +32,7 @@ public:
     
     
     RenderObject();
+    virtual ~RenderObject();
     
     virtual void Render(int lod, Material *material) = 0;
 };

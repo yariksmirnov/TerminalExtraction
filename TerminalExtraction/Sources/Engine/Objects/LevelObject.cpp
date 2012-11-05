@@ -10,15 +10,16 @@
 #include "EngineMesh.h"
 #include "StaticObjectBehaviorModel.h"
 #include "UnAnimRenderObject.h"
+#include "TextureMaterial.h"
 
 LevelObject::LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behaviorModel, Material *material):PivotObject(behaviorModel) {
     _renderAspect = renderObject;
-    material = material;
+    _material = material;
 }
 
 LevelObject * LevelObject::CreateCube() {
     const EngineMesh * mesh = EngineMesh::CreateCube();
-    Material *material = nullptr;
+    Material *material = new TextureMaterial("woodbox.jpg");
     
     ObjectBehaviourModel *obmm = new StaticObjectBehaviourModel();
     
@@ -45,5 +46,10 @@ RenderObject * LevelObject::GetRenderAspect()
 
 Material * LevelObject::GetMaterial()
 {
-    return material;
+    return _material;
+}
+
+LevelObject::~LevelObject() {
+    delete _renderAspect;
+    delete _material;
 }

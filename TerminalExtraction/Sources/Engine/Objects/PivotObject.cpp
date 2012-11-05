@@ -70,6 +70,10 @@ void PivotObject::EndFrame() {
     moved = _objectBehaviourModel->moved;
 }
 
+ObjectBehaviourModel * PivotObject::GetObjectBehaviourModel() {
+    return _objectBehaviourModel;
+}
+
 RenderObject * PivotObject::GetRenderAspect() {
     return NULL;
 }
@@ -94,4 +98,8 @@ void PivotObject::SetPosition(GLKVector3 position) {
     _transformMatrix.m30 = position.x;
     _transformMatrix.m31 = position.y;
     _transformMatrix.m32 = position.z;
+}
+
+PivotObject::~PivotObject() {
+    delete _objectBehaviourModel;
 }

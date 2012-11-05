@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		8B7F451F1645B2D00041897F /* ShaderBackground.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */; };
 		8B7F45201645B2D00041897F /* ShaderBackground.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */; };
-		8B7F452B16463EF30041897F /* ShaderPostQuad.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F452916463EF20041897F /* ShaderPostQuad.vsh */; };
-		8B7F452C16463EF30041897F /* ShaderPostQuad.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */; };
 		8B7F452D16463F320041897F /* ShaderPostQuad.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F452916463EF20041897F /* ShaderPostQuad.vsh */; };
 		8B7F452E16463F320041897F /* ShaderPostQuad.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */; };
+		9D4349B11646CFED008394DE /* TextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349AF1646CFED008394DE /* TextureCache.cpp */; };
+		9D4349B816470617008394DE /* woodbox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D4349B716470616008394DE /* woodbox.jpg */; };
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
 		9D60B5701645346E0074081D /* LevelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B56E1645346B0074081D /* LevelObject.cpp */; };
@@ -47,8 +47,6 @@
 		9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC6162F5AD40027565E /* GLSurface.m */; };
 		9DE33AC9162F5B5A0027565E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE33AC8162F5B5A0027565E /* QuartzCore.framework */; };
 		9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */; };
-		9DE6AA0616459E5500AF9280 /* ShaderBackground.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */; };
-		9DE6AA0716459E5500AF9280 /* ShaderBackground.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -66,6 +64,10 @@
 		8B7F452916463EF20041897F /* ShaderPostQuad.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.vsh; sourceTree = "<group>"; };
 		8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.fsh; sourceTree = "<group>"; };
 		9D2C461E1632140F000EC193 /* GlobalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GlobalConstants.h; path = Sources/Utils/GlobalConstants.h; sourceTree = "<group>"; };
+		9D4349AF1646CFED008394DE /* TextureCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TextureCache.cpp; path = Sources/Engine/COntent/TextureCache.cpp; sourceTree = "<group>"; };
+		9D4349B01646CFED008394DE /* TextureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureCache.h; path = Sources/Engine/COntent/TextureCache.h; sourceTree = "<group>"; };
+		9D4349B31646D6F7008394DE /* TextureCacheAsyncObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureCacheAsyncObserver.h; path = Sources/Engine/COntent/TextureCacheAsyncObserver.h; sourceTree = "<group>"; };
+		9D4349B716470616008394DE /* woodbox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woodbox.jpg; sourceTree = "<group>"; };
 		9D60B5451642D1FD0074081D /* RenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderObject.cpp; path = Sources/Engine/Objects/RenderObject.cpp; sourceTree = "<group>"; };
 		9D60B5461642D1FD0074081D /* RenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderObject.h; path = Sources/Engine/Objects/RenderObject.h; sourceTree = "<group>"; };
 		9D60B5491642D6A20074081D /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Sources/Engine/Materials/Material.cpp; sourceTree = "<group>"; };
@@ -163,6 +165,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D4349B516470616008394DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9D4349B616470616008394DE /* Textures */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9D4349B616470616008394DE /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				9D4349B716470616008394DE /* woodbox.jpg */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
 		9D60B5481642D68D0074081D /* Materials */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +198,9 @@
 				9D60B576164536400074081D /* Meshes */,
 				9D60B58316453FB20074081D /* Texture.cpp */,
 				9D60B58416453FB20074081D /* Texture.h */,
+				9D4349AF1646CFED008394DE /* TextureCache.cpp */,
+				9D4349B01646CFED008394DE /* TextureCache.h */,
+				9D4349B31646D6F7008394DE /* TextureCacheAsyncObserver.h */,
 			);
 			name = Content;
 			sourceTree = "<group>";
@@ -320,6 +341,7 @@
 				9D83B957162E216500B216AD /* Game */,
 				9D83B954162E214C00B216AD /* Engine */,
 				9D904315162DB1E1003BB5FF /* Utils */,
+				9D4349B516470616008394DE /* Resources */,
 				9D9042EB162D9F1A003BB5FF /* Supporting Files */,
 			);
 			path = TerminalExtraction;
@@ -463,6 +485,7 @@
 				9D9042F7162D9F1A003BB5FF /* Default.png in Resources */,
 				9D9042F9162D9F1A003BB5FF /* Default@2x.png in Resources */,
 				9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */,
+				9D4349B816470617008394DE /* woodbox.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,10 +521,7 @@
 				9D60B5921645473B0074081D /* FileManger.cpp in Sources */,
 				9D60B5951645488C0074081D /* ios_fileManager.mm in Sources */,
 				9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */,
-				9DE6AA0616459E5500AF9280 /* ShaderBackground.fsh in Sources */,
-				9DE6AA0716459E5500AF9280 /* ShaderBackground.vsh in Sources */,
-				8B7F452B16463EF30041897F /* ShaderPostQuad.vsh in Sources */,
-				8B7F452C16463EF30041897F /* ShaderPostQuad.fsh in Sources */,
+				9D4349B11646CFED008394DE /* TextureCache.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

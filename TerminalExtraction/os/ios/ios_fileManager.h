@@ -15,10 +15,14 @@
 
 class iosFileManager : public FileManager {
     
+protected:
+    
+    const char *  GetFilePath(string filename);
+    
 public:
     
     virtual string* GetContent(string filename);
-    
+    virtual GLubyte * CreateBitmapData(string filename, GLfloat *width, GLfloat *heigth);
 };
 
 #endif /* defined(__TerminalExtraction__ios_fileManager__) */
