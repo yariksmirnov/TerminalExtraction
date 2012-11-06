@@ -8,10 +8,13 @@
 
 #include "SceneSystem.h"
 
+using namespace std;
+
 SceneSystem::SceneSystem() {
     _objects = new UContainer(100);
     _visibleObjects = new UContainer(100);
     _shadowObjects = new UContainer(100);
+    
 }
 
 SceneSystem::~SceneSystem() {

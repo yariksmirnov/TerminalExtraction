@@ -39,9 +39,6 @@ void TEEngine::Init() {
     _shader1 = new Shader("ShaderPostQuad.vsh", "ShaderPostQuad.fsh");
     
     
-       
-    
-  
 }
 
 
