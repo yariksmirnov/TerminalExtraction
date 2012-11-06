@@ -11,7 +11,8 @@
 using namespace Utils;
 
 
-template<class T> UContainer<T>::UContainer(int baseSize) {
+template<class T>
+UContainer<T>::UContainer(int baseSize) {
     _baseSize = baseSize;
     _array = new shared_ptr<T>[_baseSize];
 }
