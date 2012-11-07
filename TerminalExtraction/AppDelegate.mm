@@ -10,6 +10,7 @@
 #include "TEEngine.h"
 #include "Utils.h"
 
+
 #import <QuartzCore/QuartzCore.h>
 
 @interface AppDelegate ()
@@ -17,6 +18,26 @@
 - (void)frameCallback:(CADisplayLink *)link;
 
 @end
+
+class MyClass {
+    
+    
+public:
+    int a;
+    
+    MyClass();
+    ~MyClass();
+};
+
+MyClass::MyClass()
+{
+    cout << "I born" << endl;
+}
+
+MyClass::~MyClass()
+{
+    cout << "I die" << endl;
+}
 
 
 @implementation AppDelegate
@@ -35,7 +56,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    {
+        UContainer<MyClass> container = UContainer<MyClass>(10);
+        {
+            shared_ptr<MyClass> outptr;
+            {
+                shared_ptr<MyClass> ptr(new MyClass());
+                outptr = ptr;
+            }
+            container.addObject(outptr);
+        }
+        cout << container.GetCount();
+    }
     
+    int a = 0;
+    a++;
+    
+    ///exit(0);
     [self initEnviroment];
     
     return YES;
