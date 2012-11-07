@@ -33,9 +33,9 @@ namespace Utils {
         ~UContainer();
         
         void remove(int index);
-        bool removeObject(shared_ptr<T> object);
-        void addObject(shared_ptr<T> object);
-        int indexOf(shared_ptr<T> object);
+        bool removeObject(shared_ptr<T>& object);
+        void addObject(shared_ptr<T>& object);
+        int indexOf(shared_ptr<T>& object);
         void AddObjects(const UContainer<T>& objects);
         void clear();
         shared_ptr<T> objectAtIndex(int index);
@@ -50,7 +50,7 @@ namespace Utils {
     template<class T>
     UContainer<T>::UContainer(int baseSize):_count(0) {
         _baseSize = baseSize;
-        _array = (shared_ptr<T>*)malloc(sizeof(shared_ptr<T>)*_baseSize);// new shared_ptr<T>[_baseSize];
+        _array = (shared_ptr<T>*)malloc(ELEMENT_SIZE*_baseSize);
         _currentSize = _baseSize;
     }
     
@@ -58,7 +58,6 @@ namespace Utils {
     UContainer<T>::~UContainer<T>() {
         clear();
         free(_array);
-        //delete [] _array;
     }
     
     template <class T>
@@ -74,6 +73,15 @@ namespace Utils {
     }
     
     template <class T>
+    int UContainer<T>::indexOf(shared_ptr<T> &object) {
+         for (int i = 0; i < _count; i++) {
+            if(_array[index] == object)
+                return i;
+        }
+        return -1;
+    }
+    
+    template <class T>
     void UContainer<T>::clear() {
         for (int i = 0; i < _count; i++) {
             _array[i].reset();
@@ -82,7 +90,7 @@ namespace Utils {
     }
     
     template <class T>
-    bool UContainer<T>::removeObject(shared_ptr<T> object) {
+    bool UContainer<T>::removeObject(shared_ptr<T>& object) {
         for (int i = 0; i < _count; i++) {
             if (_array[i] == object) {
                 remove(i);
@@ -93,11 +101,11 @@ namespace Utils {
     }
     
     template <class T>
-    void UContainer<T>::addObject(shared_ptr<T> object) {
+    void UContainer<T>::addObject(shared_ptr<T>& object) {
         if (_count == _currentSize) {
             shared_ptr<T> *tmp = _array;
             
-            _array = (shared_ptr<T>*)malloc(ELEMENT_SIZE*(_currentSize + _baseSize));// new shared_ptr<T>[_currentSize + _baseSize];
+            _array = (shared_ptr<T>*)malloc(ELEMENT_SIZE*(_currentSize + _baseSize));
             memcpy(_array, tmp, ELEMENT_SIZE*_currentSize);
             _currentSize += _baseSize;
             free(tmp);
@@ -115,7 +123,6 @@ namespace Utils {
     void UContainer<T>::sort(int (*pointer)(const void *, const void *), size_t size) {
         qsort(_array, _count, size, pointer);
     }
-    
     
     template <class T>
     void UContainer<T>::AddObjects(const UContainer<T>& objects)

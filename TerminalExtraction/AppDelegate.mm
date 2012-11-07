@@ -66,13 +66,9 @@ MyClass::~MyClass()
             }
             container.addObject(outptr);
         }
-        cout << container.GetCount();
+        cout << container.GetCount() << endl;
     }
     
-    int a = 0;
-    a++;
-    
-    ///exit(0);
     [self initEnviroment];
     
     return YES;
