@@ -40,7 +40,7 @@ namespace Utils {
         void clear();
         shared_ptr<T> objectAtIndex(int index);
         void sort(int (* pointer)(const void *, const void *), size_t size);
-        int GetCount() { return _count; }
+        int GetCount() const { return _count; }
     };
 
     template <class T>
