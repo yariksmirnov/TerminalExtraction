@@ -62,11 +62,16 @@ MyClass::~MyClass()
             shared_ptr<MyClass> outptr;
             {
                 shared_ptr<MyClass> ptr(new MyClass());
+                ptr->a = 10;
                 outptr = ptr;
             }
             container.addObject(outptr);
         }
-        cout << container.GetCount() << endl;
+        
+        
+        shared_ptr<MyClass> outptr = container.objectAtIndex(0);
+        cout <<"count=" <<container.GetCount() <<" item=" << outptr->a <<endl;
+        
     }
     
     [self initEnviroment];

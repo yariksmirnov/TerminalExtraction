@@ -33,12 +33,12 @@ namespace Utils {
         ~UContainer();
         
         void remove(int index);
-        bool removeObject(shared_ptr<T>& object);
-        void addObject(shared_ptr<T>& object);
-        int indexOf(shared_ptr<T>& object);
+        bool removeObject(const shared_ptr<T>& object);
+        void addObject(const shared_ptr<T>& object);
+        int indexOf(const shared_ptr<T>& object);
         void AddObjects(const UContainer<T>& objects);
         void clear();
-        shared_ptr<T> objectAtIndex(int index);
+        const shared_ptr<T>& objectAtIndex(int index);
         void sort(int (* pointer)(const void *, const void *), size_t size);
         int GetCount() const { return _count; }
     };
@@ -73,7 +73,7 @@ namespace Utils {
     }
     
     template <class T>
-    int UContainer<T>::indexOf(shared_ptr<T> &object) {
+    int UContainer<T>::indexOf(const shared_ptr<T> &object) {
          for (int i = 0; i < _count; i++) {
             if(_array[index] == object)
                 return i;
@@ -90,7 +90,7 @@ namespace Utils {
     }
     
     template <class T>
-    bool UContainer<T>::removeObject(shared_ptr<T>& object) {
+    bool UContainer<T>::removeObject(const shared_ptr<T>& object) {
         for (int i = 0; i < _count; i++) {
             if (_array[i] == object) {
                 remove(i);
@@ -101,7 +101,7 @@ namespace Utils {
     }
     
     template <class T>
-    void UContainer<T>::addObject(shared_ptr<T>& object) {
+    void UContainer<T>::addObject(const shared_ptr<T>& object) {
         if (_count == _currentSize) {
             shared_ptr<T> *tmp = _array;
             
@@ -115,7 +115,7 @@ namespace Utils {
     }
     
     template <class T>
-    shared_ptr<T> UContainer<T>::objectAtIndex(int index) {
+    const shared_ptr<T>& UContainer<T>::objectAtIndex(int index) {
         return _array[index];
     }
     
