@@ -7,13 +7,14 @@
 //
 
 #include "SceneSystem.h"
+#include "PivotObject.h"
 
 using namespace std;
 
 SceneSystem::SceneSystem() {
-    _objects = new UContainer(100);
-    _visibleObjects = new UContainer(100);
-    _shadowObjects = new UContainer(100);
+    _objects = new UContainer<PivotObject>(100);
+    _visibleObjects = new UContainer<PivotObject>(100);
+    _shadowObjects = new UContainer<PivotObject>(100);
     
 }
 

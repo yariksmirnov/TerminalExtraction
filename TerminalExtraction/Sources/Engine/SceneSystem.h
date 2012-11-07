@@ -18,9 +18,9 @@ class PivotObject;
 
 class SceneSystem {
     
-    UContainer          *_shadowObjects;
-    UContainer          *_visibleObjects;
-    UContainer          *_objects;
+    UContainer<PivotObject>          *_shadowObjects;
+    UContainer<PivotObject>          *_visibleObjects;
+    UContainer<PivotObject>          *_objects;
     
 public:
    
@@ -31,9 +31,9 @@ public:
     void Clear();
     PivotObject *GetObject(unsigned int objId);
     void AddObject(PivotObject *newObject, bool needUpdate);
-    void DeleteObjects(UContainer *objects);
+    void DeleteObjects(UContainer<PivotObject> *objects);
     void RemoveObject(PivotObject *object);
-    void AddObject(UContainer *newObjects);
+    void AddObject(UContainer<PivotObject> *newObjects);
     void UpdateScene();
     void AfterScene();
     void CalculateVisbleObject();

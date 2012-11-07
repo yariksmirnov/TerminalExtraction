@@ -103,6 +103,8 @@ GLfloat screenQuadVertexData[48] =
 GLushort planeIndexData[6] =
 {0,1,2,3,4,5};
 
+EngineMesh::EngineMesh()
+{}
 
 EngineMesh::EngineMesh(void * vertices, long vSize, void *indices, long iSize):_vSize(vSize), _iSize(iSize)
 { 
