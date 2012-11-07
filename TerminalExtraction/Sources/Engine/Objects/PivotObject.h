@@ -12,6 +12,8 @@
 #include <iostream>
 #include "TranslateableObject.h"
 
+using namespace std;
+
 class EditorData;
 class ObjectBehaviourModel;
 class RenderMatrixController;
@@ -36,6 +38,8 @@ class PivotObject : public TranslateableObject {
     
     ObjectBehaviourModel    *_objectBehaviourModel;
     
+    shared_ptr<EditorData>  _editorAspect;
+    
     bool                _unloaded;
     
     int                 _materialType;
@@ -51,7 +55,6 @@ public:
     GLKVector3 objectConstrAxis;
     GLKVector3 objectConstrForward;
     
-    EditorData *editorAspect;
     
     RenderMatrixController      *matrixController;
     
@@ -78,6 +81,7 @@ public:
     
     virtual RenderObject * GetRenderAspect();
     virtual Material * GetMaterial();
+    virtual shared_ptr<EditorData> GetEditorAspect();
     
     virtual GLKVector3 GetPosition();
     virtual void SetPosition(GLKVector3 position);

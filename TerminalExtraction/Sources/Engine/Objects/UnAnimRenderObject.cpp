@@ -13,7 +13,6 @@
 
 UnAnimRenderObject::UnAnimRenderObject(const EngineMesh *mesh):RenderObject() {
     _mesh = mesh;
-    shared_ptr<EngineMesh> m(new EngineMesh());
 }
 
 void UnAnimRenderObject::Render(int lod, Material *material) {

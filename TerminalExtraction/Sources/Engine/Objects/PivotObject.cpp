@@ -24,6 +24,7 @@ PivotObject::PivotObject(ObjectBehaviourModel *behaviourModel) {
     _needMouseCast = false;
     objectConstrAxis = GLKVector3Make(0, 1, 0);
     _isOnScreen = false;
+    _editorAspect = nullptr;
     moved = false;
 }
 
@@ -54,6 +55,9 @@ void PivotObject::SetIsOnScreen(bool isOnScreen) {
     _isOnScreen = isOnScreen;
 }
 
+shared_ptr<EditorData> PivotObject::GetEditorAspect() {
+    return _editorAspect;
+}
 
 void PivotObject::BeginFrame() {
     moved = false;

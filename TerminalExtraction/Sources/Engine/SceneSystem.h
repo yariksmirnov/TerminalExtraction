@@ -18,24 +18,24 @@ class PivotObject;
 
 class SceneSystem {
     
-    UContainer<PivotObject>          *_shadowObjects;
-    UContainer<PivotObject>          *_visibleObjects;
-    UContainer<PivotObject>          *_objects;
+    UContainer<PivotObject>          _shadowObjects;
+    UContainer<PivotObject>          _visibleObjects;
+    UContainer<PivotObject>          _objects;
     
 public:
    
     SceneSystem();
     ~SceneSystem();
     
-    void SwapObjects(PivotObject *anObject, PivotObject *newObject, bool recaclulate);
+    void SwapObjects(shared_ptr<PivotObject> anObject, shared_ptr<PivotObject> newObject, bool recaclulate);
     void Clear();
-    PivotObject *GetObject(unsigned int objId);
-    void AddObject(PivotObject *newObject, bool needUpdate);
+    shared_ptr<PivotObject> GetObject(unsigned int objId);
+    void AddObject(shared_ptr<PivotObject> newObject, bool needUpdate);
     void DeleteObjects(UContainer<PivotObject> *objects);
-    void RemoveObject(PivotObject *object);
+    void RemoveObject(shared_ptr<PivotObject> object);
     void AddObject(UContainer<PivotObject> *newObjects);
     void UpdateScene();
-    void AfterScene();
+    void AfterUpdate();
     void CalculateVisbleObject();
     
     void BeginFrame();
