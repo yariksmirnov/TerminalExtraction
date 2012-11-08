@@ -27,12 +27,12 @@ public:
     SceneSystem();
     ~SceneSystem();
     
-    void SwapObjects(shared_ptr<PivotObject> anObject, shared_ptr<PivotObject> newObject, bool recaclulate);
+    void SwapObjects(const shared_ptr<PivotObject> anObject, const shared_ptr<PivotObject> newObject, bool recaclulate);
     void Clear();
     shared_ptr<PivotObject> GetObject(unsigned int objId);
-    void AddObject(shared_ptr<PivotObject> newObject, bool needUpdate);
+    void AddObject(const shared_ptr<PivotObject> newObject, bool needUpdate);
     void DeleteObjects(UContainer<PivotObject> *objects);
-    void RemoveObject(shared_ptr<PivotObject> object);
+    void RemoveObject(const shared_ptr<PivotObject> object);
     void AddObject(UContainer<PivotObject> *newObjects);
     void UpdateScene();
     void AfterUpdate();

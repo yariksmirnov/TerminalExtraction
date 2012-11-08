@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #include "TEEngine.h"
 #include "Utils.h"
-
+#include "PivotObject.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -57,6 +57,9 @@ MyClass::~MyClass()
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     {
+        
+        cout << sizeof(shared_ptr<PivotObject>);
+    
         UContainer<MyClass> container = UContainer<MyClass>(10);
         {
             shared_ptr<MyClass> outptr;

@@ -38,7 +38,7 @@ namespace Utils {
         int indexOf(const shared_ptr<T>& object);
         void AddObjects(const UContainer<T>& objects);
         void clear();
-        const shared_ptr<T>& objectAtIndex(int index);
+        shared_ptr<T>& objectAtIndex(int index);
         void sort(int (* pointer)(const void *, const void *), size_t size);
         int GetCount() const { return _count; }
     };
@@ -115,7 +115,7 @@ namespace Utils {
     }
     
     template <class T>
-    const shared_ptr<T>& UContainer<T>::objectAtIndex(int index) {
+    shared_ptr<T>& UContainer<T>::objectAtIndex(int index) {
         return _array[index];
     }
     

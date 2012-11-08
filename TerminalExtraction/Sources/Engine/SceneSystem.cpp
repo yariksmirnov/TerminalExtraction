@@ -24,7 +24,7 @@ SceneSystem::~SceneSystem() {
 
 
 
-void SceneSystem::AddObject(shared_ptr<PivotObject> newObject, bool needUpdate) {
+void SceneSystem::AddObject(const shared_ptr<PivotObject> newObject, bool needUpdate) {
     if (needUpdate) {
         newObject->BeginFrame();
         newObject->Frame(0);
@@ -98,7 +98,7 @@ void SceneSystem::DeleteObjects(UContainer<PivotObject> *objects) {
     
 }
 
-void SceneSystem::RemoveObject(shared_ptr<PivotObject> object) {
+void SceneSystem::RemoveObject(const shared_ptr<PivotObject> object) {
     _objects.removeObject(object);
     //_sceneGraph.RemoveObject(deletingobjects);
     //deletingobjects.behaviourmodel.Disable();
