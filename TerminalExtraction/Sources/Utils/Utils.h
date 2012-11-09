@@ -10,6 +10,7 @@
 #define TerminalExtraction_Utils_h
 
 #include "UContainer.h"
+#include "IdGenerator.h"
 
 using namespace Utils;
 

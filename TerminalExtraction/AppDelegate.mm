@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #include "TEEngine.h"
 #include "Utils.h"
+#include "PivotObject.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -17,6 +18,26 @@
 - (void)frameCallback:(CADisplayLink *)link;
 
 @end
+
+class MyClass {
+    
+    
+public:
+    int a;
+    
+    MyClass();
+    ~MyClass();
+};
+
+MyClass::MyClass()
+{
+    cout << "I born" << endl;
+}
+
+MyClass::~MyClass()
+{
+    cout << "I die" << endl;
+}
 
 
 @implementation AppDelegate
@@ -35,6 +56,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    {
+        
+        cout << sizeof(shared_ptr<PivotObject>);
+    
+        UContainer<MyClass> container = UContainer<MyClass>(10);
+        {
+            shared_ptr<MyClass> outptr;
+            {
+                shared_ptr<MyClass> ptr(new MyClass());
+                ptr->a = 10;
+                outptr = ptr;
+            }
+            container.addObject(outptr);
+        }
+        
+        
+        shared_ptr<MyClass> outptr = container.objectAtIndex(0);
+        cout <<"count=" <<container.GetCount() <<" item=" << outptr->a <<endl;
+        
+    }
     
     [self initEnviroment];
     
