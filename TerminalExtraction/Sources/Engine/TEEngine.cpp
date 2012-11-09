@@ -16,6 +16,9 @@
 #include "Shader.h"
 #include "Display.h"
 #include "EngineMesh.h"
+//#include "Geometry.h"
+
+
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
@@ -29,8 +32,9 @@ void TEEngine::Init() {
     _renderSystem->InitOpenGL();
     
     
-    GRect2D screen = GRect2DMake(0, 0, _renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight());
-    _camera = new Camera(GLKVector3Make(2, 2, 2), GLKVector3Make(0, 0, 0), screen);
+    GRect2D _screenRect = GRect2DMake(0, 0, _renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight());
+    _camera = new Camera(GLKVector3Make(2, 2, 2), GLKVector3Make(0, 0, 0), _screenRect);
+    
     
     _cube = LevelObject::CreateCube();
     _plane = LevelObject::CreatePlane();

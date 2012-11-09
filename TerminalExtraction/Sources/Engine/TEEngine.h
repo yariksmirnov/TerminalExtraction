@@ -10,6 +10,7 @@
 #define __TerminalExtraction__TEEngine__
 
 #include <iostream>
+//#include "Geometry.h"
 
 class RenderSystem;
 class Shader;
@@ -35,6 +36,9 @@ class TEEngine {
     Shader              *_shader1;
     
 public:
+    
+    //GRect2D _screenRect;
+    
     TEEngine();
     ~TEEngine();
     
