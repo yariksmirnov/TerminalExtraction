@@ -29,6 +29,7 @@
 		9D6A843F1641D83B00E322C3 /* ObjectBehaviourModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A843D1641D83B00E322C3 /* ObjectBehaviourModel.cpp */; };
 		9D6A84431641DB0F00E322C3 /* RenderMatrixController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6A84411641DB0F00E322C3 /* RenderMatrixController.cpp */; };
 		9D83B95A162E225700B216AD /* TEEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D83B958162E225700B216AD /* TEEngine.cpp */; };
+		9D87CAE4164E9F390030B46F /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D87CAE1164E9F130030B46F /* libcocos2dx.a */; };
 		9D9042E5162D9F1A003BB5FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E4162D9F1A003BB5FF /* UIKit.framework */; };
 		9D9042E7162D9F1A003BB5FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E6162D9F1A003BB5FF /* Foundation.framework */; };
 		9D9042E9162D9F1A003BB5FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9042E8162D9F1A003BB5FF /* CoreGraphics.framework */; };
@@ -60,6 +61,23 @@
 			);
 		};
 /* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		9D87CAE0164E9F130030B46F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D87CAD9164E9F130030B46F /* cocos2dx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1551A33F158F2AB200E66CFE;
+			remoteInfo = cocos2dx;
+		};
+		9D87CAE2164E9F350030B46F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D87CAD9164E9F130030B46F /* cocos2dx.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1551A33E158F2AB200E66CFE;
+			remoteInfo = cocos2dx;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8B7F452916463EF20041897F /* ShaderPostQuad.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.vsh; sourceTree = "<group>"; };
@@ -101,6 +119,7 @@
 		9D6A84421641DB0F00E322C3 /* RenderMatrixController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderMatrixController.h; path = Sources/Engine/Objects/MatrixControllers/RenderMatrixController.h; sourceTree = "<group>"; };
 		9D83B958162E225700B216AD /* TEEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TEEngine.cpp; path = Sources/Engine/TEEngine.cpp; sourceTree = "<group>"; };
 		9D83B959162E225700B216AD /* TEEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEEngine.h; path = Sources/Engine/TEEngine.h; sourceTree = "<group>"; };
+		9D87CAD9164E9F130030B46F /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = "cocos2d-2.0-x-2.0.4/cocos2dx/proj.ios/cocos2dx.xcodeproj"; sourceTree = "<group>"; };
 		9D9042E0162D9F1A003BB5FF /* TerminalExtraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerminalExtraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9042E4162D9F1A003BB5FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9D9042E6162D9F1A003BB5FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -157,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D87CAE4164E9F390030B46F /* libcocos2dx.a in Frameworks */,
 				9DE33AC9162F5B5A0027565E /* QuartzCore.framework in Frameworks */,
 				9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */,
 				9D9042E5162D9F1A003BB5FF /* UIKit.framework in Frameworks */,
@@ -250,6 +270,7 @@
 		9D83B954162E214C00B216AD /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				9D87C1DB164E88D30030B46F /* Vendors */,
 				9D60B575164536320074081D /* Content */,
 				9D60B5481642D68D0074081D /* Materials */,
 				9DD218B516417EDD00E2CFA2 /* Objects */,
@@ -308,6 +329,23 @@
 				9DE33AC6162F5AD40027565E /* GLSurface.m */,
 			);
 			name = ios;
+			sourceTree = "<group>";
+		};
+		9D87C1DB164E88D30030B46F /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				9D87CAD9164E9F130030B46F /* cocos2dx.xcodeproj */,
+			);
+			name = Vendors;
+			path = Sources/Vendors;
+			sourceTree = "<group>";
+		};
+		9D87CADA164E9F130030B46F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D87CAE1164E9F130030B46F /* libcocos2dx.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		9D9042D5162D9F19003BB5FF = {
@@ -446,6 +484,7 @@
 				9DE6AA081645AB1600AF9280 /* PBXBuildRule */,
 			);
 			dependencies = (
+				9D87CAE3164E9F350030B46F /* PBXTargetDependency */,
 			);
 			name = TerminalExtraction;
 			productName = TerminalExtraction;
@@ -470,12 +509,28 @@
 			mainGroup = 9D9042D5162D9F19003BB5FF;
 			productRefGroup = 9D9042E1162D9F1A003BB5FF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9D87CADA164E9F130030B46F /* Products */;
+					ProjectRef = 9D87CAD9164E9F130030B46F /* cocos2dx.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9D9042DF162D9F19003BB5FF /* TerminalExtraction */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9D87CAE1164E9F130030B46F /* libcocos2dx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcocos2dx.a;
+			remoteRef = 9D87CAE0164E9F130030B46F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9D9042DE162D9F19003BB5FF /* Resources */ = {
@@ -533,6 +588,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9D87CAE3164E9F350030B46F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cocos2dx;
+			targetProxy = 9D87CAE2164E9F350030B46F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9D9042ED162D9F1A003BB5FF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -567,6 +630,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendors";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -589,6 +653,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendors";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
@@ -606,6 +671,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TerminalExtraction/TerminalExtraction-Prefix.pch";
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -620,6 +688,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TerminalExtraction/TerminalExtraction-Prefix.pch";
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

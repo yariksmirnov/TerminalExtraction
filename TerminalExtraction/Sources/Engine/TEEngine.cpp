@@ -19,6 +19,9 @@
 //#include "Geometry.h"
 
 
+#include "CCDirector.h"
+
+using namespace cocos2d;
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
@@ -42,7 +45,7 @@ void TEEngine::Init() {
     _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
     _shader1 = new Shader("ShaderPostQuad.vsh", "ShaderPostQuad.fsh");
     
-    
+    _director = cocos2d::CCDirector::sharedDirector();
 }
 
 
@@ -54,6 +57,7 @@ void TEEngine::RunLoop(double delta) {
     _elapsedTime = delta;
     _fullTime += _elapsedTime;
     
+    _director->mainLoop();
     this->Update();
     this->Draw();
 }

@@ -12,6 +12,7 @@
 #include <iostream>
 //#include "Geometry.h"
 
+
 class RenderSystem;
 class Shader;
 
@@ -31,6 +32,8 @@ class TEEngine {
     
     
     Camera              *_camera;
+    
+    CCDirector          *_director;
     
     Shader              *_shader;
     Shader              *_shader1;

@@ -8,6 +8,7 @@
 
 #include "RenderSystem.h"
 #include "Display.h"
+#include "CCDirector.h"
 
 RenderSystem::RenderSystem() {
     _deviceDisplay = Display::currentDisplay();
@@ -24,6 +25,10 @@ void RenderSystem::InitOpenGL() {
     glClearColor(1,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     _deviceDisplay->SwapBuffers();
+}
+
+void RenderSystem::InitCocos2Dx() {
+    
 }
 
 void RenderSystem::SetColor(float color){

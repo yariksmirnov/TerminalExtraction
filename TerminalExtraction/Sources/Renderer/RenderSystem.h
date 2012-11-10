@@ -28,6 +28,7 @@ public:
     
     void Init();
     void InitOpenGL();
+    void InitCocos2Dx();
     
     void Draw();
     void EndFrame();
