@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-
+#import "ios_display.h"
 
 struct __TouchDelegateAdapter {
     iosDisplay    *_touchDelegate;
