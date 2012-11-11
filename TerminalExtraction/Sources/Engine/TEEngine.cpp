@@ -82,7 +82,11 @@ void TEEngine::EndFrame() {
 }
 
 void TEEngine::DrawInterface() {
+    glEnable(GL_BLEND);
+    glDisable(GL_DEPTH_TEST);
     _director->mainLoop();
+    glEnable(GL_DEPTH_TEST);
+    glDisable(GL_BLEND);
 }
 
 void TEEngine::Update() {
@@ -127,8 +131,6 @@ void TEEngine::Draw() {
             printf(" glError: 0x%04X", err);
     }
 }
-
-
 
 float TEEngine::ElapsedTime() {
     return _elapsedTime;
