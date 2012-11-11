@@ -12,6 +12,7 @@
 #include "GlobalConstants.h"
 
 #include GLES2
+#include Glext
 
 struct __GPoint2D {
     GLfloat x;

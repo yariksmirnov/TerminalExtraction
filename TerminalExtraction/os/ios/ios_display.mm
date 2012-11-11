@@ -10,6 +10,11 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
+iosDisplay::iosDisplay() {
+    m_obScreenSize.width = m_obDesignResolutionSize.width = [UIScreen mainScreen].bounds.size.width;
+    m_obScreenSize.height = m_obDesignResolutionSize.height = [UIScreen mainScreen].bounds.size.height;
+}
+
 void iosDisplay::InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat) {
     
     UIScreen *iphoneScreen = [UIScreen mainScreen];

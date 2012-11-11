@@ -61,6 +61,9 @@ void TEEngine::RunLoop(double delta) {
     _elapsedTime = delta;
     _fullTime += _elapsedTime;
     
+//    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
     _director->mainLoop();
     this->Update();
     this->Draw();
@@ -73,11 +76,12 @@ void TEEngine::Update() {
 void TEEngine::Draw() {
 
     
-    glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
     glDisable(GL_BLEND);
     glDisable(GL_CULL_FACE);
+    
+    GLint currentShader;
+    glGetIntegerv(GL_CURRENT_PROGRAM, &currentShader);
     
     glUseProgram(_shader->GetProgram());
     _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
@@ -109,7 +113,7 @@ void TEEngine::Draw() {
         if (err != GL_NO_ERROR)
             printf(" glError: 0x%04X", err);
     }
-    glUseProgram(0);
+    glUseProgram(currentShader);
     
     
     

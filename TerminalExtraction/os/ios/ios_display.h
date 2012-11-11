@@ -15,6 +15,9 @@
 class iosDisplay : public Display {
     
 public:
+    
+    iosDisplay();
+    
     virtual void InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat);
     
     virtual GLfloat GetDisplayHeight();

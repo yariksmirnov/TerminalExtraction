@@ -20,6 +20,7 @@ Display * Display::currentDisplay() {
     return new iosDisplay();
 }
 
+
 GLfloat Display::GetDisplayHeight() {
     throw "Virtual method";
 }
