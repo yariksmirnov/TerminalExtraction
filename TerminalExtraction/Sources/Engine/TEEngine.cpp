@@ -61,12 +61,17 @@ void TEEngine::RunLoop(double delta) {
     _elapsedTime = delta;
     _fullTime += _elapsedTime;
     
-//    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
-//    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    _director->mainLoop();
     this->Update();
     this->Draw();
+    
+    _director->mainLoop();
+    
+    
+    
+    _renderSystem->EndFrame();
 }
 
 void TEEngine::Update() {
@@ -116,8 +121,6 @@ void TEEngine::Draw() {
     glUseProgram(currentShader);
     
     
-    
-    _renderSystem->EndFrame();
 }
 
 float TEEngine::ElapsedTime() {
