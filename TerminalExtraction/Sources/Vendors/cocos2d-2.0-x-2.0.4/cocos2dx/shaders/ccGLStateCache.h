@@ -142,6 +142,8 @@ void CC_DLL ccGLEnable( ccGLServerState flags );
 // end of shaders group
 /// @}
 
+void dropProgram();
+
 NS_CC_END
 
 #endif /* __CCGLSTATE_H__ */

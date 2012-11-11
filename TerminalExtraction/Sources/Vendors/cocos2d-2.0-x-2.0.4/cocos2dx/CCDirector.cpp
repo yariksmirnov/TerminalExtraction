@@ -55,6 +55,7 @@ THE SOFTWARE.
 #include "support/CCProfiling.h"
 #include "CCEGLView.h"
 #include <string>
+#include "ccGLStateCache.h"
 
 /**
  Position of the FPS
@@ -203,6 +204,7 @@ void CCDirector::setGLDefaultValues(void)
 // Draw the Scene
 void CCDirector::drawScene(void)
 {
+    dropProgram();
     // calculate "global" dt
     calculateDeltaTime();
 

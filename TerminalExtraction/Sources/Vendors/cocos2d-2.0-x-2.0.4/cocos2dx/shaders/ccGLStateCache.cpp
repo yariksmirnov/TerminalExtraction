@@ -232,4 +232,9 @@ void ccSetProjectionMatrixDirty( void )
     s_uCurrentProjectionMatrix = -1;
 }
 
+void dropProgram()
+{
+    s_uCurrentShaderProgram = -1;
+}
+
 NS_CC_END

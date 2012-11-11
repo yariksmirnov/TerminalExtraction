@@ -42,14 +42,14 @@ void TEEngine::Init() {
     _shader1 = new Shader("ShaderPostQuad.vsh", "ShaderPostQuad.fsh");
     
     _director = CCDirector::sharedDirector();
-    
     _director->setOpenGLView((CCEGLView *)(_renderSystem->GetDisplay()));
     
     _renderSystem->GetDisplay()->setDesignResolutionSize(_renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight(), kResolutionNoBorder);
     
     _director->setDisplayStats(true);
     
-    _director->startAnimation();
+  //  _director->startAnimation();
+    _scene = nullptr;
 }
 
 
@@ -67,11 +67,22 @@ void TEEngine::RunLoop(double delta) {
     this->Update();
     this->Draw();
     
-    _director->mainLoop();
+    if(!_scene)
+    {
+        _scene = new CCScene();
+        _director->pushScene(_scene);
+    }
     
-    
-    
+    this->DrawInterface();
+    this->EndFrame();
+}
+
+void TEEngine::EndFrame() {
     _renderSystem->EndFrame();
+}
+
+void TEEngine::DrawInterface() {
+    _director->mainLoop();
 }
 
 void TEEngine::Update() {
@@ -80,13 +91,10 @@ void TEEngine::Update() {
 
 void TEEngine::Draw() {
 
-    
     glEnable(GL_DEPTH_TEST);
     glDisable(GL_BLEND);
     glDisable(GL_CULL_FACE);
     
-    GLint currentShader;
-    glGetIntegerv(GL_CURRENT_PROGRAM, &currentShader);
     
     glUseProgram(_shader->GetProgram());
     _shader->SetMatrixValue(UNIFORM_VIEW_MATRIX, _camera->view.m);
@@ -118,10 +126,9 @@ void TEEngine::Draw() {
         if (err != GL_NO_ERROR)
             printf(" glError: 0x%04X", err);
     }
-    glUseProgram(currentShader);
-    
-    
 }
+
+
 
 float TEEngine::ElapsedTime() {
     return _elapsedTime;

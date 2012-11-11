@@ -35,7 +35,6 @@ class TEEngine : private CCApplication {
     
     Camera              *_camera;
     
-    CCDirector          *_director;
     
     Shader              *_shader;
     Shader              *_shader1;
@@ -43,6 +42,9 @@ class TEEngine : private CCApplication {
 public:
     
     //GRect2D _screenRect;
+    
+    CCScene             *_scene;
+    CCDirector          *_director;
     
     TEEngine();
     ~TEEngine();
@@ -56,6 +58,8 @@ public:
     
     void Update();
     void Draw();
+    void DrawInterface();
+    void EndFrame();
     
     
     Shader * GetShader();

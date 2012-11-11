@@ -576,7 +576,10 @@ void CCSprite::draw(void)
 
     CCAssert(!m_pobBatchNode, "If CCSprite is being rendered by CCSpriteBatchNode, CCSprite#draw SHOULD NOT be called");
 
-    CC_NODE_DRAW_SETUP();
+  //  CC_NODE_DRAW_SETUP();
+    
+    getShaderProgram()->use(); 
+    getShaderProgram()->setUniformForModelViewProjectionMatrix();
 
     ccGLBlendFunc( m_sBlendFunc.src, m_sBlendFunc.dst );
 
