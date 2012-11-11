@@ -8,15 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "GLSurface.h"
+
+
+struct __TouchDelegateAdapter {
+    iosDisplay    *_touchDelegate;
+};
+
+typedef struct __TouchDelegateAdapter TouchDelagteAdapter;
+
+@class GLSurface;
 
 @interface ViewController : UIViewController {
 @private
-    GLSurface           *_glView;
+    GLSurface               *_glView;
+    TouchDelagteAdapter     _touchDelegate;
 }
 @property (nonatomic, assign) GLuint depthFormat;
 @property (nonatomic, assign) GLuint pixelFormat;
 
 + (ViewController *)instance;
+
+- (void)setTouchDelegate:(TouchDelagteAdapter)delegate;
 
 @end

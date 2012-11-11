@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GLSurface.h"
 
 ViewController      *_g_Controller = nil;
 
@@ -31,6 +32,10 @@ ViewController      *_g_Controller = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)setTouchDelegate:(TouchDelagteAdapter)delegate {
+    _touchDelegate = delegate;
 }
 
 - (void)didReceiveMemoryWarning
