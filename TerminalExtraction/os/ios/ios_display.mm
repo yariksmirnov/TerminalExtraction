@@ -24,6 +24,11 @@ void iosDisplay::InitGLSurface(unsigned int depthFormat, unsigned int pixelForma
     [ViewController instance].pixelFormat = pixelFormat;
     [ViewController instance].depthFormat = depthFormat;
     
+    struct __TouchDelegateAdapter adapter;
+    adapter._touchDelegate = this;
+    
+    [[ViewController instance] setTouchDelegate:adapter];
+    
     window.rootViewController = [ViewController instance];
     [window makeKeyAndVisible];
     

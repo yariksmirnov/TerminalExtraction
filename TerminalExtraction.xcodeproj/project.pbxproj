@@ -48,7 +48,7 @@
 		9DE33AB9162F4CC30027565E /* RenderSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AB7162F4CC30027565E /* RenderSystem.cpp */; };
 		9DE33ABE162F51830027565E /* Display.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33ABC162F51830027565E /* Display.cpp */; };
 		9DE33AC1162F55350027565E /* ios_display.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33ABF162F55340027565E /* ios_display.mm */; };
-		9DE33AC4162F5A7E0027565E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC3162F5A7D0027565E /* ViewController.m */; };
+		9DE33AC4162F5A7E0027565E /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC3162F5A7D0027565E /* ViewController.mm */; };
 		9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC6162F5AD40027565E /* GLSurface.m */; };
 		9DE33AC9162F5B5A0027565E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE33AC8162F5B5A0027565E /* QuartzCore.framework */; };
 		9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */; };
@@ -167,7 +167,7 @@
 		9DE33ABF162F55340027565E /* ios_display.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ios_display.mm; path = os/ios/ios_display.mm; sourceTree = "<group>"; };
 		9DE33AC0162F55350027565E /* ios_display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ios_display.h; path = os/ios/ios_display.h; sourceTree = "<group>"; };
 		9DE33AC2162F5A7D0027565E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = os/ios/ViewController.h; sourceTree = "<group>"; };
-		9DE33AC3162F5A7D0027565E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = os/ios/ViewController.m; sourceTree = "<group>"; };
+		9DE33AC3162F5A7D0027565E /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ViewController.mm; path = os/ios/ViewController.mm; sourceTree = "<group>"; };
 		9DE33AC5162F5AD40027565E /* GLSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLSurface.h; path = os/ios/GLSurface.h; sourceTree = "<group>"; };
 		9DE33AC6162F5AD40027565E /* GLSurface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLSurface.m; path = os/ios/GLSurface.m; sourceTree = "<group>"; };
 		9DE33AC8162F5B5A0027565E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -333,7 +333,7 @@
 				9D60B5931645488B0074081D /* ios_fileManager.mm */,
 				9D60B5941645488B0074081D /* ios_fileManager.h */,
 				9DE33AC2162F5A7D0027565E /* ViewController.h */,
-				9DE33AC3162F5A7D0027565E /* ViewController.m */,
+				9DE33AC3162F5A7D0027565E /* ViewController.mm */,
 				9DE33AC5162F5AD40027565E /* GLSurface.h */,
 				9DE33AC6162F5AD40027565E /* GLSurface.m */,
 			);
@@ -574,7 +574,7 @@
 				9DE33AB9162F4CC30027565E /* RenderSystem.cpp in Sources */,
 				9DE33ABE162F51830027565E /* Display.cpp in Sources */,
 				9DE33AC1162F55350027565E /* ios_display.mm in Sources */,
-				9DE33AC4162F5A7E0027565E /* ViewController.m in Sources */,
+				9DE33AC4162F5A7E0027565E /* ViewController.mm in Sources */,
 				9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */,
 				9DD218A916403E3800E2CFA2 /* Camera.cpp in Sources */,
 				9DD218B816417F3300E2CFA2 /* PivotObject.cpp in Sources */,
