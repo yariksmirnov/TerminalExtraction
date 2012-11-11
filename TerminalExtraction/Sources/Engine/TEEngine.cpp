@@ -16,12 +16,8 @@
 #include "Shader.h"
 #include "Display.h"
 #include "EngineMesh.h"
-//#include "Geometry.h"
+#include "Geometry.h"
 
-
-#include "CCDirector.h"
-
-using namespace cocos2d;
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
@@ -45,7 +41,15 @@ void TEEngine::Init() {
     _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
     _shader1 = new Shader("ShaderPostQuad.vsh", "ShaderPostQuad.fsh");
     
-    _director = cocos2d::CCDirector::sharedDirector();
+    _director = CCDirector::sharedDirector();
+    
+    _director->setOpenGLView((CCEGLView *)(_renderSystem->GetDisplay()));
+    
+    _renderSystem->GetDisplay()->setDesignResolutionSize(_renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight(), kResolutionNoBorder);
+    
+    _director->setDisplayStats(true);
+    
+    _director->startAnimation();
 }
 
 
@@ -114,6 +118,18 @@ void TEEngine::Draw() {
 
 float TEEngine::ElapsedTime() {
     return _elapsedTime;
+}
+
+void TEEngine::applicationDidEnterBackground() {
+    
+}
+
+bool TEEngine::applicationDidFinishLaunching() {
+    return true;
+}
+
+void TEEngine::applicationWillEnterForeground() {
+    
 }
 
 TEEngine::~TEEngine() {

@@ -37,3 +37,28 @@ void iosDisplay::SwapBuffers() {
     
     [context presentRenderbuffer:GL_RENDERBUFFER];
 }
+
+void iosDisplay::swapBuffers() {
+    //SwapBuffers();
+}
+
+bool iosDisplay::isOpenGLReady() {
+    return [ViewController instance].view != nil;
+}
+
+bool iosDisplay::setContentScaleFactor(float contentScaleFactor) {
+    //[[ViewController instance].view setNeedsLayout];
+    
+    return true;
+}
+
+void iosDisplay::end() {
+    // do nothing;
+}
+
+void iosDisplay::setIMEKeyboardState(bool bOpen) {
+    if (bOpen) {
+        [[ViewController instance].view becomeFirstResponder];
+    } else
+        [[ViewController instance].view resignFirstResponder];
+}

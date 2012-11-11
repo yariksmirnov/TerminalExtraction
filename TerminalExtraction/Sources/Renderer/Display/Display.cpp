@@ -35,3 +35,12 @@ void Display::SwapBuffers() {
 void Display::InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat) {
     throw "Virtual method";
 }
+
+void Display::setViewPortInPoints(float x, float y, float w, float h) {
+    
+}
+
+void Display::setScissorInPoints(float x, float y, float w, float h) {
+    
+}
+

@@ -10,7 +10,7 @@
 #include "TEEngine.h"
 #include "Utils.h"
 #include "PivotObject.h"
-
+#include "cocos2d.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface AppDelegate ()

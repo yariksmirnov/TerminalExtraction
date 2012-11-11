@@ -12,16 +12,18 @@
 #include <iostream>
 //#include "Geometry.h"
 
+#include "cocos2d.h"
+
+using namespace cocos2d;
 
 class RenderSystem;
 class Shader;
-
 
 class LevelObject;
 class Camera;
 class EngineMesh;
 
-class TEEngine {
+class TEEngine : private CCApplication {
     
     RenderSystem        *_renderSystem;
     float                _elapsedTime;
@@ -58,6 +60,10 @@ public:
     
     Shader * GetShader();
 
+    
+    virtual bool applicationDidFinishLaunching();
+    virtual void applicationDidEnterBackground();
+    virtual void applicationWillEnterForeground();
 };
 
 

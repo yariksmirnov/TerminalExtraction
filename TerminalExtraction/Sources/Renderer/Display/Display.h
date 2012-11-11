@@ -9,11 +9,13 @@
 #ifndef __TerminalExtraction__Display__
 #define __TerminalExtraction__Display__
 #include "GlobalConstants.h"
-
+#include "platform/CCEGLViewProtocol.h"
 #include <iostream>
 #include GLES2
 
-class Display {
+using namespace cocos2d;
+
+class Display : public CCEGLViewProtocol {
     static Display * _current;
     
 public:
@@ -25,6 +27,9 @@ public:
     virtual GLfloat GetDisplayWidth();
     
     virtual void SwapBuffers();
+    
+    void setViewPortInPoints(float x , float y , float w , float h);
+    void setScissorInPoints(float x , float y , float w , float h);
 
 };
 

@@ -43,8 +43,8 @@ static __inline__ GRect2D GRect2DMake(GLfloat x, GLfloat y, GLfloat width, GLflo
     return rect;
 };
 
-#include "GLKMath.h"
 #include "MyMath.h"
+#include "GLKMath.h"
 
 //http://www.opengl.org/wiki/GluProject_and_gluUnProject_code
 

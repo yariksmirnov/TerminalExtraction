@@ -47,6 +47,8 @@ Config of cocos2d-x project, per target platform.
 // Determine target platform by compile environment macro.
 #define CC_TARGET_PLATFORM             CC_PLATFORM_UNKNOWN
 
+
+
 // iphone
 #if ! CC_TARGET_PLATFORM && (defined(TARGET_OS_IPHONE) || defined(TARGET_IPHONE_SIMULATOR))
     #undef  CC_TARGET_PLATFORM

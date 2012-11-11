@@ -20,7 +20,16 @@ public:
     virtual GLfloat GetDisplayHeight();
     virtual GLfloat GetDisplayWidth();
     
-    virtual void SwapBuffers();
+    virtual void    SwapBuffers();
+    
+    virtual bool    isOpenGLReady();
+    virtual bool    setContentScaleFactor(float contentScaleFactor);
+    
+    // keep compatible
+    virtual void    end();
+    virtual void    swapBuffers();
+    
+    virtual void setIMEKeyboardState(bool bOpen);
 };
 
 #endif /* defined(__TerminalExtraction__ios_display__) */

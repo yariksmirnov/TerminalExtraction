@@ -5,9 +5,9 @@
 //  Created by Katekov Anton on 13.02.12.
 //  Copyright (c) 2012 SoftFacade. All rights reserved.
 //
-
-#include "Geometry.h"
-
+#include "GLKMatrix4.h"
+#include "GLKMatrix3.h"
+#include "GLKMathUtils.h"
 #ifndef __clang__
 static __inline__ GLKMatrix4 GLKMatrix4MakeBillboard(GLKMatrix4 view, GLKVector3 objectPositon)
 #else
