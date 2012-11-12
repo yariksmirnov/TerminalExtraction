@@ -11,6 +11,8 @@
 #import "ViewController.h"
 
 iosDisplay::iosDisplay() {
+    m_fScaleX = 1.0;
+    m_fScaleY = 1.0;
     m_obScreenSize.width = m_obDesignResolutionSize.width = [UIScreen mainScreen].bounds.size.width;
     m_obScreenSize.height = m_obDesignResolutionSize.height = [UIScreen mainScreen].bounds.size.height;
 }

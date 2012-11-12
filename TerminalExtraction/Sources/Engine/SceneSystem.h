@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "Utils.h"
+#include "UserInterface.h"
 
 using namespace Utils;
 
@@ -21,6 +22,8 @@ class SceneSystem {
     UContainer<PivotObject>          _shadowObjects;
     UContainer<PivotObject>          _visibleObjects;
     UContainer<PivotObject>          _objects;
+    
+    UserInterface                    *_userInterface;
     
 public:
    
@@ -41,6 +44,8 @@ public:
     void BeginFrame();
     void EndFrame();
     void Frame(double time);
+    
+    UserInterface * GetInterfaceManager();
 };
 
 

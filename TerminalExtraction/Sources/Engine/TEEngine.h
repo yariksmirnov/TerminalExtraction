@@ -22,6 +22,7 @@ class Shader;
 class LevelObject;
 class Camera;
 class EngineMesh;
+class SceneSystem;
 
 class TEEngine : private CCApplication {
     
@@ -35,15 +36,17 @@ class TEEngine : private CCApplication {
     
     Camera              *_camera;
     
+    SceneSystem         *_scene;
     
     Shader              *_shader;
     Shader              *_shader1;
     
+    GLfloat             _color;
+    
 public:
     
     //GRect2D _screenRect;
-    
-    CCScene             *_scene;
+
     CCDirector          *_director;
     
     TEEngine();
@@ -68,6 +71,10 @@ public:
     virtual bool applicationDidFinishLaunching();
     virtual void applicationDidEnterBackground();
     virtual void applicationWillEnterForeground();
+    
+    //test
+    
+    void switchLight();
 };
 
 

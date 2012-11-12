@@ -17,7 +17,7 @@
 #include "Display.h"
 #include "EngineMesh.h"
 #include "Geometry.h"
-
+#include "SceneSystem.h"
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
@@ -49,7 +49,10 @@ void TEEngine::Init() {
     _director->setDisplayStats(true);
     
   //  _director->startAnimation();
-    _scene = nullptr;
+    
+    _scene = new SceneSystem();
+    _scene->GetInterfaceManager()->Prepare();
+    _director->pushScene(_scene->GetInterfaceManager()->GetGUISession());
 }
 
 
@@ -61,20 +64,24 @@ void TEEngine::RunLoop(double delta) {
     _elapsedTime = delta;
     _fullTime += _elapsedTime;
     
-    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+    glClearColor(_color, _color, _color, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     this->Update();
     this->Draw();
     
-    if(!_scene)
-    {
-        _scene = new CCScene();
-        _director->pushScene(_scene);
-    }
+    
     
     this->DrawInterface();
     this->EndFrame();
+}
+
+void TEEngine::switchLight() {
+    if (_color == 0.6) {
+        _color = 0;
+    } else {
+        _color = 0.6;
+    }
 }
 
 void TEEngine::EndFrame() {

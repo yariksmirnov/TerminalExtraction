@@ -21,7 +21,7 @@ typedef struct __TouchDelegateAdapter TouchDelagteAdapter;
 @interface ViewController : UIViewController {
 @private
     GLSurface               *_glView;
-    TouchDelagteAdapter     _touchDelegate;
+    TouchDelagteAdapter     _touchApdater;
 }
 @property (nonatomic, assign) GLuint depthFormat;
 @property (nonatomic, assign) GLuint pixelFormat;

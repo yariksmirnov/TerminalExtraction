@@ -17,9 +17,12 @@ SceneSystem::SceneSystem() {
     _objects = UContainer<PivotObject>(100);
     _visibleObjects = UContainer<PivotObject>(100);
     _shadowObjects = UContainer<PivotObject>(100);
+    
+    _userInterface = new UserInterface;
 }
 
 SceneSystem::~SceneSystem() {
+    delete _userInterface;
 }
 
 
@@ -57,6 +60,10 @@ void SceneSystem::CalculateVisbleObject() {
     //_sceneGraph.calculateShadowVisibleObjects(GameEngine.Instance.GraphicPipeleine.frustumForShadow, _shadowObjects);
     
     _visibleObjects.AddObjects(_objects);
+}
+
+UserInterface * SceneSystem::GetInterfaceManager() {
+    return _userInterface;
 }
 
 void SceneSystem::BeginFrame() {

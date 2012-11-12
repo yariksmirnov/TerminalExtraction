@@ -39,6 +39,7 @@
 		9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */; };
 		9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D904312162DA7ED003BB5FF /* OpenGLES.framework */; };
 		9D904318162DB254003BB5FF /* UContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D904316162DB254003BB5FF /* UContainer.cpp */; };
+		9DB05CA416500B18001FC18E /* UserInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB05CA216500B18001FC18E /* UserInterface.cpp */; };
 		9DCF1DF9164F0F5F00FE6B45 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D87CAE1164E9F130030B46F /* libcocos2dx.a */; };
 		9DCF1DFB164F12A900FE6B45 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF1DFA164F12A800FE6B45 /* libz.dylib */; };
 		9DCF1DFF164F12DE00FE6B45 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF1DFE164F12DE00FE6B45 /* libxml2.dylib */; };
@@ -139,6 +140,8 @@
 		9D904316162DB254003BB5FF /* UContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UContainer.cpp; path = Sources/Utils/UContainer.cpp; sourceTree = "<group>"; };
 		9D904317162DB254003BB5FF /* UContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UContainer.h; path = Sources/Utils/UContainer.h; sourceTree = "<group>"; };
 		9D904319162DB867003BB5FF /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/Utils/Utils.h; sourceTree = "<group>"; };
+		9DB05CA216500B18001FC18E /* UserInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserInterface.cpp; path = Sources/Engine/UserInterface.cpp; sourceTree = "<group>"; };
+		9DB05CA316500B18001FC18E /* UserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInterface.h; path = Sources/Engine/UserInterface.h; sourceTree = "<group>"; };
 		9DCE1539162F28A1002EBD95 /* GLKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMath.h; sourceTree = "<group>"; };
 		9DCE153A162F28A1002EBD95 /* GLKMathTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMathTypes.h; sourceTree = "<group>"; };
 		9DCE153B162F28A1002EBD95 /* GLKMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMathUtils.h; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				9D83B956162E215A00B216AD /* Renderer */,
 				9D83B959162E225700B216AD /* TEEngine.h */,
 				9D83B958162E225700B216AD /* TEEngine.cpp */,
+				9DB05CA216500B18001FC18E /* UserInterface.cpp */,
+				9DB05CA316500B18001FC18E /* UserInterface.h */,
 				9D4349C11647F78C008394DE /* SceneSystem.cpp */,
 				9D4349C21647F78F008394DE /* SceneSystem.h */,
 				9DD218A816403E3800E2CFA2 /* Camera.h */,
@@ -595,6 +600,7 @@
 				9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */,
 				9D4349B11646CFED008394DE /* TextureCache.cpp in Sources */,
 				9D4349C31647F793008394DE /* SceneSystem.cpp in Sources */,
+				9DB05CA416500B18001FC18E /* UserInterface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

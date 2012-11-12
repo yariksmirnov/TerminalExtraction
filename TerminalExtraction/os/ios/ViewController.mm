@@ -15,6 +15,8 @@ ViewController      *_g_Controller = nil;
 
 @end
 
+static int const _kTEiOSMaxTouchesCount = 10;
+
 @implementation ViewController
 
 + (ViewController *)instance {
@@ -28,6 +30,7 @@ ViewController      *_g_Controller = nil;
     UIScreen *screen = [UIScreen mainScreen];
     
     self.view = [[GLSurface alloc] initWithFrame:screen.bounds andDepthFormat:_depthFormat andPixelFormat:_pixelFormat];
+    _glView = (GLSurface *)self.view;
 }
 
 - (void)viewDidLoad {
@@ -35,7 +38,7 @@ ViewController      *_g_Controller = nil;
 }
 
 - (void)setTouchDelegate:(TouchDelagteAdapter)delegate {
-    _touchDelegate = delegate;
+    _touchApdater = delegate;
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,6 +55,66 @@ ViewController      *_g_Controller = nil;
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskLandscape;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    int ids[_kTEiOSMaxTouchesCount] = {0};
+    float xs[_kTEiOSMaxTouchesCount] = {0.0f};
+    float ys[_kTEiOSMaxTouchesCount] = {0.0f};
+    
+    int i = 0;
+    for (UITouch *touch in touches) {
+        ids[i] = (int)touch;
+        xs[i] = [touch locationInView: [touch view]].x * self.view.contentScaleFactor;;
+        ys[i] = [touch locationInView: [touch view]].y * self.view.contentScaleFactor;;
+        ++i;
+    }
+    _touchApdater._touchDelegate->handleTouchesBegin(i, ids, xs, ys);
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    int ids[_kTEiOSMaxTouchesCount] = {0};
+    float xs[_kTEiOSMaxTouchesCount] = {0.0f};
+    float ys[_kTEiOSMaxTouchesCount] = {0.0f};
+    
+    int i = 0;
+    for (UITouch *touch in touches) {
+        ids[i] = (int)touch;
+        xs[i] = [touch locationInView: [touch view]].x * self.view.contentScaleFactor;;
+        ys[i] = [touch locationInView: [touch view]].y * self.view.contentScaleFactor;;
+        ++i;
+    }
+    _touchApdater._touchDelegate->handleTouchesCancel(i, ids, xs, ys);
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    int ids[_kTEiOSMaxTouchesCount] = {0};
+    float xs[_kTEiOSMaxTouchesCount] = {0.0f};
+    float ys[_kTEiOSMaxTouchesCount] = {0.0f};
+    
+    int i = 0;
+    for (UITouch *touch in touches) {
+        ids[i] = (int)touch;
+        xs[i] = [touch locationInView: [touch view]].x * self.view.contentScaleFactor;;
+        ys[i] = [touch locationInView: [touch view]].y * self.view.contentScaleFactor;;
+        ++i;
+    }
+    _touchApdater._touchDelegate->handleTouchesEnd(i, ids, xs, ys);
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    int ids[_kTEiOSMaxTouchesCount] = {0};
+    float xs[_kTEiOSMaxTouchesCount] = {0.0f};
+    float ys[_kTEiOSMaxTouchesCount] = {0.0f};
+    
+    int i = 0;
+    for (UITouch *touch in touches) {
+        ids[i] = (int)touch;
+        xs[i] = [touch locationInView: [touch view]].x * self.view.contentScaleFactor;;
+        ys[i] = [touch locationInView: [touch view]].y * self.view.contentScaleFactor;;
+        ++i;
+    }
+    _touchApdater._touchDelegate->handleTouchesMove(i, ids, xs, ys);
 }
 
 @end
