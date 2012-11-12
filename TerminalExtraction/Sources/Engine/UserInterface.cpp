@@ -39,11 +39,12 @@ CCScene * UserInterface::GetGUISession() {
 void UserInterface::Prepare() {
     CCLabelTTF *label = CCLabelTTF::create("Light ON/OFF", "HelveticaNeue-Bold", 25);
     CCMenuItemLabel *labelItem = CCMenuItemLabel::create(label, (CCObject *)engine, menu_selector(TEEngine::switchLight));
-    ccColor3B color = {157, 157, 180};
+    ccColor3B color = {255, 255, 255};
     labelItem->setColor(color);
     labelItem->setPosition(CCPointZero);
+    labelItem->setAnchorPoint(CCPointZero);
     CCMenu *menu = CCMenu::create(labelItem, nullptr);
-    menu->setPosition(CCPoint(120, 20));
+    menu->setPosition(CCPoint(00, 560));
     menu->setTouchEnabled(true);
     _guiNodes->addObject(menu);
     

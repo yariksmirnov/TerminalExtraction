@@ -11,10 +11,23 @@
 #import "ViewController.h"
 
 iosDisplay::iosDisplay() {
-    m_fScaleX = 1.0;
-    m_fScaleY = 1.0;
-    m_obScreenSize.width = m_obDesignResolutionSize.width = [UIScreen mainScreen].bounds.size.width;
-    m_obScreenSize.height = m_obDesignResolutionSize.height = [UIScreen mainScreen].bounds.size.height;
+    //if (UIInterfaceOrientationIsLandscape([[ViewController instance] interfaceOrientation]) ) {
+    if(![[UIApplication sharedApplication] isStatusBarHidden])
+    {
+        m_obScreenSize.width = m_obDesignResolutionSize.width = [UIScreen mainScreen].bounds.size.height * [UIScreen mainScreen].scale;
+        m_obScreenSize.height = m_obDesignResolutionSize.height = ([UIScreen mainScreen].bounds.size.width - 20) * [UIScreen mainScreen].scale;
+    }
+    else
+    {
+        m_obScreenSize.width = m_obDesignResolutionSize.width = [UIScreen mainScreen].bounds.size.height * [UIScreen mainScreen].scale;
+        m_obScreenSize.height = m_obDesignResolutionSize.height = [UIScreen mainScreen].bounds.size.width * [UIScreen mainScreen].scale;
+    }
+//    }
+//    else
+//    {
+//        m_obScreenSize.width = m_obDesignResolutionSize.width = [UIScreen mainScreen].bounds.size.width;
+//        m_obScreenSize.height = m_obDesignResolutionSize.height = [UIScreen mainScreen].bounds.size.height;
+//    }
 }
 
 void iosDisplay::InitGLSurface(unsigned int depthFormat, unsigned int pixelFormat) {

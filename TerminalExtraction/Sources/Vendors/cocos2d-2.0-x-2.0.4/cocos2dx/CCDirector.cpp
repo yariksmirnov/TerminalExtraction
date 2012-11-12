@@ -714,7 +714,7 @@ void CCDirector::showStats(void)
                 m_uFrames = 0;
                 m_fAccumDt = 0;
                 
-                sprintf(m_pszFPS, " UPS %.1f", m_fFrameRate);
+                sprintf(m_pszFPS, "FPS %.1f", m_fFrameRate);
                 m_pFPSLabel->setString(m_pszFPS);
                 
                 sprintf(m_pszFPS, "DPF %4lu", (unsigned long)g_uNumberOfDraws);
@@ -772,11 +772,11 @@ void CCDirector::createStatsLabel()
         fontSize = (int)(m_obWinSizeInPoints.width / 320.0f * 24);
     }
     
-    m_pFPSLabel = CCLabelTTF::create("00.0", "Arial", 24);
+    m_pFPSLabel = CCLabelTTF::create("DPS 00.0", "Arial", 24);
     m_pFPSLabel->retain();
-    m_pSPFLabel = CCLabelTTF::create("0.000", "Arial", 24);
+    m_pSPFLabel = CCLabelTTF::create("SPF 0.000", "Arial", 24);
     m_pSPFLabel->retain();
-    m_pDrawsLabel = CCLabelTTF::create("t000", "Arial", 24);
+    m_pDrawsLabel = CCLabelTTF::create("FPS 000", "Arial", 24);
     m_pDrawsLabel->retain();
 
     //CCTexture2D::setDefaultAlphaPixelFormat(currentFormat);

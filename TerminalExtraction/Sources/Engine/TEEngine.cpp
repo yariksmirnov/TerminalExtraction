@@ -19,6 +19,7 @@
 #include "Geometry.h"
 #include "SceneSystem.h"
 
+
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
 
@@ -45,14 +46,17 @@ void TEEngine::Init() {
     _director->setOpenGLView((CCEGLView *)(_renderSystem->GetDisplay()));
     
     _renderSystem->GetDisplay()->setDesignResolutionSize(_renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight(), kResolutionNoBorder);
+    _director->setContentScaleFactor(2.0f);
     
-    _director->setDisplayStats(true);
     
   //  _director->startAnimation();
     
     _scene = new SceneSystem();
     _scene->GetInterfaceManager()->Prepare();
     _director->pushScene(_scene->GetInterfaceManager()->GetGUISession());
+    
+    
+    _director->setDisplayStats(true);
 }
 
 
@@ -77,7 +81,11 @@ void TEEngine::RunLoop(double delta) {
 }
 
 void TEEngine::switchLight() {
-    if (_color == 0.6) {
+    float abs = _color - 0.6;
+    if(abs < 0)
+        abs = -abs;
+    
+    if (abs<0.1 ) {
         _color = 0;
     } else {
         _color = 0.6;
