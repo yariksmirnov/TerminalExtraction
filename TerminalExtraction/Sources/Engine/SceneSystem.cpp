@@ -19,6 +19,24 @@ SceneSystem::SceneSystem() {
     _shadowObjects = UContainer<PivotObject>(100);
     
     _userInterface = new UserInterface;
+    
+    btBroadphaseInterface* broadphase = new btDbvtBroadphase();
+	btDefaultCollisionConfiguration* collisionConfiguration = new btDefaultCollisionConfiguration();
+	btCollisionDispatcher* dispatcher = new btCollisionDispatcher(collisionConfiguration);
+	btSequentialImpulseConstraintSolver* solver = new btSequentialImpulseConstraintSolver();
+    
+    _physicScene = new btDiscreteDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration);
+    _physicScene->setGravity(btVector3(0, -9.8, 0));
+    
+    
+    btCollisionShape *groundShape = new btStaticPlaneShape(btVector3(0, 1, 0), -1);
+	btDefaultMotionState *groundMotionState = new btDefaultMotionState(btTransform(btQuaternion(0,0,0,1),btVector3(0,-5,0)));
+    
+    
+	btRigidBody::btRigidBodyConstructionInfo groundRigidBodyCI(0,groundMotionState,groundShape,btVector3(0,0,0));
+	groundRigidBodyCI.m_restitution = 0.0;
+	btRigidBody* groundRigidBody = new btRigidBody(groundRigidBodyCI);
+	_physicScene->addRigidBody(groundRigidBody);
 }
 
 SceneSystem::~SceneSystem() {
@@ -42,7 +60,8 @@ void SceneSystem::AddObject(const shared_ptr<PivotObject> newObject, bool needUp
 
 void SceneSystem::UpdateScene() {
     for (int i = 0; i < _objects.GetCount(); i++) {
-        _objects.objectAtIndex(i)->Update();
+        shared_ptr<PivotObject> obj = _objects.objectAtIndex(i);
+        obj->Update();
     }
     //_sceneGraph.NewFrame();
     _visibleObjects.clear();

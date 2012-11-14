@@ -12,7 +12,6 @@
 #include <iostream>
 #include "PivotObject.h"
 
-
 class LevelObject : public PivotObject {
     
     RenderObject        *_renderAspect;

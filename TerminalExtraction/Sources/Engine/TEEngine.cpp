@@ -36,8 +36,7 @@ void TEEngine::Init() {
     _camera = new Camera(GLKVector3Make(2, 2, 2), GLKVector3Make(0, 0, 0), _screenRect);
     
     
-    _cube = LevelObject::CreateCube();
-    _plane = LevelObject::CreatePlane();
+    _cube = shared_ptr<LevelObject>(LevelObject::CreateCube());
     
     _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
     _shader1 = new Shader("ShaderPostQuad.vsh", "ShaderPostQuad.fsh");
@@ -52,11 +51,13 @@ void TEEngine::Init() {
   //  _director->startAnimation();
     
     _scene = new SceneSystem();
+    
+    _scene->AddObject(_cube, true);
     _scene->GetInterfaceManager()->Prepare();
     _director->pushScene(_scene->GetInterfaceManager()->GetGUISession());
     
-    
     _director->setDisplayStats(true);
+    
 }
 
 
@@ -73,8 +74,6 @@ void TEEngine::RunLoop(double delta) {
     
     this->Update();
     this->Draw();
-    
-    
     
     this->DrawInterface();
     this->EndFrame();
@@ -105,7 +104,7 @@ void TEEngine::DrawInterface() {
 }
 
 void TEEngine::Update() {
-    
+    _scene->UpdateScene();
 }
 
 void TEEngine::Draw() {
@@ -131,8 +130,7 @@ void TEEngine::Draw() {
     }
     
     
-    GLKMatrix4 m = GLKMatrix4Identity;
-    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m.m);
+    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, _cube->GetTransformMatrix().m);
     {
         GLenum err = glGetError();
         if (err != GL_NO_ERROR)
@@ -165,8 +163,6 @@ void TEEngine::applicationWillEnterForeground() {
 
 TEEngine::~TEEngine() {
     delete _renderSystem;
-    delete _cube;
     delete _shader;
     delete _shader1;
-    delete _plane;
 }

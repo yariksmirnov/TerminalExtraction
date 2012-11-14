@@ -12,6 +12,7 @@
 #include <iostream>
 #include "Utils.h"
 #include "UserInterface.h"
+#include "btBulletDynamicsCommon.h"
 
 using namespace Utils;
 
@@ -24,6 +25,8 @@ class SceneSystem {
     UContainer<PivotObject>          _objects;
     
     UserInterface                    *_userInterface;
+    
+    btDiscreteDynamicsWorld         *_physicScene;
     
 public:
    

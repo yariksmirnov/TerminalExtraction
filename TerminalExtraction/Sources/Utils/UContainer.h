@@ -50,14 +50,14 @@ namespace Utils {
     template<class T>
     UContainer<T>::UContainer(int baseSize):_count(0) {
         _baseSize = baseSize;
-        _array = (shared_ptr<T>*)malloc(ELEMENT_SIZE*_baseSize);
+        _array = new shared_ptr<T>[baseSize];//(shared_ptr<T>*)malloc(ELEMENT_SIZE*_baseSize);
         _currentSize = _baseSize;
     }
     
     template <class T>
     UContainer<T>::~UContainer<T>() {
         clear();
-        free(_array);
+        delete [] _array;
     }
     
     template <class T>
@@ -105,10 +105,11 @@ namespace Utils {
         if (_count == _currentSize) {
             shared_ptr<T> *tmp = _array;
             
-            _array = (shared_ptr<T>*)malloc(ELEMENT_SIZE*(_currentSize + _baseSize));
+            _array = new shared_ptr<T>[_currentSize + _baseSize];// (shared_ptr<T>*)malloc(ELEMENT_SIZE*(_currentSize + _baseSize));
+
             memcpy(_array, tmp, ELEMENT_SIZE*_currentSize);
             _currentSize += _baseSize;
-            free(tmp);
+            delete [] tmp;
         }
         _array[_count] = object;
         _count ++;
@@ -130,10 +131,11 @@ namespace Utils {
         if (_currentSize < objects.GetCount() + _count)
         {
             shared_ptr<T> *tmp = _array;
-            _array = (shared_ptr<T>*)malloc(ELEMENT_SIZE*(objects.GetCount() + _count + _baseSize));
+            _array = new shared_ptr<T>[_count + _baseSize];// (shared_ptr<T>*)malloc(ELEMENT_SIZE*(objects.GetCount() + _count + _baseSize));
             memcpy(_array, tmp, ELEMENT_SIZE*_count);
             _currentSize = objects.GetCount() + _count + _baseSize;
-            free(tmp);
+            delete [] tmp;
+           // free(tmp);
         }
         memcpy(_array + ELEMENT_SIZE * _count, &objects, ELEMENT_SIZE * objects.GetCount());
         _currentSize += objects.GetCount();

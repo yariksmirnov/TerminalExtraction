@@ -16,6 +16,7 @@
 
 using namespace cocos2d;
 
+
 class RenderSystem;
 class Shader;
 
@@ -30,8 +31,8 @@ class TEEngine : private CCApplication {
     float                _elapsedTime;
     float                _fullTime;
     
-    LevelObject         *_cube;
-    LevelObject         *_plane;
+    std::shared_ptr<LevelObject>         _cube;
+    //LevelObject         *_plane;
     
     
     Camera              *_camera;
