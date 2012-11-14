@@ -194,6 +194,7 @@
 		9DE33AC7162F5AD40027565E /* GLSurface.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE33AC6162F5AD40027565E /* GLSurface.m */; };
 		9DE33AC9162F5B5A0027565E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE33AC8162F5B5A0027565E /* QuartzCore.framework */; };
 		9DE6A9FC16458EE700AF9280 /* UnAnimRenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE6A9FA16458EE700AF9280 /* UnAnimRenderObject.cpp */; };
+		9DFFDE461653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFFDE441653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -682,6 +683,8 @@
 		9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = ShaderBackground.vsh; path = Sources/Renderer/Shaders/Sources/ShaderBackground.vsh; sourceTree = "<group>"; };
 		9DFFDE3F1653DB2200AB84F0 /* BulletDynamics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BulletDynamics.framework; sourceTree = "<group>"; };
 		9DFFDE421653DD1F00AB84F0 /* BulletSoftBody.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BulletSoftBody.framework; sourceTree = "<group>"; };
+		9DFFDE441653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PhysicObjectBehaviourModel.cpp; path = Sources/Engine/Objects/ObjectBehaviourModel/PhysicObjectBehaviourModel.cpp; sourceTree = "<group>"; };
+		9DFFDE451653F8BE00AB84F0 /* PhysicObjectBehaviourModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhysicObjectBehaviourModel.h; path = Sources/Engine/Objects/ObjectBehaviourModel/PhysicObjectBehaviourModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -770,6 +773,8 @@
 				9D6A843E1641D83B00E322C3 /* ObjectBehaviourModel.h */,
 				9D60B571164536050074081D /* StaticObjectBehaviorModel.cpp */,
 				9D60B572164536050074081D /* StaticObjectBehaviorModel.h */,
+				9DFFDE441653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp */,
+				9DFFDE451653F8BE00AB84F0 /* PhysicObjectBehaviourModel.h */,
 			);
 			name = ObjectBehaviourModel;
 			sourceTree = "<group>";
@@ -1770,6 +1775,7 @@
 				9D87CE5B1653D2E00030B46F /* MiniCL.cpp in Sources */,
 				9D87CE5C1653D2E00030B46F /* MiniCLTask.cpp in Sources */,
 				9D87CE5D1653D2E00030B46F /* MiniCLTaskScheduler.cpp in Sources */,
+				9DFFDE461653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
