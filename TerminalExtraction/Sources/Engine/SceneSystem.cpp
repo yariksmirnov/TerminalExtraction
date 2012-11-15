@@ -39,6 +39,7 @@ SceneSystem::SceneSystem() {
 	btRigidBody::btRigidBodyConstructionInfo groundRigidBodyCI(0,groundMotionState,groundShape,btVector3(0,0,0));
 	groundRigidBodyCI.m_restitution = 0.0;
 	btRigidBody* groundRigidBody = new btRigidBody(groundRigidBodyCI);
+    groundRigidBody->setCollisionFlags(btCollisionObject::CF_STATIC_OBJECT);
 	_physicScene->addRigidBody(groundRigidBody);
     //_physicScene->getDebugDrawer()->setDebugMode(btIDebugDraw::DBG_MAX_DEBUG_DRAW_MODE);
 }

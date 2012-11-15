@@ -27,13 +27,15 @@ LevelObject * LevelObject::CreateCube() {
     
     btCollisionShape *shape = new btBoxShape(btVector3(0.5, 0.5, 0.5));
     btDefaultMotionState *motionState = new btDefaultMotionState();
+	btVector3 fallInertia(0,0,0);
+    shape->calculateLocalInertia(10, fallInertia);
     btTransform t;
     t.setRotation(btQuaternion(btVector3(1, 0, 0), 0));
-    t.setOrigin(btVector3(0, 0, 0));
+    t.setOrigin(btVector3(0, 0.5, 0));
     motionState->setWorldTransform(t);
-    btRigidBody::btRigidBodyConstructionInfo info(10, motionState, shape, btVector3(0, 0, 0));
+    btRigidBody::btRigidBodyConstructionInfo info(10, motionState, shape, fallInertia);
     btRigidBody *body = new btRigidBody(info);
-    
+    body->setCollisionFlags(btCollisionObject::CF_KINEMATIC_OBJECT);
     ObjectBehaviourModel *obmm = new PhysicObjectBehaviuorModel(body);
     
     RenderObject *renderObject = new UnAnimRenderObject(mesh);

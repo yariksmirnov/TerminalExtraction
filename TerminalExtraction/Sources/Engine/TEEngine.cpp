@@ -37,7 +37,7 @@ void TEEngine::Init() {
     
     
     _cube = shared_ptr<LevelObject>(LevelObject::CreateCube());
-    _cube->GetBehavoiurModel()->SetPosition(GLKMatrix4MakeTranslation(0, 5, 0));
+   // _cube->GetBehavoiurModel()->SetPosition(GLKMatrix4MakeTranslation(0, 5, 0));
     
     _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
     _shader1 = new Shader("ShaderPostQuad.vsh", "ShaderPostQuad.fsh");

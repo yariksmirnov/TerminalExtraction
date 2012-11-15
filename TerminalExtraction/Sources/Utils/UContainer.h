@@ -19,7 +19,7 @@ namespace Utils {
     
     template<class T>
     class UContainer {
-        
+        #pragma DATA_ALIGN ( 8 );
         shared_ptr<T> *_array;
         
         int         _baseSize;
@@ -38,7 +38,7 @@ namespace Utils {
         int indexOf(const shared_ptr<T>& object);
         void AddObjects(const UContainer<T>& objects);
         void clear();
-        shared_ptr<T> objectAtIndex(int index);
+        shared_ptr<T> objectAtIndex(int index) const;
         void sort(int (* pointer)(const void *, const void *), size_t size);
         int GetCount() const { return _count; }
     };
@@ -116,8 +116,9 @@ namespace Utils {
     }
     
     template <class T>
-    shared_ptr<T> UContainer<T>::objectAtIndex(int index) {
-        return _array[index];
+    shared_ptr<T> UContainer<T>::objectAtIndex(int index) const {
+        shared_ptr<T> result = _array[index];
+        return result;
     }
     
     template <class T>
