@@ -170,7 +170,7 @@ void TEEngine::Draw() {
             printf(" glError: 0x%04X", err);
     }
     GLKMatrix4 m1 = _cube->GetTransformMatrix();
-    printf("x: %f y: %f z: %f\n", m1.m30, m1.m31, m1.m32);
+    //printf("x: %f y: %f z: %f\n", m1.m30, m1.m31, m1.m32);
     _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m1.m);
     {
         GLenum err = glGetError();
