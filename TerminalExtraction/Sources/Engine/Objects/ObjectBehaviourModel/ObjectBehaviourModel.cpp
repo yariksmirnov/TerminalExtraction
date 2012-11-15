@@ -17,9 +17,17 @@ GLKMatrix4 ObjectBehaviourModel::GetGlobalPosition() {
     return _globalPosition;
 }
 
-void ObjectBehaviourModel::SetGlobalPosition(GLKMatrix4 globalPosition, void *aditionalData, PivotObject *parent, bool afterUpdate) {
+void ObjectBehaviourModel::SetGlobalPosition(const GLKMatrix4& globalPosition, void *aditionalData, const PivotObject *parent, bool afterUpdate) {
     
 }
+
+void ObjectBehaviourModel::SetPosition(const GLKMatrix4& position)
+{
+    SetGlobalPosition(position, nullptr, nullptr, true);
+}
+
+void ObjectBehaviourModel::SetParentObject(const PivotObject *parent)
+{}
 
 void ObjectBehaviourModel::CommitPosition() {
     moved = ((_globalPosition.m30 != _currentPosition.m30) || (_globalPosition.m31 != _currentPosition.m31) || (_globalPosition.m32 != _currentPosition.m32));
@@ -57,5 +65,9 @@ void ObjectBehaviourModel::Move(GLKVector3 displacement) {
 }
 
 void ObjectBehaviourModel::MakeJolt(GLKVector3 point, GLKVector3 direction, float mass) {
+    
+}
+
+ObjectBehaviourModel::~ObjectBehaviourModel() {
     
 }

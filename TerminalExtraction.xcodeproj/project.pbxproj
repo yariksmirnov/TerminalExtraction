@@ -14,6 +14,8 @@
 		9D4349B11646CFED008394DE /* TextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349AF1646CFED008394DE /* TextureCache.cpp */; };
 		9D4349B816470617008394DE /* woodbox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D4349B716470616008394DE /* woodbox.jpg */; };
 		9D4349C31647F793008394DE /* SceneSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349C11647F78C008394DE /* SceneSystem.cpp */; };
+		9D496F5016553CCD006B3925 /* liblog4cxx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D496F4F16553CCD006B3925 /* liblog4cxx.a */; };
+		9D496F5516554405006B3925 /* Sys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F5416554405006B3925 /* Sys.cpp */; };
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
 		9D60B5701645346E0074081D /* LevelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B56E1645346B0074081D /* LevelObject.cpp */; };
@@ -235,6 +237,9 @@
 		9D4349B716470616008394DE /* woodbox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woodbox.jpg; sourceTree = "<group>"; };
 		9D4349C11647F78C008394DE /* SceneSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSystem.cpp; path = Sources/Engine/SceneSystem.cpp; sourceTree = "<group>"; };
 		9D4349C21647F78F008394DE /* SceneSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSystem.h; path = Sources/Engine/SceneSystem.h; sourceTree = "<group>"; };
+		9D496F4F16553CCD006B3925 /* liblog4cxx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblog4cxx.a; path = "TerminalExtraction/Sources/Vendors/log4cxx/log4cxx.02 PM/liblog4cxx.a"; sourceTree = "<group>"; };
+		9D496F5416554405006B3925 /* Sys.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sys.cpp; path = Sources/Utils/Sys.cpp; sourceTree = "<group>"; };
+		9D496F5616554416006B3925 /* Sys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sys.h; path = Sources/Utils/Sys.h; sourceTree = "<group>"; };
 		9D60B5451642D1FD0074081D /* RenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderObject.cpp; path = Sources/Engine/Objects/RenderObject.cpp; sourceTree = "<group>"; };
 		9D60B5461642D1FD0074081D /* RenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderObject.h; path = Sources/Engine/Objects/RenderObject.h; sourceTree = "<group>"; };
 		9D60B5491642D6A20074081D /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Sources/Engine/Materials/Material.cpp; sourceTree = "<group>"; };
@@ -685,6 +690,7 @@
 		9DFFDE421653DD1F00AB84F0 /* BulletSoftBody.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BulletSoftBody.framework; sourceTree = "<group>"; };
 		9DFFDE441653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PhysicObjectBehaviourModel.cpp; path = Sources/Engine/Objects/ObjectBehaviourModel/PhysicObjectBehaviourModel.cpp; sourceTree = "<group>"; };
 		9DFFDE451653F8BE00AB84F0 /* PhysicObjectBehaviourModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhysicObjectBehaviourModel.h; path = Sources/Engine/Objects/ObjectBehaviourModel/PhysicObjectBehaviourModel.h; sourceTree = "<group>"; };
+		9DFFDE4B1654ED7900AB84F0 /* bulletAddons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bulletAddons.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -701,6 +707,7 @@
 				9D9042E5162D9F1A003BB5FF /* UIKit.framework in Frameworks */,
 				9D9042E7162D9F1A003BB5FF /* Foundation.framework in Frameworks */,
 				9D9042E9162D9F1A003BB5FF /* CoreGraphics.framework in Frameworks */,
+				9D496F5016553CCD006B3925 /* liblog4cxx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +866,7 @@
 			children = (
 				9D87CB7C1653D2DF0030B46F /* bullet-physics */,
 				9D87CAD9164E9F130030B46F /* cocos2dx.xcodeproj */,
+				9DFFDE4B1654ED7900AB84F0 /* bulletAddons.h */,
 			);
 			name = Vendors;
 			path = Sources/Vendors;
@@ -1415,6 +1423,7 @@
 		9D9042E3162D9F1A003BB5FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D496F4F16553CCD006B3925 /* liblog4cxx.a */,
 				9DCF1E00164F151400FE6B45 /* libstdc++.6.dylib */,
 				9DCF1DFE164F12DE00FE6B45 /* libxml2.dylib */,
 				9DCF1DFA164F12A800FE6B45 /* libz.dylib */,
@@ -1458,6 +1467,8 @@
 			children = (
 				9DCE1537162F284D002EBD95 /* MathKit */,
 				9D904319162DB867003BB5FF /* Utils.h */,
+				9D496F5416554405006B3925 /* Sys.cpp */,
+				9D496F5616554416006B3925 /* Sys.h */,
 				9D904317162DB254003BB5FF /* UContainer.h */,
 				9D904316162DB254003BB5FF /* UContainer.cpp */,
 				9D2C461E1632140F000EC193 /* GlobalConstants.h */,
@@ -1776,6 +1787,7 @@
 				9D87CE5C1653D2E00030B46F /* MiniCLTask.cpp in Sources */,
 				9D87CE5D1653D2E00030B46F /* MiniCLTaskScheduler.cpp in Sources */,
 				9DFFDE461653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp in Sources */,
+				9D496F5516554405006B3925 /* Sys.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1902,9 +1914,13 @@
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/platform/ios\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/kazmath/include\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src\"",
+					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/include\"",
 				);
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/log4cxx.02 PM\"",
+				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1939,9 +1955,13 @@
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/platform/ios\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/kazmath/include\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src\"",
+					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/include\"",
 				);
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/log4cxx.02 PM\"",
+				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

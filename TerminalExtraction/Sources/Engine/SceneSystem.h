@@ -47,6 +47,7 @@ public:
     void BeginFrame();
     void EndFrame();
     void Frame(double time);
+    void PhysicFrame(double time);
     
     UserInterface * GetInterfaceManager();
 };

@@ -51,7 +51,7 @@ MyClass::~MyClass()
 }
 
 - (void)frameCallback:(CADisplayLink *)link {
-    engine->RunLoop(link.timestamp);
+    engine->RunLoop(link.duration);
 }
 
 

@@ -16,7 +16,7 @@ class TranslateableObject {
 public:
     
     virtual GLKVector3 GetPosition() = 0;
-    virtual void SetPosition(GLKVector3 position) = 0;
+    virtual void SetPosition(const GLKVector3& position) = 0;
     
 };
 

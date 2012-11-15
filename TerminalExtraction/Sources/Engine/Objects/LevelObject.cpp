@@ -8,9 +8,13 @@
 
 #include "LevelObject.h"
 #include "EngineMesh.h"
+#include "PhysicObjectBehaviourModel.h"
 #include "StaticObjectBehaviorModel.h"
 #include "UnAnimRenderObject.h"
 #include "TextureMaterial.h"
+#include "btRigidBody.h"
+#include "btBoxShape.h"
+#include "btDefaultMotionState.h"
 
 LevelObject::LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behaviorModel, Material *material):PivotObject(behaviorModel) {
     _renderAspect = renderObject;
@@ -21,7 +25,16 @@ LevelObject * LevelObject::CreateCube() {
     const EngineMesh * mesh = EngineMesh::CreateCube();
     Material *material = new TextureMaterial("woodbox.jpg");
     
-    ObjectBehaviourModel *obmm = new StaticObjectBehaviourModel();
+    btCollisionShape *shape = new btBoxShape(btVector3(0.5, 0.5, 0.5));
+    btDefaultMotionState *motionState = new btDefaultMotionState();
+    btTransform t;
+    t.setRotation(btQuaternion(btVector3(1, 0, 0), 0));
+    t.setOrigin(btVector3(0, 0, 0));
+    motionState->setWorldTransform(t);
+    btRigidBody::btRigidBodyConstructionInfo info(10, motionState, shape, btVector3(0, 0, 0));
+    btRigidBody *body = new btRigidBody(info);
+    
+    ObjectBehaviourModel *obmm = new PhysicObjectBehaviuorModel(body);
     
     RenderObject *renderObject = new UnAnimRenderObject(mesh);
     
@@ -42,6 +55,12 @@ LevelObject * LevelObject::CreatePlane() {
 RenderObject * LevelObject::GetRenderAspect()
 {
     return _renderAspect;
+}
+
+void LevelObject::Frame(double time)
+{
+    _objectBehaviourModel->Frame(time);
+   // _renderAspect->SetPosition(_cu);
 }
 
 Material * LevelObject::GetMaterial()

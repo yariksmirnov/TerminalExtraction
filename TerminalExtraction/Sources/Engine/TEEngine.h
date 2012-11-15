@@ -24,6 +24,7 @@ class LevelObject;
 class Camera;
 class EngineMesh;
 class SceneSystem;
+class PivotObject;
 
 class TEEngine : private CCApplication {
     
@@ -67,7 +68,7 @@ public:
     
     
     Shader * GetShader();
-
+    void AddObject(const std::shared_ptr<PivotObject>& object, const std::shared_ptr<PivotObject>& parentObject);
     
     virtual bool applicationDidFinishLaunching();
     virtual void applicationDidEnterBackground();

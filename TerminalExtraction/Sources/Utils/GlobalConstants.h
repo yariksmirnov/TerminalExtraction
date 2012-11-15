@@ -17,6 +17,8 @@
 #include GLES2
 #include "wchar.h"
 
+#include <log4cxx/logger.h>
+
 typedef struct _vertexStruct
 {
     GLfloat position[3];

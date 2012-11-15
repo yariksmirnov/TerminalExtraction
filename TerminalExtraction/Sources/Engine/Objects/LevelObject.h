@@ -29,6 +29,8 @@ public:
     static LevelObject * CreateCube();
     static LevelObject * CreatePlane();
     
+    void Frame(double time);
+    
 };
 
 #endif /* defined(__TerminalExtraction__LevelObject__) */

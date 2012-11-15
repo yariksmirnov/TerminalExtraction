@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "TranslateableObject.h"
+#include "ObjectBehaviourModel.h"
 
 using namespace std;
 
@@ -33,6 +34,7 @@ enum {
 typedef unsigned int PivotMaterialType;
 
 class PivotObject : public TranslateableObject {
+protected:
     GLKMatrix4              _renderMatrix;
     GLKMatrix4              _transformMatrix;
     
@@ -55,6 +57,7 @@ public:
     GLKVector3 objectConstrAxis;
     GLKVector3 objectConstrForward;
     
+    ObjectBehaviourModel* GetBehavoiurModel() const {return _objectBehaviourModel;}
     
     RenderMatrixController      *matrixController;
     
@@ -84,7 +87,7 @@ public:
     virtual shared_ptr<EditorData> GetEditorAspect();
     
     virtual GLKVector3 GetPosition();
-    virtual void SetPosition(GLKVector3 position);
+    virtual void SetPosition(const GLKVector3& position);
     
 };
 

@@ -10,6 +10,9 @@
 #include "PivotObject.h"
 #include "RenderObject.h"
 #include "EditorData.h"
+#include "ObjectBehaviourModel.h"
+#include "PhysicObjectBehaviourModel.h"
+#include "btIDebugDraw.h"
 
 using namespace std;
 
@@ -29,7 +32,7 @@ SceneSystem::SceneSystem() {
     _physicScene->setGravity(btVector3(0, -9.8, 0));
     
     
-    btCollisionShape *groundShape = new btStaticPlaneShape(btVector3(0, 1, 0), -1);
+    btCollisionShape *groundShape = new btStaticPlaneShape(btVector3(0, 0.1, 0), 0.1);
 	btDefaultMotionState *groundMotionState = new btDefaultMotionState(btTransform(btQuaternion(0,0,0,1),btVector3(0,-5,0)));
     
     
@@ -37,15 +40,16 @@ SceneSystem::SceneSystem() {
 	groundRigidBodyCI.m_restitution = 0.0;
 	btRigidBody* groundRigidBody = new btRigidBody(groundRigidBodyCI);
 	_physicScene->addRigidBody(groundRigidBody);
+    //_physicScene->getDebugDrawer()->setDebugMode(btIDebugDraw::DBG_MAX_DEBUG_DRAW_MODE);
 }
 
 SceneSystem::~SceneSystem() {
     delete _userInterface;
 }
 
-
-
 void SceneSystem::AddObject(const shared_ptr<PivotObject> newObject, bool needUpdate) {
+    PhysicObjectBehaviuorModel* m = dynamic_cast<PhysicObjectBehaviuorModel *>(newObject->GetBehavoiurModel());
+    _physicScene->addRigidBody(m->GetRigidBody());
     if (needUpdate) {
         newObject->BeginFrame();
         newObject->Frame(0);
@@ -53,8 +57,9 @@ void SceneSystem::AddObject(const shared_ptr<PivotObject> newObject, bool needUp
         newObject->Update();
     }
     newObject->AfterUpdate();
-    //newObject.behaviourmodel.Enable();
+    //newObject->_objectBehaviourModel->Enable();
     _objects.addObject(newObject);
+    
     //_sceneGraph.AddObject(newObject);
 }
 
@@ -78,7 +83,7 @@ void SceneSystem::CalculateVisbleObject() {
     //_sceneGraph.calculateVisibleObjects(CameraControllers.CameraManager.Camera.cameraFrustum, _visibleObjects);
     //_sceneGraph.calculateShadowVisibleObjects(GameEngine.Instance.GraphicPipeleine.frustumForShadow, _shadowObjects);
     
-    _visibleObjects.AddObjects(_objects);
+    _visibleObjects.AddObjects(_objects); 
 }
 
 UserInterface * SceneSystem::GetInterfaceManager() {
@@ -87,7 +92,8 @@ UserInterface * SceneSystem::GetInterfaceManager() {
 
 void SceneSystem::BeginFrame() {
     for (int i = 0; i < _objects.GetCount(); i++) {
-        _objects.objectAtIndex(i)->BeginFrame();
+        shared_ptr<PivotObject> obj = _objects.objectAtIndex(i);
+        obj->BeginFrame();
     }
 }
 
@@ -95,6 +101,12 @@ void SceneSystem::Frame(double time) {
     for (int i = 0; i < _objects.GetCount(); i++) {
         _objects.objectAtIndex(i)->Frame(time);
     }
+    _physicScene->debugDrawWorld();
+}
+
+void SceneSystem::PhysicFrame(double time)
+{
+    _physicScene->stepSimulation(1/60.f, 10);
 }
 
 void SceneSystem::EndFrame() {

@@ -37,6 +37,7 @@ void TEEngine::Init() {
     
     
     _cube = shared_ptr<LevelObject>(LevelObject::CreateCube());
+    _cube->GetBehavoiurModel()->SetPosition(GLKMatrix4MakeTranslation(0, 5, 0));
     
     _shader = new Shader("ShaderBackground.vsh", "ShaderBackground.fsh");
     _shader1 = new Shader("ShaderPostQuad.vsh", "ShaderPostQuad.fsh");
@@ -60,6 +61,36 @@ void TEEngine::Init() {
     
 }
 
+void TEEngine::AddObject(const shared_ptr<PivotObject>& object, const shared_ptr<PivotObject>& parentObject)
+{
+//    LevelObject loNew = __object as LevelObject;
+//    if (loNew == null)
+//        return;
+//    
+//    if (loNew.renderaspect.isanimated)
+//    {
+//        Render.AnimRenderObject ro = loNew.renderaspect as Render.AnimRenderObject;
+//        AnimationManager.AnimationManager.Manager.AddAnimationUserEnd(ro);
+//    }
+//    
+//    gameScene.AddObject(__object);
+//    
+//    if (__parentObject != null)
+//    {
+//        __object.behaviourmodel.SetParentObject(__parentObject);
+//        gameScene._objects.AddRule(__parentObject, __object);
+//    }
+    RenderObject* ro = object->GetRenderAspect();
+    ro = ro;
+    //is anim
+    
+    _scene->AddObject(object, true);
+    if(parentObject)
+    {
+        //lalala
+    }
+    
+}
 
 Shader * TEEngine::GetShader() {
     return _shader;
@@ -104,6 +135,16 @@ void TEEngine::DrawInterface() {
 }
 
 void TEEngine::Update() {
+    
+    _scene->BeginFrame();
+    
+    
+    _scene->PhysicFrame(_elapsedTime);
+    _scene->Frame(_elapsedTime);
+    
+    
+    //End updating world objects
+    _scene->EndFrame();
     _scene->UpdateScene();
 }
 
@@ -128,9 +169,9 @@ void TEEngine::Draw() {
         if (err != GL_NO_ERROR)
             printf(" glError: 0x%04X", err);
     }
-    
-    
-    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, _cube->GetTransformMatrix().m);
+    GLKMatrix4 m1 = _cube->GetTransformMatrix();
+    printf("x: %f y: %f z: %f\n", m1.m30, m1.m31, m1.m32);
+    _shader->SetMatrixValue(UNIFORM_MODEL_MATRIX, m1.m);
     {
         GLenum err = glGetError();
         if (err != GL_NO_ERROR)

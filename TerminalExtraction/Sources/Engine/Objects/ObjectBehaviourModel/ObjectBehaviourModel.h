@@ -16,6 +16,7 @@
 class PivotObject;
 
 class ObjectBehaviourModel {
+protected:
     
     GLKMatrix4      _currentPosition;
     GLKMatrix4      _globalPosition;
@@ -25,25 +26,24 @@ public:
     bool            moved;
     
     ObjectBehaviourModel();
+    virtual ~ ObjectBehaviourModel();
     
     GLKMatrix4 GetGlobalPosition();
-    virtual void SetGlobalPosition(GLKMatrix4 globalPosition, void * aditionalData, PivotObject *parent, bool afterUpdate);
-    void SetParentObject(PivotObject *parent);
+    virtual void SetGlobalPosition(const GLKMatrix4& globalPosition, void * aditionalData, const PivotObject *parent, bool afterUpdate);
+    virtual void SetPosition(const GLKMatrix4& position);
+    virtual void SetParentObject(const PivotObject *parent);
     
-    void SetPosition(GLKMatrix4 position);
     void CommitPosition();
     
     void BeginFrame();
     void EndFrame();
-    void Frame(double time);
+    virtual void Frame(double time);
     
-    void Enable();
-    void Disale();
-    
-    void Rotate(float angle);
+    virtual void Enable();
+    virtual void Disale();
+    virtual void Rotate(float angle);
     virtual void Move(GLKVector3 displacement);
-
-    void MakeJolt(GLKVector3 point, GLKVector3 direction, float mass);
+    virtual void MakeJolt(GLKVector3 point, GLKVector3 direction, float mass);
 
 };
 

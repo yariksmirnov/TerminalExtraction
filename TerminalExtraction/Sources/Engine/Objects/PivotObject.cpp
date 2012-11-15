@@ -30,9 +30,12 @@ PivotObject::PivotObject(ObjectBehaviourModel *behaviourModel) {
 
 void PivotObject::Update() {
     _transformMatrix = _objectBehaviourModel->GetGlobalPosition();
+//    if (moved)
+//        raycastaspect.boundingShape.Update(transform);
 }
 
-void PivotObject::SetGlobalPosition(GLKMatrix4 globalPosition, void *aditionalData, PivotObject *parent, bool afterUpdate){
+void PivotObject::SetGlobalPosition(GLKMatrix4 globalPosition, void *aditionalData, PivotObject *parent, bool afterUpdate)
+{
     _objectBehaviourModel->SetGlobalPosition(globalPosition, aditionalData, parent, afterUpdate);
     _transformMatrix = _objectBehaviourModel->GetGlobalPosition();
     moved = true;
@@ -42,8 +45,10 @@ void PivotObject::SetGlobalPosition(GLKMatrix4 globalPosition, void *aditionalDa
     }
 }
 
-void PivotObject::AfterUpdate() {
-    if (_isOnScreen) {
+void PivotObject::AfterUpdate()
+{
+    if (_isOnScreen)
+    {
         if (matrixController)
             _renderMatrix = matrixController->GetRenderMatrix(this);
         else
@@ -66,12 +71,13 @@ void PivotObject::BeginFrame() {
 }
 
 void PivotObject::Frame(double time) {
-    
+    _objectBehaviourModel->Frame(time);
 }
 
 void PivotObject::EndFrame() {
     _objectBehaviourModel->EndFrame();
     moved = _objectBehaviourModel->moved;
+    _transformMatrix = _objectBehaviourModel->GetGlobalPosition();
 }
 
 ObjectBehaviourModel * PivotObject::GetObjectBehaviourModel() {
@@ -98,10 +104,8 @@ GLKVector3 PivotObject::GetPosition() {
     return GLKMatrix4GetTranslation(_transformMatrix);
 }
 
-void PivotObject::SetPosition(GLKVector3 position) {
-    _transformMatrix.m30 = position.x;
-    _transformMatrix.m31 = position.y;
-    _transformMatrix.m32 = position.z;
+void PivotObject::SetPosition(const GLKVector3& position) {
+    _objectBehaviourModel->SetPosition(GLKMatrix4MakeTranslationV(position));
 }
 
 PivotObject::~PivotObject() {
