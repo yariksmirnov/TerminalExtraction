@@ -7,14 +7,17 @@
 //
 
 #include "USQliteConnector.h"
+#include "sqlite3.h"
 
 using namespace std;
 
-namespace Utils {
+namespace Utils
+{
     
-   
     SQliteConnector::SQliteConnector(string dbname)
-    {}
+    {
+        sqlite3_open(dbname.c_str(), &_dbconnector);
+    }
     
     SQliteConnector::~SQliteConnector()
     {
@@ -23,7 +26,8 @@ namespace Utils {
     }
     
     void  SQliteConnector::executeNonQuery(string query, void* errorCallback)
-    {}
+    {
+    }
        
     USQLiteResultSet* SQliteConnector::executeSelect(string query, void* errorCallback)
     {
@@ -36,6 +40,9 @@ namespace Utils {
     }
         
     void SQliteConnector::Close()
-    {}
+    {
+        if(_closed)
+            return;
+    }
     
 }
