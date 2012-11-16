@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B0C40F81656C03200FC3452 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C40F61656C03200FC3452 /* sqlite3.c */; };
+		8B0C40FB1656C15100FC3452 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C40F91656C15100FC3452 /* sqlite3.c */; };
+		8B0C41021656C2B300FC3452 /* USQliteConnector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C41001656C2B300FC3452 /* USQliteConnector.cpp */; };
+		8B0C41051656C2DF00FC3452 /* USQLiteResultSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C41031656C2DF00FC3452 /* USQLiteResultSet.cpp */; };
 		8B7F451F1645B2D00041897F /* ShaderBackground.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */; };
 		8B7F45201645B2D00041897F /* ShaderBackground.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */; };
 		8B7F452D16463F320041897F /* ShaderPostQuad.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F452916463EF20041897F /* ShaderPostQuad.vsh */; };
@@ -228,8 +230,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B0C40F61656C03200FC3452 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
-		8B0C40F71656C03200FC3452 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		8B0C40F91656C15100FC3452 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = SQLite/sqlite3.c; sourceTree = "<group>"; };
+		8B0C40FA1656C15100FC3452 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = SQLite/sqlite3.h; sourceTree = "<group>"; };
+		8B0C41001656C2B300FC3452 /* USQliteConnector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = USQliteConnector.cpp; sourceTree = "<group>"; };
+		8B0C41011656C2B300FC3452 /* USQliteConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USQliteConnector.h; sourceTree = "<group>"; };
+		8B0C41031656C2DF00FC3452 /* USQLiteResultSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = USQLiteResultSet.cpp; sourceTree = "<group>"; };
+		8B0C41041656C2DF00FC3452 /* USQLiteResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USQLiteResultSet.h; sourceTree = "<group>"; };
 		8B7F452916463EF20041897F /* ShaderPostQuad.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.vsh; sourceTree = "<group>"; };
 		8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.fsh; sourceTree = "<group>"; };
 		9D2C461E1632140F000EC193 /* GlobalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GlobalConstants.h; path = Sources/Utils/GlobalConstants.h; sourceTree = "<group>"; };
@@ -718,10 +724,22 @@
 		8B0C40E81656B9A500FC3452 /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
-				8B0C40F61656C03200FC3452 /* sqlite3.c */,
-				8B0C40F71656C03200FC3452 /* sqlite3.h */,
+				8B0C40F91656C15100FC3452 /* sqlite3.c */,
+				8B0C40FA1656C15100FC3452 /* sqlite3.h */,
 			);
 			name = SQLite;
+			sourceTree = "<group>";
+		};
+		8B0C40FC1656C16B00FC3452 /* USQLiteShell */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C41001656C2B300FC3452 /* USQliteConnector.cpp */,
+				8B0C41011656C2B300FC3452 /* USQliteConnector.h */,
+				8B0C41031656C2DF00FC3452 /* USQLiteResultSet.cpp */,
+				8B0C41041656C2DF00FC3452 /* USQLiteResultSet.h */,
+			);
+			name = USQLiteShell;
+			path = Sources/Utils/USQLiteShell;
 			sourceTree = "<group>";
 		};
 		9D4349B516470616008394DE /* Resources */ = {
@@ -1476,6 +1494,7 @@
 		9D904315162DB1E1003BB5FF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8B0C40FC1656C16B00FC3452 /* USQLiteShell */,
 				9DCE1537162F284D002EBD95 /* MathKit */,
 				9D904319162DB867003BB5FF /* Utils.h */,
 				9D496F5416554405006B3925 /* Sys.cpp */,
@@ -1797,7 +1816,9 @@
 				9D87CE5D1653D2E00030B46F /* MiniCLTaskScheduler.cpp in Sources */,
 				9DFFDE461653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp in Sources */,
 				9D496F5516554405006B3925 /* Sys.cpp in Sources */,
-				8B0C40F81656C03200FC3452 /* sqlite3.c in Sources */,
+				8B0C40FB1656C15100FC3452 /* sqlite3.c in Sources */,
+				8B0C41021656C2B300FC3452 /* USQliteConnector.cpp in Sources */,
+				8B0C41051656C2DF00FC3452 /* USQLiteResultSet.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

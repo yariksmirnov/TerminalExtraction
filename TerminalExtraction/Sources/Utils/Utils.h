@@ -12,6 +12,7 @@
 #include "UContainer.h"
 #include "IdGenerator.h"
 #include "Sys.h"
+#include "USQliteConnector.h"
 
 using namespace Utils;
 
