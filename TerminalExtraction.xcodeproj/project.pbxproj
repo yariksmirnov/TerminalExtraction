@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0C40F81656C03200FC3452 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C40F61656C03200FC3452 /* sqlite3.c */; };
 		8B7F451F1645B2D00041897F /* ShaderBackground.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0516459E5500AF9280 /* ShaderBackground.vsh */; };
 		8B7F45201645B2D00041897F /* ShaderBackground.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 9DE6AA0416459E5500AF9280 /* ShaderBackground.fsh */; };
 		8B7F452D16463F320041897F /* ShaderPostQuad.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F452916463EF20041897F /* ShaderPostQuad.vsh */; };
@@ -227,6 +228,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B0C40F61656C03200FC3452 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		8B0C40F71656C03200FC3452 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		8B7F452916463EF20041897F /* ShaderPostQuad.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.vsh; sourceTree = "<group>"; };
 		8B7F452A16463EF30041897F /* ShaderPostQuad.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ShaderPostQuad.fsh; sourceTree = "<group>"; };
 		9D2C461E1632140F000EC193 /* GlobalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GlobalConstants.h; path = Sources/Utils/GlobalConstants.h; sourceTree = "<group>"; };
@@ -712,6 +715,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B0C40E81656B9A500FC3452 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C40F61656C03200FC3452 /* sqlite3.c */,
+				8B0C40F71656C03200FC3452 /* sqlite3.h */,
+			);
+			name = SQLite;
+			sourceTree = "<group>";
+		};
 		9D4349B516470616008394DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -862,9 +874,10 @@
 		9D87C1DB164E88D30030B46F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				8B0C40E81656B9A500FC3452 /* SQLite */,
 				9D87CB7C1653D2DF0030B46F /* bullet-physics */,
-				9D87CAD9164E9F130030B46F /* cocos2dx.xcodeproj */,
 				9DFFDE4B1654ED7900AB84F0 /* bulletAddons.h */,
+				9D87CAD9164E9F130030B46F /* cocos2dx.xcodeproj */,
 			);
 			name = Vendors;
 			path = Sources/Vendors;
@@ -1784,6 +1797,7 @@
 				9D87CE5D1653D2E00030B46F /* MiniCLTaskScheduler.cpp in Sources */,
 				9DFFDE461653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp in Sources */,
 				9D496F5516554405006B3925 /* Sys.cpp in Sources */,
+				8B0C40F81656C03200FC3452 /* sqlite3.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
