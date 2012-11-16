@@ -41,7 +41,7 @@ SceneSystem::SceneSystem() {
     
     
 	btRigidBody::btRigidBodyConstructionInfo groundRigidBodyCI(0,groundMotionState,groundShape,btVector3(0,0,0));
-	groundRigidBodyCI.m_restitution = 0.0;
+	groundRigidBodyCI.m_restitution = 0.01;
 	btRigidBody* groundRigidBody = new btRigidBody(groundRigidBodyCI);
     groundRigidBody->setRollingFriction(1);
     groundRigidBody->setCollisionFlags(btCollisionObject::CF_STATIC_OBJECT);
@@ -122,7 +122,7 @@ void SceneSystem::Frame(double time) {
 
 void SceneSystem::PhysicFrame(double time)
 {
-    _physicScene->stepSimulation(time, 2);
+    _physicScene->stepSimulation(time, 5);
 }
 
 void SceneSystem::EndFrame() {

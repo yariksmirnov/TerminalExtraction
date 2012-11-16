@@ -33,12 +33,12 @@ LevelObject * LevelObject::CreateCube() {
     btDefaultMotionState *motionState = new btDefaultMotionState();
     btTransform t;
     t.setRotation(btQuaternion(btVector3(1, 0, 0), 0));
-    //t.setOrigin(btVector3(0, 1.5, 0));
     motionState->setWorldTransform(t);
     
     btRigidBody::btRigidBodyConstructionInfo info(10, motionState, shape, fallInertia);
     btRigidBody *body = new btRigidBody(info);
     body->setCollisionFlags(0);
+    body->setRestitution(0.01);
     ObjectBehaviourModel *obmm = new PhysicObjectBehaviuorModel(body);
     
     RenderObject *renderObject = new UnAnimRenderObject(mesh);
