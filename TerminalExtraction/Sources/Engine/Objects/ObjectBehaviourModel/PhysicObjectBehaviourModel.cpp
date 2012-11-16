@@ -13,10 +13,10 @@
 PhysicObjectBehaviuorModel::PhysicObjectBehaviuorModel(btRigidBody *rigidBody):ObjectBehaviourModel()
 {
     _rigidBody = rigidBody;
-    _rigidBody->setLinearVelocity(btVector3());
-    _rigidBody->setLinearFactor(btVector3());
-    _rigidBody->setAngularVelocity(btVector3());
-    _rigidBody->setAngularFactor(0);
+//    _rigidBody->setLinearVelocity(btVector3());
+//    _rigidBody->setLinearFactor(btVector3());
+//    _rigidBody->setAngularVelocity(btVector3());
+//    _rigidBody->setAngularFactor(0);
 }
 
 PhysicObjectBehaviuorModel::~PhysicObjectBehaviuorModel()

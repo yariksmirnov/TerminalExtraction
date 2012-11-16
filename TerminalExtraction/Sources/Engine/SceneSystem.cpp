@@ -36,7 +36,7 @@ SceneSystem::SceneSystem() {
     
     btTransform gt = btTransform();
     gt.setIdentity();
-    gt.setOrigin(btVector3(0,-2,0));
+    gt.setOrigin(btVector3(0,-1,0));
 	btDefaultMotionState *groundMotionState = new btDefaultMotionState(gt);
     
     
@@ -122,7 +122,7 @@ void SceneSystem::Frame(double time) {
 
 void SceneSystem::PhysicFrame(double time)
 {
-    _physicScene->stepSimulation(time/ 1000000.f, 2);
+    _physicScene->stepSimulation(time, 2);
 }
 
 void SceneSystem::EndFrame() {
