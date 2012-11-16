@@ -22,4 +22,8 @@ inline btTransform btTransformFromMatrix4(GLKMatrix4 mat) {
     return t;
 }
 
+inline btVector3 btVector3FromGLKVector3(GLKVector3 mat) {
+    return btVector3(mat.x, mat.y, mat.z);
+}
+
 #endif

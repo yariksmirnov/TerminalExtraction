@@ -13,9 +13,9 @@
 PhysicObjectBehaviuorModel::PhysicObjectBehaviuorModel(btRigidBody *rigidBody):ObjectBehaviourModel()
 {
     _rigidBody = rigidBody;
-//    _rigidBody->setLinearVelocity(btVector3());
+    _rigidBody->setLinearVelocity(btVector3());
 //    _rigidBody->setLinearFactor(btVector3());
-//    _rigidBody->setAngularVelocity(btVector3());
+    _rigidBody->setAngularVelocity(btVector3());
 //    _rigidBody->setAngularFactor(0);
 }
 
@@ -53,14 +53,20 @@ void PhysicObjectBehaviuorModel::Move(GLKVector3 displacement)
 
 void PhysicObjectBehaviuorModel::MakeJolt(GLKVector3 point, GLKVector3 direction, float mass)
 {
-    
+    _rigidBody->applyForce(btVector3FromGLKVector3(direction) * mass, btVector3FromGLKVector3(point));
 }
 
 void PhysicObjectBehaviuorModel::SetGlobalPosition(const GLKMatrix4& globalPosition, void * aditionalData, const PivotObject *parent, bool afterUpdate)
 {
-    _rigidBody->getMotionState()->setWorldTransform(btTransformFromMatrix4(globalPosition));
-
+    //_rigidBody->getMotionState()->setWorldTransform(btTransformFromMatrix4(globalPosition));
+    _rigidBody->setCenterOfMassTransform(btTransformFromMatrix4(globalPosition));
     _rigidBody->activate(true);
+    
+    if(aditionalData)
+    {
+        
+    }
+    
     if(afterUpdate)
         this->Frame(0);
 }

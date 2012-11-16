@@ -36,7 +36,7 @@ SceneSystem::SceneSystem() {
     
     btTransform gt = btTransform();
     gt.setIdentity();
-    gt.setOrigin(btVector3(0,-1,0));
+    gt.setOrigin(btVector3(0,0,0));
 	btDefaultMotionState *groundMotionState = new btDefaultMotionState(gt);
     
     
