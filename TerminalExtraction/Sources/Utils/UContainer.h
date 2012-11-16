@@ -19,9 +19,9 @@ namespace Utils {
     
     template<class T>
     class UContainer {
-        #pragma DATA_ALIGN ( 8 );
-        shared_ptr<T> *_array;
-        
+        //#pragma DATA_ALIGN ( 16 );
+//        __attribute__((packed))
+        shared_ptr<T> *_array __attribute__ ((aligned (8)));
         int         _baseSize;
         int         _count;
         int         _currentSize;
@@ -36,7 +36,7 @@ namespace Utils {
         bool removeObject(const shared_ptr<T>& object);
         void addObject(const shared_ptr<T>& object);
         int indexOf(const shared_ptr<T>& object);
-        void AddObjects(const UContainer<T>& objects);
+        void AddObjects(const UContainer<T>* objects);
         void clear();
         shared_ptr<T> objectAtIndex(int index) const;
         void sort(int (* pointer)(const void *, const void *), size_t size);
@@ -127,19 +127,19 @@ namespace Utils {
     }
     
     template <class T>
-    void UContainer<T>::AddObjects(const UContainer<T>& objects)
+    void UContainer<T>::AddObjects(const UContainer<T>* objects)
     {
-        if (_currentSize < objects.GetCount() + _count)
+        if (_currentSize < objects->GetCount() + _count)
         {
             shared_ptr<T> *tmp = _array;
             _array = new shared_ptr<T>[_count + _baseSize];// (shared_ptr<T>*)malloc(ELEMENT_SIZE*(objects.GetCount() + _count + _baseSize));
             memcpy(_array, tmp, ELEMENT_SIZE*_count);
-            _currentSize = objects.GetCount() + _count + _baseSize;
+            _currentSize = objects->GetCount() + _count + _baseSize;
             delete [] tmp;
            // free(tmp);
         }
-        memcpy(_array + ELEMENT_SIZE * _count, &objects, ELEMENT_SIZE * objects.GetCount());
-        _currentSize += objects.GetCount();
+        memcpy(_array + ELEMENT_SIZE * _count, &objects, ELEMENT_SIZE * objects->GetCount());
+        _currentSize += objects->GetCount();
     }
 }
 

@@ -20,9 +20,9 @@ class PivotObject;
 
 class SceneSystem {
     
-    UContainer<PivotObject>          _shadowObjects;
-    UContainer<PivotObject>          _visibleObjects;
-    UContainer<PivotObject>          _objects;
+    UContainer<PivotObject>        *  _shadowObjects;
+    UContainer<PivotObject>        *  _visibleObjects;
+    UContainer<PivotObject>        *  _objects;
     
     UserInterface                    *_userInterface;
     

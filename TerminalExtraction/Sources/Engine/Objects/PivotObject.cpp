@@ -37,12 +37,16 @@ void PivotObject::Update() {
 void PivotObject::SetGlobalPosition(GLKMatrix4 globalPosition, void *aditionalData, PivotObject *parent, bool afterUpdate)
 {
     _objectBehaviourModel->SetGlobalPosition(globalPosition, aditionalData, parent, afterUpdate);
-    _transformMatrix = _objectBehaviourModel->GetGlobalPosition();
     moved = true;
-    if (afterUpdate) {
+    if (afterUpdate)
+    {
         _objectBehaviourModel->EndFrame();
         Update();
     }
+//    else
+//    {
+//        _transformMatrix = _objectBehaviourModel->GetGlobalPosition();
+//    }
 }
 
 void PivotObject::AfterUpdate()

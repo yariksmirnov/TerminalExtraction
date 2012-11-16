@@ -8,6 +8,7 @@
 
 #include "PhysicObjectBehaviourModel.h"
 #include "bulletAddons.h"
+#include "btDefaultMotionState.h"
 
 PhysicObjectBehaviuorModel::PhysicObjectBehaviuorModel(btRigidBody *rigidBody):ObjectBehaviourModel()
 {
@@ -58,6 +59,10 @@ void PhysicObjectBehaviuorModel::MakeJolt(GLKVector3 point, GLKVector3 direction
 void PhysicObjectBehaviuorModel::SetGlobalPosition(const GLKMatrix4& globalPosition, void * aditionalData, const PivotObject *parent, bool afterUpdate)
 {
     _rigidBody->getMotionState()->setWorldTransform(btTransformFromMatrix4(globalPosition));
+
+    _rigidBody->activate(true);
+    if(afterUpdate)
+        this->Frame(0);
 }
 
 void PhysicObjectBehaviuorModel::SetPosition(const GLKMatrix4& position)

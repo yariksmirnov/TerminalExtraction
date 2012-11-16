@@ -181,7 +181,6 @@
 		9D9042F9162D9F1A003BB5FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042F8162D9F1A003BB5FF /* Default@2x.png */; };
 		9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */; };
 		9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D904312162DA7ED003BB5FF /* OpenGLES.framework */; };
-		9D904318162DB254003BB5FF /* UContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D904316162DB254003BB5FF /* UContainer.cpp */; };
 		9DB05CA416500B18001FC18E /* UserInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB05CA216500B18001FC18E /* UserInterface.cpp */; };
 		9DCF1DF9164F0F5F00FE6B45 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D87CAE1164E9F130030B46F /* libcocos2dx.a */; };
 		9DCF1DFB164F12A900FE6B45 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF1DFA164F12A800FE6B45 /* libz.dylib */; };
@@ -644,7 +643,6 @@
 		9D9042F8162D9F1A003BB5FF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9D904312162DA7ED003BB5FF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		9D904316162DB254003BB5FF /* UContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UContainer.cpp; path = Sources/Utils/UContainer.cpp; sourceTree = "<group>"; };
 		9D904317162DB254003BB5FF /* UContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UContainer.h; path = Sources/Utils/UContainer.h; sourceTree = "<group>"; };
 		9D904319162DB867003BB5FF /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/Utils/Utils.h; sourceTree = "<group>"; };
 		9DB05CA216500B18001FC18E /* UserInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserInterface.cpp; path = Sources/Engine/UserInterface.cpp; sourceTree = "<group>"; };
@@ -1470,7 +1468,6 @@
 				9D496F5416554405006B3925 /* Sys.cpp */,
 				9D496F5616554416006B3925 /* Sys.h */,
 				9D904317162DB254003BB5FF /* UContainer.h */,
-				9D904316162DB254003BB5FF /* UContainer.cpp */,
 				9D2C461E1632140F000EC193 /* GlobalConstants.h */,
 				9D6A84391641D46A00E322C3 /* IdGenerator.cpp */,
 				9D6A843A1641D46A00E322C3 /* IdGenerator.h */,
@@ -1628,7 +1625,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9042F5162D9F1A003BB5FF /* AppDelegate.mm in Sources */,
-				9D904318162DB254003BB5FF /* UContainer.cpp in Sources */,
 				9D83B95A162E225700B216AD /* TEEngine.cpp in Sources */,
 				9DE33AB9162F4CC30027565E /* RenderSystem.cpp in Sources */,
 				9DE33ABE162F51830027565E /* Display.cpp in Sources */,
