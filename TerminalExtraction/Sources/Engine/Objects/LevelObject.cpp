@@ -21,7 +21,8 @@ LevelObject::LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behav
     _material = material;
 }
 
-LevelObject * LevelObject::CreateCube() {
+LevelObject * LevelObject::CreateCube()
+{
     const EngineMesh * mesh = EngineMesh::CreateCube();
     Material *material = new TextureMaterial("woodbox.jpg");
     

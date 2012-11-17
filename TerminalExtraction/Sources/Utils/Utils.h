@@ -12,7 +12,9 @@
 #include "UContainer.h"
 #include "IdGenerator.h"
 #include "Sys.h"
-#include "USQliteConnector.h"
+#include "KompexSQLiteDatabase.h"
+#include "KompexSQLiteException.h"
+#include "KompexSQLiteStatement.h"
 
 using namespace Utils;
 
