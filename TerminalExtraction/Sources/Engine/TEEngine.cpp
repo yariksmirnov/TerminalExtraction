@@ -28,6 +28,9 @@ TEEngine::TEEngine() {
 }
 
 void TEEngine::Init() {
+    
+    SysInit();
+    
     _renderSystem->Init();
     _renderSystem->InitOpenGL();
     

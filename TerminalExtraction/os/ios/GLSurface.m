@@ -11,6 +11,7 @@
 #import <OpenGLES/EAGLDrawable.h>
 #import <QuartzCore/QuartzCore.h>
 
+#include "Sys.h"
 @implementation GLSurface
 
 + (Class)layerClass {
@@ -20,7 +21,7 @@
 - (id)initWithFrame:(CGRect)frame andDepthFormat:(unsigned int)depthFormat andPixelFormat:(unsigned int)pixelFormat {
     self = [super initWithFrame:frame];
     if (self) {
-        NSLog(@"Initializing iOS GL Surface");
+        SysLogInfo("Initializing iOS GL Surface");
         CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
         //we don't want a transparent surface
         eaglLayer.opaque = TRUE;

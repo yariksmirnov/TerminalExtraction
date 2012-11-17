@@ -1539,7 +1539,6 @@
 					COCOS2D_JAVASCRIPT,
 					USE_FILE32API,
 					TARGET_OS_IPHONE,
-					"COCOS2D_DEBUG=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/..\"",

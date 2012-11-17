@@ -17,7 +17,6 @@
 		9D4349B11646CFED008394DE /* TextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349AF1646CFED008394DE /* TextureCache.cpp */; };
 		9D4349B816470617008394DE /* woodbox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D4349B716470616008394DE /* woodbox.jpg */; };
 		9D4349C31647F793008394DE /* SceneSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349C11647F78C008394DE /* SceneSystem.cpp */; };
-		9D496F5016553CCD006B3925 /* liblog4cxx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D496F4F16553CCD006B3925 /* liblog4cxx.a */; };
 		9D496F5516554405006B3925 /* Sys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F5416554405006B3925 /* Sys.cpp */; };
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
@@ -44,7 +43,6 @@
 		9D87CD8E1653D2DF0030B46F /* btOverlappingPairCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CB911653D2DF0030B46F /* btOverlappingPairCache.cpp */; };
 		9D87CD8F1653D2DF0030B46F /* btQuantizedBvh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CB941653D2DF0030B46F /* btQuantizedBvh.cpp */; };
 		9D87CD901653D2DF0030B46F /* btSimpleBroadphase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CB961653D2DF0030B46F /* btSimpleBroadphase.cpp */; };
-		9D87CD911653D2DF0030B46F /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CB981653D2DF0030B46F /* CMakeLists.txt */; };
 		9D87CD921653D2DF0030B46F /* btActivatingCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CB9A1653D2DF0030B46F /* btActivatingCollisionAlgorithm.cpp */; };
 		9D87CD931653D2DF0030B46F /* btBox2dBox2dCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CB9C1653D2DF0030B46F /* btBox2dBox2dCollisionAlgorithm.cpp */; };
 		9D87CD941653D2DF0030B46F /* btBoxBoxCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CB9E1653D2DF0030B46F /* btBoxBoxCollisionAlgorithm.cpp */; };
@@ -128,9 +126,7 @@
 		9D87CDE21653D2DF0030B46F /* btRaycastCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC571653D2DF0030B46F /* btRaycastCallback.cpp */; };
 		9D87CDE31653D2DF0030B46F /* btSubSimplexConvexCast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC5A1653D2DF0030B46F /* btSubSimplexConvexCast.cpp */; };
 		9D87CDE41653D2DF0030B46F /* btVoronoiSimplexSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC5C1653D2DF0030B46F /* btVoronoiSimplexSolver.cpp */; };
-		9D87CDE51653D2DF0030B46F /* premake4.lua in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CC5E1653D2DF0030B46F /* premake4.lua */; };
 		9D87CDE61653D2DF0030B46F /* btKinematicCharacterController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC621653D2DF0030B46F /* btKinematicCharacterController.cpp */; };
-		9D87CDE71653D2DF0030B46F /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CC641653D2DF0030B46F /* CMakeLists.txt */; };
 		9D87CDE81653D2DF0030B46F /* btConeTwistConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC661653D2DF0030B46F /* btConeTwistConstraint.cpp */; };
 		9D87CDE91653D2DF0030B46F /* btContactConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC691653D2DF0030B46F /* btContactConstraint.cpp */; };
 		9D87CDEA1653D2DF0030B46F /* btGearConstraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC6C1653D2DF0030B46F /* btGearConstraint.cpp */; };
@@ -148,7 +144,6 @@
 		9D87CDF61653D2DF0030B46F /* btRigidBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC8A1653D2DF0030B46F /* btRigidBody.cpp */; };
 		9D87CDF71653D2DF0030B46F /* btSimpleDynamicsWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC8C1653D2DF0030B46F /* btSimpleDynamicsWorld.cpp */; };
 		9D87CDF81653D2E00030B46F /* Bullet-C-API.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC8E1653D2DF0030B46F /* Bullet-C-API.cpp */; };
-		9D87CDF91653D2E00030B46F /* premake4.lua in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CC8F1653D2DF0030B46F /* premake4.lua */; };
 		9D87CDFA1653D2E00030B46F /* btRaycastVehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC911653D2DF0030B46F /* btRaycastVehicle.cpp */; };
 		9D87CDFB1653D2E00030B46F /* btWheelInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CC941653D2DF0030B46F /* btWheelInfo.cpp */; };
 		9D87CE431653D2E00030B46F /* btDefaultSoftBodySolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD241653D2DF0030B46F /* btDefaultSoftBodySolver.cpp */; };
@@ -159,8 +154,6 @@
 		9D87CE481653D2E00030B46F /* btSoftRigidCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD321653D2DF0030B46F /* btSoftRigidCollisionAlgorithm.cpp */; };
 		9D87CE491653D2E00030B46F /* btSoftRigidDynamicsWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD341653D2DF0030B46F /* btSoftRigidDynamicsWorld.cpp */; };
 		9D87CE4A1653D2E00030B46F /* btSoftSoftCollisionAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD361653D2DF0030B46F /* btSoftSoftCollisionAlgorithm.cpp */; };
-		9D87CE4B1653D2E00030B46F /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CD391653D2DF0030B46F /* CMakeLists.txt */; };
-		9D87CE4C1653D2E00030B46F /* premake4.lua in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CD3A1653D2DF0030B46F /* premake4.lua */; };
 		9D87CE4E1653D2E00030B46F /* btAlignedAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD3E1653D2DF0030B46F /* btAlignedAllocator.cpp */; };
 		9D87CE4F1653D2E00030B46F /* btConvexHull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD411653D2DF0030B46F /* btConvexHull.cpp */; };
 		9D87CE501653D2E00030B46F /* btConvexHullComputer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD431653D2DF0030B46F /* btConvexHullComputer.cpp */; };
@@ -169,9 +162,6 @@
 		9D87CE531653D2E00030B46F /* btQuickprof.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD541653D2DF0030B46F /* btQuickprof.cpp */; };
 		9D87CE541653D2E00030B46F /* btSerializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD581653D2DF0030B46F /* btSerializer.cpp */; };
 		9D87CE551653D2E00030B46F /* btVector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD5D1653D2DF0030B46F /* btVector3.cpp */; };
-		9D87CE561653D2E00030B46F /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CD5F1653D2DF0030B46F /* CMakeLists.txt */; };
-		9D87CE571653D2E00030B46F /* premake4.lua in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CD601653D2DF0030B46F /* premake4.lua */; };
-		9D87CE5A1653D2E00030B46F /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9D87CD681653D2DF0030B46F /* CMakeLists.txt */; };
 		9D87CE5B1653D2E00030B46F /* MiniCL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD691653D2DF0030B46F /* MiniCL.cpp */; };
 		9D87CE5C1653D2E00030B46F /* MiniCLTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD6B1653D2DF0030B46F /* MiniCLTask.cpp */; };
 		9D87CE5D1653D2E00030B46F /* MiniCLTaskScheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D87CD6D1653D2DF0030B46F /* MiniCLTaskScheduler.cpp */; };
@@ -184,6 +174,7 @@
 		9D9042F9162D9F1A003BB5FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042F8162D9F1A003BB5FF /* Default@2x.png */; };
 		9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */; };
 		9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D904312162DA7ED003BB5FF /* OpenGLES.framework */; };
+		9DAC9E20165704FF0031F2AE /* lcl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC9E1B165704FF0031F2AE /* lcl.m */; };
 		9DB05CA416500B18001FC18E /* UserInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB05CA216500B18001FC18E /* UserInterface.cpp */; };
 		9DCF1DF9164F0F5F00FE6B45 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D87CAE1164E9F130030B46F /* libcocos2dx.a */; };
 		9DCF1DFB164F12A900FE6B45 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF1DFA164F12A800FE6B45 /* libz.dylib */; };
@@ -305,7 +296,6 @@
 		9D87CB951653D2DF0030B46F /* btQuantizedBvh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btQuantizedBvh.h; sourceTree = "<group>"; };
 		9D87CB961653D2DF0030B46F /* btSimpleBroadphase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btSimpleBroadphase.cpp; sourceTree = "<group>"; };
 		9D87CB971653D2DF0030B46F /* btSimpleBroadphase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btSimpleBroadphase.h; sourceTree = "<group>"; };
-		9D87CB981653D2DF0030B46F /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		9D87CB9A1653D2DF0030B46F /* btActivatingCollisionAlgorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btActivatingCollisionAlgorithm.cpp; sourceTree = "<group>"; };
 		9D87CB9B1653D2DF0030B46F /* btActivatingCollisionAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btActivatingCollisionAlgorithm.h; sourceTree = "<group>"; };
 		9D87CB9C1653D2DF0030B46F /* btBox2dBox2dCollisionAlgorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btBox2dBox2dCollisionAlgorithm.cpp; sourceTree = "<group>"; };
@@ -499,11 +489,9 @@
 		9D87CC5B1653D2DF0030B46F /* btSubSimplexConvexCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btSubSimplexConvexCast.h; sourceTree = "<group>"; };
 		9D87CC5C1653D2DF0030B46F /* btVoronoiSimplexSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btVoronoiSimplexSolver.cpp; sourceTree = "<group>"; };
 		9D87CC5D1653D2DF0030B46F /* btVoronoiSimplexSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btVoronoiSimplexSolver.h; sourceTree = "<group>"; };
-		9D87CC5E1653D2DF0030B46F /* premake4.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = premake4.lua; sourceTree = "<group>"; };
 		9D87CC611653D2DF0030B46F /* btCharacterControllerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btCharacterControllerInterface.h; sourceTree = "<group>"; };
 		9D87CC621653D2DF0030B46F /* btKinematicCharacterController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btKinematicCharacterController.cpp; sourceTree = "<group>"; };
 		9D87CC631653D2DF0030B46F /* btKinematicCharacterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btKinematicCharacterController.h; sourceTree = "<group>"; };
-		9D87CC641653D2DF0030B46F /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		9D87CC661653D2DF0030B46F /* btConeTwistConstraint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btConeTwistConstraint.cpp; sourceTree = "<group>"; };
 		9D87CC671653D2DF0030B46F /* btConeTwistConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btConeTwistConstraint.h; sourceTree = "<group>"; };
 		9D87CC681653D2DF0030B46F /* btConstraintSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btConstraintSolver.h; sourceTree = "<group>"; };
@@ -544,7 +532,6 @@
 		9D87CC8C1653D2DF0030B46F /* btSimpleDynamicsWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btSimpleDynamicsWorld.cpp; sourceTree = "<group>"; };
 		9D87CC8D1653D2DF0030B46F /* btSimpleDynamicsWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btSimpleDynamicsWorld.h; sourceTree = "<group>"; };
 		9D87CC8E1653D2DF0030B46F /* Bullet-C-API.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Bullet-C-API.cpp"; sourceTree = "<group>"; };
-		9D87CC8F1653D2DF0030B46F /* premake4.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = premake4.lua; sourceTree = "<group>"; };
 		9D87CC911653D2DF0030B46F /* btRaycastVehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btRaycastVehicle.cpp; sourceTree = "<group>"; };
 		9D87CC921653D2DF0030B46F /* btRaycastVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btRaycastVehicle.h; sourceTree = "<group>"; };
 		9D87CC931653D2DF0030B46F /* btVehicleRaycaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btVehicleRaycaster.h; sourceTree = "<group>"; };
@@ -571,8 +558,6 @@
 		9D87CD361653D2DF0030B46F /* btSoftSoftCollisionAlgorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btSoftSoftCollisionAlgorithm.cpp; sourceTree = "<group>"; };
 		9D87CD371653D2DF0030B46F /* btSoftSoftCollisionAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btSoftSoftCollisionAlgorithm.h; sourceTree = "<group>"; };
 		9D87CD381653D2DF0030B46F /* btSparseSDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btSparseSDF.h; sourceTree = "<group>"; };
-		9D87CD391653D2DF0030B46F /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
-		9D87CD3A1653D2DF0030B46F /* premake4.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = premake4.lua; sourceTree = "<group>"; };
 		9D87CD3D1653D2DF0030B46F /* btAabbUtil2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btAabbUtil2.h; sourceTree = "<group>"; };
 		9D87CD3E1653D2DF0030B46F /* btAlignedAllocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btAlignedAllocator.cpp; sourceTree = "<group>"; };
 		9D87CD3F1653D2DF0030B46F /* btAlignedAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btAlignedAllocator.h; sourceTree = "<group>"; };
@@ -607,13 +592,10 @@
 		9D87CD5C1653D2DF0030B46F /* btTransformUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btTransformUtil.h; sourceTree = "<group>"; };
 		9D87CD5D1653D2DF0030B46F /* btVector3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = btVector3.cpp; sourceTree = "<group>"; };
 		9D87CD5E1653D2DF0030B46F /* btVector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btVector3.h; sourceTree = "<group>"; };
-		9D87CD5F1653D2DF0030B46F /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
-		9D87CD601653D2DF0030B46F /* premake4.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = premake4.lua; sourceTree = "<group>"; };
 		9D87CD641653D2DF0030B46F /* cl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cl.h; sourceTree = "<group>"; };
 		9D87CD651653D2DF0030B46F /* cl_gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cl_gl.h; sourceTree = "<group>"; };
 		9D87CD661653D2DF0030B46F /* cl_MiniCL_Defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cl_MiniCL_Defs.h; sourceTree = "<group>"; };
 		9D87CD671653D2DF0030B46F /* cl_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cl_platform.h; sourceTree = "<group>"; };
-		9D87CD681653D2DF0030B46F /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		9D87CD691653D2DF0030B46F /* MiniCL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MiniCL.cpp; sourceTree = "<group>"; };
 		9D87CD6B1653D2DF0030B46F /* MiniCLTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MiniCLTask.cpp; sourceTree = "<group>"; };
 		9D87CD6C1653D2DF0030B46F /* MiniCLTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiniCLTask.h; sourceTree = "<group>"; };
@@ -654,6 +636,11 @@
 		9D904312162DA7ED003BB5FF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		9D904317162DB254003BB5FF /* UContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UContainer.h; path = Sources/Utils/UContainer.h; sourceTree = "<group>"; };
 		9D904319162DB867003BB5FF /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/Utils/Utils.h; sourceTree = "<group>"; };
+		9DAC9E1A165704FF0031F2AE /* lcl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl.h; sourceTree = "<group>"; };
+		9DAC9E1B165704FF0031F2AE /* lcl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lcl.m; sourceTree = "<group>"; };
+		9DAC9E1C165704FF0031F2AE /* lcl_config_components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_components.h; sourceTree = "<group>"; };
+		9DAC9E1D165704FF0031F2AE /* lcl_config_extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_extensions.h; sourceTree = "<group>"; };
+		9DAC9E1E165704FF0031F2AE /* lcl_config_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_logger.h; sourceTree = "<group>"; };
 		9DB05CA216500B18001FC18E /* UserInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UserInterface.cpp; path = Sources/Engine/UserInterface.cpp; sourceTree = "<group>"; };
 		9DB05CA316500B18001FC18E /* UserInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInterface.h; path = Sources/Engine/UserInterface.h; sourceTree = "<group>"; };
 		9DCE1539162F28A1002EBD95 /* GLKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMath.h; sourceTree = "<group>"; };
@@ -714,7 +701,6 @@
 				9D9042E5162D9F1A003BB5FF /* UIKit.framework in Frameworks */,
 				9D9042E7162D9F1A003BB5FF /* Foundation.framework in Frameworks */,
 				9D9042E9162D9F1A003BB5FF /* CoreGraphics.framework in Frameworks */,
-				9D496F5016553CCD006B3925 /* liblog4cxx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,6 +878,7 @@
 		9D87C1DB164E88D30030B46F /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				9DAC9E19165704FF0031F2AE /* aharren-LibComponentLogging-Core-17e2940 */,
 				8B0C40E81656B9A500FC3452 /* SQLite */,
 				9D87CB7C1653D2DF0030B46F /* bullet-physics */,
 				9DFFDE4B1654ED7900AB84F0 /* bulletAddons.h */,
@@ -923,21 +910,19 @@
 				9D87CD6F1653D2DF0030B46F /* vectormath */,
 			);
 			name = "bullet-physics";
-			path = "bullet-2.81-rev2613/src";
-			sourceTree = "<group>";
+			path = "TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src";
+			sourceTree = SOURCE_ROOT;
 		};
 		9D87CB801653D2DF0030B46F /* BulletCollision */ = {
 			isa = PBXGroup;
 			children = (
 				9D810D5F1653DA4E0061B03B /* BulletCollision.framework */,
 				9D87CB811653D2DF0030B46F /* BroadphaseCollision */,
-				9D87CB981653D2DF0030B46F /* CMakeLists.txt */,
 				9D87CB991653D2DF0030B46F /* CollisionDispatch */,
 				9D87CBCB1653D2DF0030B46F /* CollisionShapes */,
 				9D87CC181653D2DF0030B46F /* Doxyfile */,
 				9D87CC191653D2DF0030B46F /* Gimpact */,
 				9D87CC401653D2DF0030B46F /* NarrowPhaseCollision */,
-				9D87CC5E1653D2DF0030B46F /* premake4.lua */,
 			);
 			path = BulletCollision;
 			sourceTree = "<group>";
@@ -1196,10 +1181,8 @@
 			children = (
 				9DFFDE3F1653DB2200AB84F0 /* BulletDynamics.framework */,
 				9D87CC601653D2DF0030B46F /* Character */,
-				9D87CC641653D2DF0030B46F /* CMakeLists.txt */,
 				9D87CC651653D2DF0030B46F /* ConstraintSolver */,
 				9D87CC851653D2DF0030B46F /* Dynamics */,
-				9D87CC8F1653D2DF0030B46F /* premake4.lua */,
 				9D87CC901653D2DF0030B46F /* Vehicle */,
 			);
 			path = BulletDynamics;
@@ -1306,8 +1289,6 @@
 				9D87CD361653D2DF0030B46F /* btSoftSoftCollisionAlgorithm.cpp */,
 				9D87CD371653D2DF0030B46F /* btSoftSoftCollisionAlgorithm.h */,
 				9D87CD381653D2DF0030B46F /* btSparseSDF.h */,
-				9D87CD391653D2DF0030B46F /* CMakeLists.txt */,
-				9D87CD3A1653D2DF0030B46F /* premake4.lua */,
 			);
 			path = BulletSoftBody;
 			sourceTree = "<group>";
@@ -1349,9 +1330,7 @@
 				9D87CD5C1653D2DF0030B46F /* btTransformUtil.h */,
 				9D87CD5D1653D2DF0030B46F /* btVector3.cpp */,
 				9D87CD5E1653D2DF0030B46F /* btVector3.h */,
-				9D87CD5F1653D2DF0030B46F /* CMakeLists.txt */,
 				9DE12FFF1653D9ED004056D4 /* LinearMath.framework */,
-				9D87CD601653D2DF0030B46F /* premake4.lua */,
 			);
 			path = LinearMath;
 			sourceTree = "<group>";
@@ -1363,7 +1342,6 @@
 				9D87CD651653D2DF0030B46F /* cl_gl.h */,
 				9D87CD661653D2DF0030B46F /* cl_MiniCL_Defs.h */,
 				9D87CD671653D2DF0030B46F /* cl_platform.h */,
-				9D87CD681653D2DF0030B46F /* CMakeLists.txt */,
 				9D87CD691653D2DF0030B46F /* MiniCL.cpp */,
 				9D87CD6A1653D2DF0030B46F /* MiniCLTask */,
 				9D87CD6D1653D2DF0030B46F /* MiniCLTaskScheduler.cpp */,
@@ -1507,6 +1485,18 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		9DAC9E19165704FF0031F2AE /* aharren-LibComponentLogging-Core-17e2940 */ = {
+			isa = PBXGroup;
+			children = (
+				9DAC9E1A165704FF0031F2AE /* lcl.h */,
+				9DAC9E1B165704FF0031F2AE /* lcl.m */,
+				9DAC9E1C165704FF0031F2AE /* lcl_config_components.h */,
+				9DAC9E1D165704FF0031F2AE /* lcl_config_extensions.h */,
+				9DAC9E1E165704FF0031F2AE /* lcl_config_logger.h */,
+			);
+			path = "aharren-LibComponentLogging-Core-17e2940";
+			sourceTree = "<group>";
+		};
 		9DCE1537162F284D002EBD95 /* MathKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1636,16 +1626,7 @@
 				9D9042F9162D9F1A003BB5FF /* Default@2x.png in Resources */,
 				9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */,
 				9D4349B816470617008394DE /* woodbox.jpg in Resources */,
-				9D87CD911653D2DF0030B46F /* CMakeLists.txt in Resources */,
 				9D87CDCD1653D2DF0030B46F /* Doxyfile in Resources */,
-				9D87CDE51653D2DF0030B46F /* premake4.lua in Resources */,
-				9D87CDE71653D2DF0030B46F /* CMakeLists.txt in Resources */,
-				9D87CDF91653D2E00030B46F /* premake4.lua in Resources */,
-				9D87CE4B1653D2E00030B46F /* CMakeLists.txt in Resources */,
-				9D87CE4C1653D2E00030B46F /* premake4.lua in Resources */,
-				9D87CE561653D2E00030B46F /* CMakeLists.txt in Resources */,
-				9D87CE571653D2E00030B46F /* premake4.lua in Resources */,
-				9D87CE5A1653D2E00030B46F /* CMakeLists.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1819,6 +1800,7 @@
 				8B0C40FB1656C15100FC3452 /* sqlite3.c in Sources */,
 				8B0C41021656C2B300FC3452 /* USQliteConnector.cpp in Sources */,
 				8B0C41051656C2DF00FC3452 /* USQLiteResultSet.cpp in Sources */,
+				9DAC9E20165704FF0031F2AE /* lcl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1863,7 +1845,6 @@
 					"$(inherited)",
 					TARGET_OS_IPHONE,
 					USE_FILE32API,
-					"COCOS2D_DEBUG=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1938,6 +1919,11 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TerminalExtraction/TerminalExtraction-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					TARGET_OS_IPHONE,
+					USE_FILE32API,
+				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/include/libxml2/\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/include\"",
@@ -1945,12 +1931,13 @@
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/platform/ios\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/kazmath/include\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src\"",
-					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/include\"",
+					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/aharren-LibComponentLogging-Core-17e2940/\"",
 				);
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/log4cxx.02 PM\"",
+					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1986,12 +1973,13 @@
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/platform/ios\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/cocos2d-2.0-x-2.0.4/cocos2dx/kazmath/include\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src\"",
-					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/include\"",
+					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/aharren-LibComponentLogging-Core-17e2940/\"",
 				);
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/log4cxx.02 PM\"",
+					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";

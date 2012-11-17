@@ -10,29 +10,18 @@
 #include "stdarg.h"
 #include <strings.h>
 #include "Sys.h"
-#include "memory.h"
+#include "GlobalConstants.h"
 
-void SysLog(const char * args, ...) {
-    va_list list;
-    va_start(list, args);
-    size_t sz = strlen(args) + 20;
-    char *string = (char *)malloc(sz);
-    sprintf(string, "TEEngine: %s\n", args);
-    printf(string, list);
-    free(string);
-}
 
-void SysLog(int interval , const char *args, ...) {
-    static int _interval = -1;
-    if (_interval < 0) {
-        _interval = interval;
-    }
+#define TE_VERSION          0.1
+
+void SysInit(void) {
+    lcl_configure_by_name("Sys_*", SysLogLevelDebug);
     
-    if (_interval > 0) {
-        va_list list;
-        va_start(list, args);
-        SysLog(args, list);
-        _interval--;
-    } else
-        _interval = interval;
+    SysLogInfo("ENGINE_VERSION: terminal-extraction-%f", TE_VERSION);
+    SysLogInfo("GL_VENDOR:     %s", glGetString(GL_VENDOR));
+    SysLogInfo("GL_RENDERER:   %s", glGetString(GL_RENDERER));
+    SysLogInfo("GL_VERSION:    %s", glGetString(GL_VERSION));
+    
+    SysLogInfo("Engine initialized ...");
 }
