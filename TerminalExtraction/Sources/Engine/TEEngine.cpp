@@ -36,7 +36,7 @@ void TEEngine::Init() {
     
     
     GRect2D _screenRect = GRect2DMake(0, 0, _renderSystem->GetDisplay()->GetDisplayWidth(), _renderSystem->GetDisplay()->GetDisplayHeight());
-    _camera = new Camera(GLKVector3Make(2, 2, 2), GLKVector3Make(0, 0, 0), _screenRect);
+    _camera = new Camera(GLKVector3Make(3, 1.5, 3), GLKVector3Make(0, 0, 0), _screenRect);
     
     
     _cube = shared_ptr<LevelObject>(LevelObject::CreateCube());
