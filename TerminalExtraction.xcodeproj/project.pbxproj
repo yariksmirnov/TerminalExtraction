@@ -191,6 +191,12 @@
 		D137ED361657EB4000AF8172 /* Data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D137ED351657EB4000AF8172 /* Data.sqlite */; };
 		D137ED3D1657EC3000AF8172 /* KompexSQLiteDatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED3B1657EC3000AF8172 /* KompexSQLiteDatabase.cpp */; };
 		D137ED3E1657EC3000AF8172 /* KompexSQLiteStatement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED3C1657EC3000AF8172 /* KompexSQLiteStatement.cpp */; };
+		D137ED441657F2F300AF8172 /* PEDescriptionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED421657F2F300AF8172 /* PEDescriptionProvider.cpp */; };
+		D137ED471657F30200AF8172 /* PEBaseDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED451657F30200AF8172 /* PEBaseDescription.cpp */; };
+		D137ED4A1657FCD600AF8172 /* PEContentProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED481657FCD600AF8172 /* PEContentProvider.cpp */; };
+		D137ED4D1657FCE800AF8172 /* PEPackList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED4B1657FCE800AF8172 /* PEPackList.cpp */; };
+		D137ED501657FCF100AF8172 /* PEPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED4E1657FCF000AF8172 /* PEPack.cpp */; };
+		D165BD401657FF3000FA1E26 /* Descriptions.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -689,6 +695,17 @@
 		D137ED3A1657EC2200AF8172 /* KompexSQLiteStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KompexSQLiteStatement.h; sourceTree = "<group>"; };
 		D137ED3B1657EC3000AF8172 /* KompexSQLiteDatabase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KompexSQLiteDatabase.cpp; sourceTree = "<group>"; };
 		D137ED3C1657EC3000AF8172 /* KompexSQLiteStatement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KompexSQLiteStatement.cpp; sourceTree = "<group>"; };
+		D137ED421657F2F300AF8172 /* PEDescriptionProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PEDescriptionProvider.cpp; sourceTree = "<group>"; };
+		D137ED431657F2F300AF8172 /* PEDescriptionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEDescriptionProvider.h; sourceTree = "<group>"; };
+		D137ED451657F30200AF8172 /* PEBaseDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PEBaseDescription.cpp; sourceTree = "<group>"; };
+		D137ED461657F30200AF8172 /* PEBaseDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEBaseDescription.h; sourceTree = "<group>"; };
+		D137ED481657FCD600AF8172 /* PEContentProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PEContentProvider.cpp; sourceTree = "<group>"; };
+		D137ED491657FCD600AF8172 /* PEContentProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEContentProvider.h; sourceTree = "<group>"; };
+		D137ED4B1657FCE800AF8172 /* PEPackList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PEPackList.cpp; sourceTree = "<group>"; };
+		D137ED4C1657FCE800AF8172 /* PEPackList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEPackList.h; sourceTree = "<group>"; };
+		D137ED4E1657FCF000AF8172 /* PEPack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PEPack.cpp; sourceTree = "<group>"; };
+		D137ED4F1657FCF100AF8172 /* PEPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEPack.h; sourceTree = "<group>"; };
+		D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Descriptions.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -737,6 +754,7 @@
 		9D4349B516470616008394DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */,
 				D137ED351657EB4000AF8172 /* Data.sqlite */,
 				9D4349B616470616008394DE /* Textures */,
 			);
@@ -765,6 +783,7 @@
 		9D60B575164536320074081D /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				D137ED3F1657EDDB00AF8172 /* ContentProvider */,
 				9D60B576164536400074081D /* Meshes */,
 				9D60B58316453FB20074081D /* Texture.cpp */,
 				9D60B58416453FB20074081D /* Texture.h */,
@@ -1556,6 +1575,40 @@
 			name = ShaderSources;
 			sourceTree = "<group>";
 		};
+		D137ED3F1657EDDB00AF8172 /* ContentProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D137ED411657EDFF00AF8172 /* ObjectProvider */,
+				D137ED401657EDED00AF8172 /* DescriptionProvider */,
+				D137ED481657FCD600AF8172 /* PEContentProvider.cpp */,
+				D137ED491657FCD600AF8172 /* PEContentProvider.h */,
+			);
+			name = ContentProvider;
+			path = Sources/Engine/COntent/ContentProvider;
+			sourceTree = "<group>";
+		};
+		D137ED401657EDED00AF8172 /* DescriptionProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D137ED421657F2F300AF8172 /* PEDescriptionProvider.cpp */,
+				D137ED431657F2F300AF8172 /* PEDescriptionProvider.h */,
+				D137ED451657F30200AF8172 /* PEBaseDescription.cpp */,
+				D137ED461657F30200AF8172 /* PEBaseDescription.h */,
+			);
+			path = DescriptionProvider;
+			sourceTree = "<group>";
+		};
+		D137ED411657EDFF00AF8172 /* ObjectProvider */ = {
+			isa = PBXGroup;
+			children = (
+				D137ED4B1657FCE800AF8172 /* PEPackList.cpp */,
+				D137ED4C1657FCE800AF8172 /* PEPackList.h */,
+				D137ED4E1657FCF000AF8172 /* PEPack.cpp */,
+				D137ED4F1657FCF100AF8172 /* PEPack.h */,
+			);
+			path = ObjectProvider;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1635,6 +1688,7 @@
 				9D4349B816470617008394DE /* woodbox.jpg in Resources */,
 				9D87CDCD1653D2DF0030B46F /* Doxyfile in Resources */,
 				D137ED361657EB4000AF8172 /* Data.sqlite in Resources */,
+				D165BD401657FF3000FA1E26 /* Descriptions.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1809,6 +1863,11 @@
 				9DAC9E20165704FF0031F2AE /* lcl.m in Sources */,
 				D137ED3D1657EC3000AF8172 /* KompexSQLiteDatabase.cpp in Sources */,
 				D137ED3E1657EC3000AF8172 /* KompexSQLiteStatement.cpp in Sources */,
+				D137ED441657F2F300AF8172 /* PEDescriptionProvider.cpp in Sources */,
+				D137ED471657F30200AF8172 /* PEBaseDescription.cpp in Sources */,
+				D137ED4A1657FCD600AF8172 /* PEContentProvider.cpp in Sources */,
+				D137ED4D1657FCE800AF8172 /* PEPackList.cpp in Sources */,
+				D137ED501657FCF100AF8172 /* PEPack.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

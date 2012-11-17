@@ -9,6 +9,11 @@
 #include "TEEngine.h"
 #include <time.h>
 #include <math.h>
+#include "FileManger.h"
+#include "Utils.h"
+
+#include "cocos2d.h"
+
 #include "LevelObject.h"
 #include "Camera.h"
 #include "UnAnimRenderObject.h"
@@ -18,7 +23,10 @@
 #include "EngineMesh.h"
 #include "Geometry.h"
 #include "SceneSystem.h"
+#include "PEContentProvider.h"
 
+using namespace cocos2d;
+using namespace Kompex;
 
 TEEngine globalEngine;
 TEEngine * engine = &globalEngine;
@@ -31,6 +39,7 @@ void TEEngine::Init() {
     
     SysInit();
     
+    _contentProvider = new PEContentProvider();
     _renderSystem->Init();
     _renderSystem->InitOpenGL();
     
@@ -208,6 +217,7 @@ void TEEngine::applicationWillEnterForeground() {
 }
 
 TEEngine::~TEEngine() {
+    delete _contentProvider;
     delete _renderSystem;
     delete _shader;
     delete _shader1;

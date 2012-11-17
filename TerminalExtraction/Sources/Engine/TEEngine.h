@@ -10,12 +10,10 @@
 #define __TerminalExtraction__TEEngine__
 
 #include <iostream>
-//#include "Geometry.h"
 
 #include "cocos2d.h"
 
 using namespace cocos2d;
-
 
 class RenderSystem;
 class Shader;
@@ -25,9 +23,12 @@ class Camera;
 class EngineMesh;
 class SceneSystem;
 class PivotObject;
+class PEContentProvider;
 
-class TEEngine : private CCApplication {
+class TEEngine  {
     
+   
+    PEContentProvider           *_contentProvider;
     RenderSystem        *_renderSystem;
     float                _elapsedTime;
     float                _fullTime;
@@ -43,11 +44,9 @@ class TEEngine : private CCApplication {
     Shader              *_shader;
     Shader              *_shader1;
     
-    GLfloat             _color;
+    float             _color;
     
 public:
-    
-    //GRect2D _screenRect;
 
     CCDirector          *_director;
     
@@ -77,6 +76,7 @@ public:
     //test
     
     void switchLight();
+    
 };
 
 
