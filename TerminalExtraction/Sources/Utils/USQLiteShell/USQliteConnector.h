@@ -17,7 +17,7 @@ class USQLiteResultSet;
 
 namespace Utils {
 
-    class SQliteConnector
+    class USQliteConnector
     {
         sqlite3* _dbconnector;
         
@@ -26,8 +26,8 @@ namespace Utils {
         
         bool IsClosed() const {return _closed;}
         
-        SQliteConnector(std::string dbname);
-        ~SQliteConnector();
+        USQliteConnector(std::string dbname);
+        ~USQliteConnector();
         
         /// <summary>
         /// executes simple query like update

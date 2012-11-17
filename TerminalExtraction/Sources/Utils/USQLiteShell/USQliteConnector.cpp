@@ -14,32 +14,32 @@ using namespace std;
 namespace Utils
 {
     
-    SQliteConnector::SQliteConnector(string dbname)
+    USQliteConnector::USQliteConnector(string dbname)
     {
         sqlite3_open(dbname.c_str(), &_dbconnector);
     }
     
-    SQliteConnector::~SQliteConnector()
+    USQliteConnector::~USQliteConnector()
     {
         if(!_closed)
             Close();
     }
     
-    void  SQliteConnector::executeNonQuery(string query, void* errorCallback)
+    void  USQliteConnector::executeNonQuery(string query, void* errorCallback)
     {
     }
        
-    USQLiteResultSet* SQliteConnector::executeSelect(string query, void* errorCallback)
+    USQLiteResultSet* USQliteConnector::executeSelect(string query, void* errorCallback)
     {
         return nullptr;
     }
     
-    int SQliteConnector::executeInsert(string query, void* errorCallback)
+    int USQliteConnector::executeInsert(string query, void* errorCallback)
     {
         return 0;
     }
         
-    void SQliteConnector::Close()
+    void USQliteConnector::Close()
     {
         if(_closed)
             return;
