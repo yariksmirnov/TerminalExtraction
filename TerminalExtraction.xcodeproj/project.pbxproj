@@ -1978,10 +1978,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Downloads/iOSOpenGLBulletPhysics-master/bullet-2.78/src/LinearMath\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src/BulletCollision\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src/BulletDynamics\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src/BulletSoftBody\"",
+					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src/LinearMath\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2003,7 +2003,6 @@
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/log4cxx.02 PM\"",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
@@ -2025,10 +2024,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Downloads/iOSOpenGLBulletPhysics-master/bullet-2.78/src/LinearMath\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src/BulletCollision\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src/BulletDynamics\"",
 					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src/BulletSoftBody\"",
+					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/bullet-2.81-rev2613/src/LinearMath\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2045,7 +2044,6 @@
 				INFOPLIST_FILE = "TerminalExtraction/TerminalExtraction-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/TerminalExtraction/Sources/Vendors/log4cxx/log4cxx.02 PM\"",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
