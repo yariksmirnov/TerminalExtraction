@@ -23,7 +23,7 @@
 #include "EngineMesh.h"
 #include "Geometry.h"
 #include "SceneSystem.h"
-#include "PEContentProvider.h"
+#include "ContentProvider.h"
 
 using namespace cocos2d;
 using namespace Kompex;
@@ -39,7 +39,7 @@ void TEEngine::Init() {
     
     SysInit();
     
-    _contentProvider = new PEContentProvider();
+    _contentProvider = new ContentProvider();
     _renderSystem->Init();
     _renderSystem->InitOpenGL();
     

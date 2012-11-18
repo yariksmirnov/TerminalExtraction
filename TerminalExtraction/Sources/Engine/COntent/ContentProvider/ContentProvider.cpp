@@ -16,7 +16,6 @@ ContentProvider::ContentProvider()
     
     _database = new SQLiteDatabase(dbName, SQLITE_OPEN_READONLY, NULL);
     
-    
     delete fm;
 }
 

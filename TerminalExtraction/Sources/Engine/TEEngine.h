@@ -23,12 +23,12 @@ class Camera;
 class EngineMesh;
 class SceneSystem;
 class PivotObject;
-class PEContentProvider;
+class ContentProvider;
 
 class TEEngine  {
     
    
-    PEContentProvider           *_contentProvider;
+    ContentProvider           *_contentProvider;
     RenderSystem        *_renderSystem;
     float                _elapsedTime;
     float                _fullTime;
