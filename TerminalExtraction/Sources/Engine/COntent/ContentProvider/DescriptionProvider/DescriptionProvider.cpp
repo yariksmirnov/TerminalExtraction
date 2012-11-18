@@ -1,9 +1,9 @@
 //
-//  PEPack.cpp
+//  PEDescriptionProvider.cpp
 //  TerminalExtraction
 //
 //  Created by Anton Katekov on 17.11.12.
 //
 //
 
-#include "PEPack.h"
+#include "DescriptionProvider.h"

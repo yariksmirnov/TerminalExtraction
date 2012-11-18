@@ -16,13 +16,12 @@ using namespace Kompex;
 
 class LevelObject;
 
-class PEContentProvider
-{
-     Kompex::SQLiteDatabase      *_database;
+class ContentProvider {
+     SQLiteDatabase      *_database;
     
 public:
-    PEContentProvider();
-    ~PEContentProvider();
+    ContentProvider();
+    ~ContentProvider();
 };
 
 

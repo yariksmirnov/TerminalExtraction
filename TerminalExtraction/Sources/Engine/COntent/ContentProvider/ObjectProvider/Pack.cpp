@@ -1,9 +1,9 @@
 //
-//  PEBaseDescription.cpp
+//  PEPack.cpp
 //  TerminalExtraction
 //
 //  Created by Anton Katekov on 17.11.12.
 //
 //
 
-#include "PEBaseDescription.h"
+#include "Pack.h"

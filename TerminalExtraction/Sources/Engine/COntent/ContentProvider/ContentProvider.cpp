@@ -6,21 +6,21 @@
 //
 //
 
-#include "PEContentProvider.h"
+#include "ContentProvider.h"
 #include "FileManger.h"
 
-PEContentProvider::PEContentProvider()
+ContentProvider::ContentProvider()
 {
     FileManager* fm = FileManager::CreateManager();
     const char *dbName = fm->GetFilePath("Descriptions.sqlite");
     
-    _database = new Kompex::SQLiteDatabase(dbName, SQLITE_OPEN_READONLY, NULL);
+    _database = new SQLiteDatabase(dbName, SQLITE_OPEN_READONLY, NULL);
     
     
     delete fm;
 }
 
-PEContentProvider::~PEContentProvider()
+ContentProvider::~ContentProvider()
 {
     delete _database;
 }
