@@ -15,7 +15,7 @@
 		9D4349B11646CFED008394DE /* TextureCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349AF1646CFED008394DE /* TextureCache.cpp */; };
 		9D4349B816470617008394DE /* woodbox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D4349B716470616008394DE /* woodbox.jpg */; };
 		9D4349C31647F793008394DE /* SceneSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349C11647F78C008394DE /* SceneSystem.cpp */; };
-		9D496F5516554405006B3925 /* Sys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F5416554405006B3925 /* Sys.cpp */; };
+		9D496F5516554405006B3925 /* Sys.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F5416554405006B3925 /* Sys.c */; };
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
 		9D60B5701645346E0074081D /* LevelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B56E1645346B0074081D /* LevelObject.cpp */; };
@@ -172,7 +172,7 @@
 		9D9042F9162D9F1A003BB5FF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042F8162D9F1A003BB5FF /* Default@2x.png */; };
 		9D9042FB162D9F1A003BB5FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D9042FA162D9F1A003BB5FF /* Default-568h@2x.png */; };
 		9D904313162DA7ED003BB5FF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D904312162DA7ED003BB5FF /* OpenGLES.framework */; };
-		9DAC9E20165704FF0031F2AE /* lcl.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC9E1B165704FF0031F2AE /* lcl.m */; };
+		9DAC9E20165704FF0031F2AE /* lcl.c in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC9E1B165704FF0031F2AE /* lcl.c */; };
 		9DB05CA416500B18001FC18E /* UserInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB05CA216500B18001FC18E /* UserInterface.cpp */; };
 		9DCF1DF9164F0F5F00FE6B45 /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D87CAE1164E9F130030B46F /* libcocos2dx.a */; };
 		9DCF1DFB164F12A900FE6B45 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF1DFA164F12A800FE6B45 /* libz.dylib */; };
@@ -239,8 +239,7 @@
 		9D4349B716470616008394DE /* woodbox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woodbox.jpg; sourceTree = "<group>"; };
 		9D4349C11647F78C008394DE /* SceneSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSystem.cpp; path = Sources/Engine/SceneSystem.cpp; sourceTree = "<group>"; };
 		9D4349C21647F78F008394DE /* SceneSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSystem.h; path = Sources/Engine/SceneSystem.h; sourceTree = "<group>"; };
-		9D496F4F16553CCD006B3925 /* liblog4cxx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblog4cxx.a; path = "TerminalExtraction/Sources/Vendors/log4cxx/log4cxx.02 PM/liblog4cxx.a"; sourceTree = "<group>"; };
-		9D496F5416554405006B3925 /* Sys.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Sys.cpp; path = Sources/Utils/Sys.cpp; sourceTree = "<group>"; };
+		9D496F5416554405006B3925 /* Sys.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Sys.c; path = Sources/Utils/Sys.c; sourceTree = "<group>"; };
 		9D496F5616554416006B3925 /* Sys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sys.h; path = Sources/Utils/Sys.h; sourceTree = "<group>"; };
 		9D60B5451642D1FD0074081D /* RenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderObject.cpp; path = Sources/Engine/Objects/RenderObject.cpp; sourceTree = "<group>"; };
 		9D60B5461642D1FD0074081D /* RenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderObject.h; path = Sources/Engine/Objects/RenderObject.h; sourceTree = "<group>"; };
@@ -640,7 +639,7 @@
 		9D904317162DB254003BB5FF /* UContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UContainer.h; path = Sources/Utils/UContainer.h; sourceTree = "<group>"; };
 		9D904319162DB867003BB5FF /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Sources/Utils/Utils.h; sourceTree = "<group>"; };
 		9DAC9E1A165704FF0031F2AE /* lcl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl.h; sourceTree = "<group>"; };
-		9DAC9E1B165704FF0031F2AE /* lcl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lcl.m; sourceTree = "<group>"; };
+		9DAC9E1B165704FF0031F2AE /* lcl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lcl.c; sourceTree = "<group>"; };
 		9DAC9E1C165704FF0031F2AE /* lcl_config_components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_components.h; sourceTree = "<group>"; };
 		9DAC9E1D165704FF0031F2AE /* lcl_config_extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_extensions.h; sourceTree = "<group>"; };
 		9DAC9E1E165704FF0031F2AE /* lcl_config_logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcl_config_logger.h; sourceTree = "<group>"; };
@@ -1456,7 +1455,6 @@
 		9D9042E3162D9F1A003BB5FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D496F4F16553CCD006B3925 /* liblog4cxx.a */,
 				9DCF1E00164F151400FE6B45 /* libstdc++.6.dylib */,
 				9DCF1DFE164F12DE00FE6B45 /* libxml2.dylib */,
 				9DCF1DFA164F12A800FE6B45 /* libz.dylib */,
@@ -1501,7 +1499,7 @@
 				8B0C40FC1656C16B00FC3452 /* KompexSQLite */,
 				9DCE1537162F284D002EBD95 /* MathKit */,
 				9D904319162DB867003BB5FF /* Utils.h */,
-				9D496F5416554405006B3925 /* Sys.cpp */,
+				9D496F5416554405006B3925 /* Sys.c */,
 				9D496F5616554416006B3925 /* Sys.h */,
 				9D904317162DB254003BB5FF /* UContainer.h */,
 				9D2C461E1632140F000EC193 /* GlobalConstants.h */,
@@ -1515,7 +1513,7 @@
 			isa = PBXGroup;
 			children = (
 				9DAC9E1A165704FF0031F2AE /* lcl.h */,
-				9DAC9E1B165704FF0031F2AE /* lcl.m */,
+				9DAC9E1B165704FF0031F2AE /* lcl.c */,
 				9DAC9E1C165704FF0031F2AE /* lcl_config_components.h */,
 				9DAC9E1D165704FF0031F2AE /* lcl_config_extensions.h */,
 				9DAC9E1E165704FF0031F2AE /* lcl_config_logger.h */,
@@ -1858,9 +1856,9 @@
 				9D87CE5C1653D2E00030B46F /* MiniCLTask.cpp in Sources */,
 				9D87CE5D1653D2E00030B46F /* MiniCLTaskScheduler.cpp in Sources */,
 				9DFFDE461653F8BE00AB84F0 /* PhysicObjectBehaviourModel.cpp in Sources */,
-				9D496F5516554405006B3925 /* Sys.cpp in Sources */,
+				9D496F5516554405006B3925 /* Sys.c in Sources */,
 				8B0C40FB1656C15100FC3452 /* sqlite3.c in Sources */,
-				9DAC9E20165704FF0031F2AE /* lcl.m in Sources */,
+				9DAC9E20165704FF0031F2AE /* lcl.c in Sources */,
 				D137ED3D1657EC3000AF8172 /* KompexSQLiteDatabase.cpp in Sources */,
 				D137ED3E1657EC3000AF8172 /* KompexSQLiteStatement.cpp in Sources */,
 				D137ED441657F2F300AF8172 /* DescriptionProvider.cpp in Sources */,

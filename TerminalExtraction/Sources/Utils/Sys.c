@@ -15,6 +15,7 @@
 
 #define TE_VERSION          0.1
 
+
 void SysInit(void) {
     lcl_configure_by_name("Sys_*", SysLogLevelDebug);
     
@@ -25,3 +26,4 @@ void SysInit(void) {
     
     SysLogInfo("Engine initialized ...");
 }
+

@@ -88,7 +88,8 @@
 
 //#import <Foundation/Foundation.h>
 
-
+#include "stdio.h"
+#include "stdint.h"
 // Use C linkage.
 #ifdef __cplusplus
 extern "C" {

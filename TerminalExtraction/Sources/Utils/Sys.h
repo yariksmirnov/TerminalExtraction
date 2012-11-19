@@ -34,7 +34,16 @@ lcl_log(SysLogComponent, lcl_vDebug, __VA_ARGS__)
 #define SysLogTrace(...)                                                                 \
 lcl_log(SysLogComponent, lcl_vTrace, __VA_ARGS__)
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 void SysInit();
+    
+#ifdef __cplusplus
+}
+#endif
 
 #define SysLogLevelOff       lcl_vOff
 #define SysLogLevelCritical  lcl_vCritical
