@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "Utils.h"
+#include <vector>
 
 using namespace Kompex;
 
@@ -18,6 +19,7 @@ class LevelObject;
 
 class ContentProvider {
      SQLiteDatabase      *_database;
+    
     
 public:
     ContentProvider();

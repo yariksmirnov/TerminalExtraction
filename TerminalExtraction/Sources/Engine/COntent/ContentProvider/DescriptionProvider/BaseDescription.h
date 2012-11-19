@@ -11,4 +11,14 @@
 
 #include <iostream>
 
+class BaseDescription {
+    
+    unsigned int _id;
+
+public:
+    
+    
+    
+};
+
 #endif /* defined(__TerminalExtraction__PEBaseDescription__) */

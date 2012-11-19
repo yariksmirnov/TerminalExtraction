@@ -8,28 +8,23 @@
 #include "GLKMatrix4.h"
 #include "GLKMatrix3.h"
 #include "GLKMathUtils.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifndef __clang__
 static __inline__ GLKMatrix4 GLKMatrix4MakeBillboard(GLKMatrix4 view, GLKVector3 objectPositon)
 #else
 static GLKMatrix4 GLKMatrix4MakeBillboard(GLKMatrix4 view, GLKVector3 objectPositon)
 #endif
 {
-    GLKMatrix4 result = view;
-    result.m00 = view.m00;
-    result.m01 = view.m10;
-    result.m02 = view.m20;
-    result.m10 = view.m01;
-    result.m11 = view.m11;
-    result.m12 = view.m21;
-    result.m20 = view.m02;
-    result.m21 = view.m12;
-    result.m22 = view.m22;
+    GLKMatrix4 result = GLKMatrix4Transpose(view);
     
+    result.m[12] = objectPositon.v[0];
+    result.m[13] = objectPositon.v[1];
+    result.m[14] = objectPositon.v[2];
     
-    
-    result.m30 = objectPositon.x;
-    result.m31 = objectPositon.y;
-    result.m32 = objectPositon.z;
     return  result;
 }
 
@@ -171,5 +166,8 @@ static GLKVector3 UnprojectPointWIdent(GLKVector3 screenSpace, GLKMatrix4 projec
     return up3;
 } 
 
+#ifdef __cplusplus
+}
+#endif
 
 

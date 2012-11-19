@@ -16,6 +16,8 @@
 		9D4349B816470617008394DE /* woodbox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D4349B716470616008394DE /* woodbox.jpg */; };
 		9D4349C31647F793008394DE /* SceneSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4349C11647F78C008394DE /* SceneSystem.cpp */; };
 		9D496F5516554405006B3925 /* Sys.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D496F5416554405006B3925 /* Sys.c */; };
+		9D5605C6165A806700AA767C /* LevelObjectDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D5605C4165A806600AA767C /* LevelObjectDescription.cpp */; };
+		9D5605ED165A82B100AA767C /* BinaryReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D5605EB165A82B000AA767C /* BinaryReader.cpp */; };
 		9D60B5471642D1FD0074081D /* RenderObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5451642D1FD0074081D /* RenderObject.cpp */; };
 		9D60B54B1642D6A20074081D /* Material.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B5491642D6A20074081D /* Material.cpp */; };
 		9D60B5701645346E0074081D /* LevelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D60B56E1645346B0074081D /* LevelObject.cpp */; };
@@ -241,6 +243,10 @@
 		9D4349C21647F78F008394DE /* SceneSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSystem.h; path = Sources/Engine/SceneSystem.h; sourceTree = "<group>"; };
 		9D496F5416554405006B3925 /* Sys.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Sys.c; path = Sources/Utils/Sys.c; sourceTree = "<group>"; };
 		9D496F5616554416006B3925 /* Sys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sys.h; path = Sources/Utils/Sys.h; sourceTree = "<group>"; };
+		9D5605C4165A806600AA767C /* LevelObjectDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LevelObjectDescription.cpp; sourceTree = "<group>"; };
+		9D5605C5165A806600AA767C /* LevelObjectDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelObjectDescription.h; sourceTree = "<group>"; };
+		9D5605EB165A82B000AA767C /* BinaryReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryReader.cpp; path = Sources/Utils/BinaryReader.cpp; sourceTree = "<group>"; };
+		9D5605EC165A82B100AA767C /* BinaryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryReader.h; path = Sources/Utils/BinaryReader.h; sourceTree = "<group>"; };
 		9D60B5451642D1FD0074081D /* RenderObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderObject.cpp; path = Sources/Engine/Objects/RenderObject.cpp; sourceTree = "<group>"; };
 		9D60B5461642D1FD0074081D /* RenderObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderObject.h; path = Sources/Engine/Objects/RenderObject.h; sourceTree = "<group>"; };
 		9D60B5491642D6A20074081D /* Material.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Material.cpp; path = Sources/Engine/Materials/Material.cpp; sourceTree = "<group>"; };
@@ -1505,6 +1511,8 @@
 				9D2C461E1632140F000EC193 /* GlobalConstants.h */,
 				9D6A84391641D46A00E322C3 /* IdGenerator.cpp */,
 				9D6A843A1641D46A00E322C3 /* IdGenerator.h */,
+				9D5605EB165A82B000AA767C /* BinaryReader.cpp */,
+				9D5605EC165A82B100AA767C /* BinaryReader.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1592,6 +1600,8 @@
 				D137ED431657F2F300AF8172 /* DescriptionProvider.h */,
 				D137ED451657F30200AF8172 /* BaseDescription.cpp */,
 				D137ED461657F30200AF8172 /* BaseDescription.h */,
+				9D5605C4165A806600AA767C /* LevelObjectDescription.cpp */,
+				9D5605C5165A806600AA767C /* LevelObjectDescription.h */,
 			);
 			path = DescriptionProvider;
 			sourceTree = "<group>";
@@ -1866,6 +1876,8 @@
 				D137ED4A1657FCD600AF8172 /* ContentProvider.cpp in Sources */,
 				D137ED4D1657FCE800AF8172 /* PackList.cpp in Sources */,
 				D137ED501657FCF100AF8172 /* Pack.cpp in Sources */,
+				9D5605C6165A806700AA767C /* LevelObjectDescription.cpp in Sources */,
+				9D5605ED165A82B100AA767C /* BinaryReader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
