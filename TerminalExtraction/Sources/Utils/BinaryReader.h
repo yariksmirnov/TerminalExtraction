@@ -33,6 +33,7 @@ public:
     long GetPosition();
     int ReadInt();
     float ReadSingle();
+    char ReadChar();
     std::string ReadString();
 	void ReadBuffer(int length, char *buf);
     void SetPosition(long position);

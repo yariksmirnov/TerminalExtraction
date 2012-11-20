@@ -53,6 +53,7 @@ void BinaryReader::SetPosition(long position) {
 
 int BinaryReader::ReadInt() {
     if (_file) {
+        
         int retVal;
         fread(&retVal, sizeof(int), 1, _file);
         return retVal;
@@ -72,9 +73,20 @@ float BinaryReader::ReadSingle() {
     return retVal;
 }
 
+char BinaryReader::ReadChar() {
+    if (_file) {
+        char retVal;
+        fread(&retVal, sizeof(char), 1, _file);
+    }
+    char retVal = (* (char*)_currentBuffer);
+    _currentBuffer += sizeof(char);
+    return retVal;
+}
+
 void BinaryReader::ReadBuffer(int length, char *buf) {
     if (_file) {
-        fread(buf, length, 1, _file);
+        size_t readed = fread(buf, sizeof(char), length, _file);
+        readed = readed;
         return;
     }
     memcpy(buf, _currentBuffer, length);
@@ -83,11 +95,22 @@ void BinaryReader::ReadBuffer(int length, char *buf) {
 }
 
 string BinaryReader::ReadString() {
-    int length = ReadInt() + 1;
-    char *buff = new char[length];
-    ReadBuffer(length, buff);
-    string str = string(buff);
-    delete [] buff;
+    int pos = GetPosition();
+    int length = ReadInt();
+    char *data = (char*) malloc (sizeof(char)*length+1);
+    fread (data,sizeof(char),length+1,_file);
+    if (data[length] != '\0') {
+        ReadChar();
+        
+        char *dataold = data;
+        data = (char*) malloc (sizeof(char)*length+2);
+        memcpy(data, dataold, length+1);
+        data[length+1]='\0';
+        free(dataold);
+    }
+    string str = string(data);
+    pos = GetPosition();
+    free(data);
     return str;
 }
 

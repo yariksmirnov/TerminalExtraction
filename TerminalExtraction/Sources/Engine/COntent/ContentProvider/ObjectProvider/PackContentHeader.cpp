@@ -48,8 +48,7 @@ PackContentHeader::PackContentHeader(BinaryReader* inputStream, int index)
     SysLogInfo("index:        %d", index);
     SysLogInfo("offset:       %ld", inputStream->GetPosition());
     _name = inputStream->ReadString();
-    if(index == 63)
-        inputStream->SetPosition(inputStream->GetPosition() + 1);
+    SysLogInfo("offset:       %ld", inputStream->GetPosition());
     SysLogInfo("name:       %s", _name.c_str());
     _offset = inputStream->ReadInt();
     _format = inputStream->ReadInt();

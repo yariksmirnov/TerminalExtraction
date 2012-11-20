@@ -19,8 +19,8 @@ ContentProvider::ContentProvider()
     
     
     
-   // Pack* p = new Pack(std::string("Data.pack"));
-   // p = p;
+    Pack* p = new Pack(std::string("Data.pack"));
+    p = p;
     
     delete fm;
 }
