@@ -30,7 +30,7 @@ public:
     MeshContentadditionalheader(BinaryReader* inputStream, int type);
 };
 
-class PackContetnHeader {
+class PackContentHeader {
     
     
 public:
@@ -83,8 +83,8 @@ public:
     MeshContentadditionalheader* _mh;
     int _disposeCount;
     
-    PackContetnHeader(BinaryReader* inputStream, int index);
-    ~PackContetnHeader();
+    PackContentHeader(BinaryReader* inputStream, int index);
+    ~PackContentHeader();
     
 };
 

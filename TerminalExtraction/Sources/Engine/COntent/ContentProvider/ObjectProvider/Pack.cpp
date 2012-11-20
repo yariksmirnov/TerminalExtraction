@@ -31,7 +31,7 @@ void Pack::ReadPack()
     
     for (int i = 0; i < objectcount; i++)
     {
-        shared_ptr<PackContentHeader> pch(new PackContentHeader(br, i));
+        shared_ptr<PackContentHeader> pch(new PackContentHeader(_reader, i));
         
         if (pch->_size == 0)
             needcalcsize.push_back(pch);
@@ -39,9 +39,9 @@ void Pack::ReadPack()
         _objects.push_back(pch);
     }
     
-    _headersize = _reader->getPosition();
+    _headersize = _reader->GetPosition();
     
-    for (int i = 0; i < needcalcsize.count - 1; i++)
+    for (int i = 0; i < needcalcsize.size() - 1; i++)
     {
         int index = [[needcalcsize objectAtIndex:i] intValue];
         PackContentHeader* pch = [_objects objectAtIndex:index];

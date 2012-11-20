@@ -14,7 +14,6 @@
 #include <vector>
 #include "PackContentHeader.h"
 
-class PackContentHeader;
 class BinaryReader;
 
 class Pack {

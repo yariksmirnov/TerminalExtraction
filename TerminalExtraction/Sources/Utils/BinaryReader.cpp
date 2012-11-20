@@ -18,18 +18,17 @@ BinaryReader::BinaryReader(std::string filename):_position(0),_filesize(0) {
     delete fm;
     
     fseek(_file, 0, SEEK_END);
-    _filsize = ftell(_file);
+    _filesize = ftell(_file);
     fseek(_file, 0, SEEK_SET);
     _currentBuffer = malloc(_filesize);
 }
 
 BinaryReader::BinaryReader(const void *buffer, unsigned int length)
 :_position(0)
-,_filesize(0)
+,_filesize(length)
 ,_file(NULL)
 {
     _internalBuffer(const_cast<void *>(buffer));
-    _filesize(length);
 }
 
 long BinaryReader::GetPosition() {

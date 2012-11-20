@@ -13,7 +13,7 @@ MeshContentadditionalheader::MeshContentadditionalheader(BinaryReader* inputStre
 {
     switch (type)
     {
-        case PackContetnHeader::MeshOptimazedForStore:
+        case PackContentHeader::MeshOptimazedForStore:
         {
             _ismaxdetalized = inputStream->ReadInt();
             _skinsize = inputStream->ReadInt();
@@ -21,7 +21,7 @@ MeshContentadditionalheader::MeshContentadditionalheader(BinaryReader* inputStre
             for (int j = 0; j < lodcount; j++)
                 inputStream->ReadString();
         } break;
-        case PackContetnHeader::MeshOptimazedForLoading:
+        case PackContentHeader::MeshOptimazedForLoading:
         {
             _ismaxdetalized = inputStream->ReadInt();
             _isstatic = inputStream->ReadInt();
@@ -34,7 +34,7 @@ MeshContentadditionalheader::MeshContentadditionalheader(BinaryReader* inputStre
     }
 }
 
-PackContetnHeader::PackContetnHeader(BinaryReader* inputStream, int index)
+PackContentHeader::PackContentHeader(BinaryReader* inputStream, int index)
 {
     _userCount = 0;
     _number = index;
@@ -45,19 +45,19 @@ PackContetnHeader::PackContetnHeader(BinaryReader* inputStream, int index)
     _headersize = inputStream->ReadInt();
     
     //когдато я был молодой и глупый и теперь пишу этот кастыль
-    if (_format == PackContetnHeader::MeshOptimazedForLoading || _format == PackContetnHeader::MeshOptimazedForStore)
+    if (_format == PackContentHeader::MeshOptimazedForLoading || _format == PackContentHeader::MeshOptimazedForStore)
     {
-        _mh = new MeshContentadditionalheader(inputStream, loadedformat)
+        _mh = new MeshContentadditionalheader(inputStream, _format);
     }
     else
     {
-        size = inputStream->ReadInt();
+        _size = inputStream->ReadInt();
     }
     
     
 }
 
-PackContetnHeader::~PackContetnHeader()
+PackContentHeader::~PackContentHeader()
 {
     if(_mh)
         delete _mh;
