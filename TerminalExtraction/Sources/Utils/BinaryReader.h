@@ -2,7 +2,7 @@
 //  BinaryReader.h
 //  TerminalExtraction
 //
-//  Created by Yarik Smirnov on 11/19/12.
+//  Created by Mister Pattern on 11/19/12.
 //
 //
 
@@ -22,7 +22,14 @@ class BinaryReader {
 public:
     
     BinaryReader(std::string filename);
+    BinaryReader(const void* buffer);
     
+    long GetPosition();
+    int ReadInt();
+    float ReadSingle();
+    string ReadString();
+	void ReadBuffer(int length, const void *buf);
+    void SetPosition(long position);
 };
 
 #endif /* defined(__TerminalExtraction__BinaryReader__) */
