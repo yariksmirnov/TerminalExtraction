@@ -10,7 +10,7 @@
 #include "FileManger.h"
 
 
-BinaryReader::BinaryReader(std::string filename):_position(0):_filesize(0) {
+BinaryReader::BinaryReader(std::string filename):_position(0),_filesize(0) {
     FileManager *fm = FileManager::CreateManager();
     std::string path = fm->GetFilePath(filename);
     _file = fopen(path.c_str(), "rb");
@@ -25,8 +25,8 @@ BinaryReader::BinaryReader(std::string filename):_position(0):_filesize(0) {
 
 BinaryReader::BinaryReader(const void *buffer, unsigned int length)
 :_position(0)
-:_filesize(0)
-:_file(NULL)
+,_filesize(0)
+,_file(NULL)
 {
     _internalBuffer(const_cast<void *>(buffer));
     _filesize(length);
