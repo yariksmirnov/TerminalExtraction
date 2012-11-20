@@ -95,13 +95,11 @@ void BinaryReader::ReadBuffer(int length, char *buf) {
 }
 
 string BinaryReader::ReadString() {
-    int pos = GetPosition();
     int length = ReadInt();
     char *data = (char*) malloc (sizeof(char)*length+1);
     fread (data,sizeof(char),length+1,_file);
     if (data[length] != '\0') {
         ReadChar();
-        
         char *dataold = data;
         data = (char*) malloc (sizeof(char)*length+2);
         memcpy(data, dataold, length+1);
@@ -109,7 +107,6 @@ string BinaryReader::ReadString() {
         free(dataold);
     }
     string str = string(data);
-    pos = GetPosition();
     free(data);
     return str;
 }
