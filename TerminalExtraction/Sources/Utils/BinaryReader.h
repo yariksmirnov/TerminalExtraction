@@ -10,26 +10,33 @@
 #define __TerminalExtraction__BinaryReader__
 
 #include <iostream>
+#include <istream>
 #include <fstream>
 #include <iosfwd>
 
-using namespace std;
-
 class BinaryReader {
     
-    ifstream            _file;
+    FILE            *_file;
+    void            *_currentBuffer;
+    void            *_internalBuffer;
+    
+    unsigned int    _filesize;
+    long            _position;
     
 public:
     
     BinaryReader(std::string filename);
-    BinaryReader(const void* buffer);
+    BinaryReader(const void *buffer, unsigned int length);
+    ~ BinaryReader();
     
     long GetPosition();
     int ReadInt();
     float ReadSingle();
-    string ReadString();
+    std::string ReadString();
 	void ReadBuffer(int length, const void *buf);
     void SetPosition(long position);
+    
+	unsigned int GetLength() { return _filesize; };
 };
 
 #endif /* defined(__TerminalExtraction__BinaryReader__) */

@@ -7,3 +7,11 @@
 //
 
 #include "Pack.h"
+
+
+class Pack {
+    
+    
+public:
+    
+};
