@@ -200,6 +200,7 @@
 		D137ED4D1657FCE800AF8172 /* PackList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED4B1657FCE800AF8172 /* PackList.cpp */; };
 		D137ED501657FCF100AF8172 /* Pack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED4E1657FCF000AF8172 /* Pack.cpp */; };
 		D165BD401657FF3000FA1E26 /* Descriptions.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */; };
+		D165BD7B165BF4A800FA1E26 /* Data.pack in Resources */ = {isa = PBXBuildFile; fileRef = D165BD7A165BF4A800FA1E26 /* Data.pack */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -714,6 +715,7 @@
 		D137ED4E1657FCF000AF8172 /* Pack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pack.cpp; sourceTree = "<group>"; };
 		D137ED4F1657FCF100AF8172 /* Pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pack.h; sourceTree = "<group>"; };
 		D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Descriptions.sqlite; sourceTree = "<group>"; };
+		D165BD7A165BF4A800FA1E26 /* Data.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = Data.pack; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -764,6 +766,7 @@
 			children = (
 				D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */,
 				D137ED351657EB4000AF8172 /* Data.sqlite */,
+				D165BD7A165BF4A800FA1E26 /* Data.pack */,
 				9D4349B616470616008394DE /* Textures */,
 			);
 			path = Resources;
@@ -1702,6 +1705,7 @@
 				9D87CDCD1653D2DF0030B46F /* Doxyfile in Resources */,
 				D137ED361657EB4000AF8172 /* Data.sqlite in Resources */,
 				D165BD401657FF3000FA1E26 /* Descriptions.sqlite in Resources */,
+				D165BD7B165BF4A800FA1E26 /* Data.pack in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

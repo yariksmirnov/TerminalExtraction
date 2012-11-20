@@ -8,6 +8,7 @@
 
 #include "PackContentHeader.h"
 #include "BinaryReader.h"
+#include "Sys.h"
 
 MeshContentadditionalheader::MeshContentadditionalheader(BinaryReader* inputStream, int type)
 {
@@ -36,13 +37,25 @@ MeshContentadditionalheader::MeshContentadditionalheader(BinaryReader* inputStre
 
 PackContentHeader::PackContentHeader(BinaryReader* inputStream, int index)
 {
-    _userCount = 0;
-    _number = index;
+    if (index == 63) {
+        int a = 0;
+        a++;
+    }
     
+    _userCount = 0;
+    _index = index;
+    SysLogInfo("-------");
+    SysLogInfo("index:        %d", index);
+    SysLogInfo("offset:       %ld", inputStream->GetPosition());
     _name = inputStream->ReadString();
+    if(index == 63)
+        inputStream->SetPosition(inputStream->GetPosition() + 1);
+    SysLogInfo("name:       %s", _name.c_str());
     _offset = inputStream->ReadInt();
     _format = inputStream->ReadInt();
     _headersize = inputStream->ReadInt();
+    
+    
     
     //когдато я был молодой и глупый и теперь пишу этот кастыль
     if (_format == PackContentHeader::MeshOptimazedForLoading || _format == PackContentHeader::MeshOptimazedForStore)
@@ -53,8 +66,7 @@ PackContentHeader::PackContentHeader(BinaryReader* inputStream, int index)
     {
         _size = inputStream->ReadInt();
     }
-    
-    
+
 }
 
 PackContentHeader::~PackContentHeader()

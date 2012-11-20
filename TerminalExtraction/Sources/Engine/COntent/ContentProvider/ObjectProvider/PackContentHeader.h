@@ -67,7 +67,7 @@ public:
     //readed content object
     void* _contentObject;
     //number in pack
-    int _number;
+    int _index;
     //offset from packs header end
     int _offset;
     //size in pack

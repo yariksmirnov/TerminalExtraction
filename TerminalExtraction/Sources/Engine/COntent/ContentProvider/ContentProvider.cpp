@@ -8,6 +8,7 @@
 
 #include "ContentProvider.h"
 #include "FileManger.h"
+#include "Pack.h"
 
 ContentProvider::ContentProvider()
 {
@@ -15,6 +16,11 @@ ContentProvider::ContentProvider()
     const char *dbName = fm->GetFilePath("Descriptions.sqlite");
     
     _database = new SQLiteDatabase(dbName, SQLITE_OPEN_READONLY, NULL);
+    
+    
+    
+   // Pack* p = new Pack(std::string("Data.pack"));
+   // p = p;
     
     delete fm;
 }

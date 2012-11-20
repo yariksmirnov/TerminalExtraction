@@ -8,6 +8,7 @@
 
 #include "Pack.h"
 #include "BinaryReader.h"
+#include "Sys.h"
 
 Pack::Pack(std::string filename)
 {
@@ -37,35 +38,32 @@ void Pack::ReadPack()
             needcalcsize.push_back(pch);
         
         _objects.push_back(pch);
+        
     }
     
     _headersize = _reader->GetPosition();
     
     for (int i = 0; i < needcalcsize.size() - 1; i++)
     {
-        int index = [[needcalcsize objectAtIndex:i] intValue];
-        PackContentHeader* pch = [_objects objectAtIndex:index];
+        shared_ptr<PackContentHeader> pch = needcalcsize.at(i);
+        int index = pch->_index;
         
-        PackContentHeader* nextpch = [_objects objectAtIndex:index+1];
-        pch.size = nextpch.offset - pch.offset;
+        shared_ptr<PackContentHeader> nextpch = _objects.at(index + 1);
+        pch->_size = nextpch->_offset - pch->_offset;
     }
     
-    if ([[needcalcsize objectAtIndex:needcalcsize.count - 1] intValue] + 1 == _objects.count)
+    if (needcalcsize.at(needcalcsize.size() - 1)->_index + 1 == _objects.size())
     {
-        int index = [[needcalcsize objectAtIndex:needcalcsize.count - 1] intValue];
-        PackContentHeader* pch = [_objects objectAtIndex:index];
-        PackContentHeader* lactpch = [_objects objectAtIndex:_objects.count - 1];
-        pch.size = br.fileSize - (lactpch.offset + _headersize);
+        shared_ptr<PackContentHeader> pch = needcalcsize.at(needcalcsize.size() - 1);
+        shared_ptr<PackContentHeader> lactpch = _objects.at(_objects.size() - 1);
+        pch->_size = _reader->GetLength() - (lactpch->_offset + _headersize);
     }
     else
     {
-        int processingobject = [[needcalcsize objectAtIndex:needcalcsize.count - 1] intValue];
-        PackContentHeader* pch = [_objects objectAtIndex:processingobject];
-        PackContentHeader* next = [_objects objectAtIndex:processingobject + 1];
-        pch.size = next.offset - pch.offset;
+        shared_ptr<PackContentHeader> pch = needcalcsize.at(needcalcsize.size() - 1);
+        shared_ptr<PackContentHeader> next = _objects.at(pch->_index + 1);
+        pch->_size = next->_offset - pch->_offset;
     }
-    [br Close];
-    _reader = [br retain];
 }
 
 Pack::~Pack()

@@ -8,6 +8,7 @@
 
 #include "BinaryReader.h"
 #include "FileManger.h"
+#include <memory>
 
 
 BinaryReader::BinaryReader(std::string filename):_position(0),_filesize(0) {
@@ -20,15 +21,15 @@ BinaryReader::BinaryReader(std::string filename):_position(0),_filesize(0) {
     fseek(_file, 0, SEEK_END);
     _filesize = ftell(_file);
     fseek(_file, 0, SEEK_SET);
-    _currentBuffer = malloc(_filesize);
+    _currentBuffer = static_cast<char*>(malloc(_filesize));
 }
 
-BinaryReader::BinaryReader(const void *buffer, unsigned int length)
+BinaryReader::BinaryReader(char *buffer, unsigned int length)
 :_position(0)
 ,_filesize(length)
 ,_file(NULL)
 {
-    _internalBuffer(const_cast<void *>(buffer));
+    _internalBuffer = const_cast<char *>(buffer);
 }
 
 long BinaryReader::GetPosition() {
@@ -45,7 +46,7 @@ void BinaryReader::SetPosition(long position) {
     if (_file) {
         fseek(_file, _position, SEEK_SET);
     } else {
-        _currentBuffer = _internalBuffer + _position;
+        _currentBuffer = reinterpret_cast<char *>(_internalBuffer) + _position;
     }
 }
 
@@ -53,27 +54,31 @@ void BinaryReader::SetPosition(long position) {
 int BinaryReader::ReadInt() {
     if (_file) {
         int retVal;
-        _currentBuffer = &retVal;
-        fread(_currentBuffer), sizeof(int), 1, _file);
+        fread(&retVal, sizeof(int), 1, _file);
+        return retVal;
     }
-    return (* _currentBuffer);
+    int retVal = (* (int*)_currentBuffer);
+    _currentBuffer += sizeof(int);
+    return retVal;
 }
 
 float BinaryReader::ReadSingle() {
     if (_file) {
         float retVal;
-        _currentBuffer = &retVal;
-        fread(_currentBuffer, sizeof(float), 1, _file);
+        fread(&retVal, sizeof(float), 1, _file);
     }
-    return (* _currentBuffer);
+    float retVal = (* (float*)_currentBuffer);
+    _currentBuffer += sizeof(float);
+    return retVal;
 }
 
-void BinaryReader::ReadBuffer(int length, const void *buf) {
+void BinaryReader::ReadBuffer(int length, char *buf) {
     if (_file) {
         fread(buf, length, 1, _file);
         return;
     }
     memcpy(buf, _currentBuffer, length);
+    _currentBuffer += length;
     return;
 }
 
