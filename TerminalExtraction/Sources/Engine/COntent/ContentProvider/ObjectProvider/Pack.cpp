@@ -80,6 +80,20 @@ shared_ptr<PackContentHeader> Pack::FindObject(string name)
     return shared_ptr<PackContentHeader>(nullptr);
 }
 
+bool Pack::ReadObjectBuffer(char* buffer, string name)
+{
+    shared_ptr<PackContentHeader> pch = FindObject(name);
+    if (!pch)
+        return false;
+    
+    if(sizeof(buffer) != pch->_size)
+        return false;
+    
+    _reader->SetPosition(_headersize + pch->_offset);
+    _reader->ReadBuffer(pch->_size, buffer);
+    return true;
+}
+
 Pack::~Pack()
 {
     delete _reader;

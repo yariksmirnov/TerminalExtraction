@@ -28,6 +28,8 @@ public:
     Pack(std::string filename);
     ~Pack();
     
+    bool ReadObjectBuffer(char* buffer, string name);
+    
 };
 
 

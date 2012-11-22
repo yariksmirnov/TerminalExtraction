@@ -15,24 +15,19 @@
 using namespace std;
 
 class BinaryReader;
+class PackObjectInterface;
 
-
-
-class MeshContentadditionalheader {
-    
-    
+//urgly rudiment
+class MeshContentAdditionalHeader {
 public:
     int _ismaxdetalized;
     int _isstatic;
     int _skinsize;
     
-    
-    MeshContentadditionalheader(BinaryReader* inputStream, int type);
+    MeshContentAdditionalHeader(BinaryReader* inputStream, int type);
 };
 
 class PackContentHeader {
-    
-    
 public:
     enum
     {
@@ -63,7 +58,7 @@ public:
     //count of engine object created from this contetnt object
     int _userCount;
     //sample engine object
-    void* _engineObject;
+    shared_ptr<PackObjectInterface> _engineObject;
     //readed content object
     void* _contentObject;
     //number in pack
@@ -80,7 +75,7 @@ public:
     //id
     std::string _name;
     //additional info for meshes
-    MeshContentadditionalheader* _mh;
+    MeshContentAdditionalHeader* _mh;
     int _disposeCount;
     
     PackContentHeader(BinaryReader* inputStream, int index);

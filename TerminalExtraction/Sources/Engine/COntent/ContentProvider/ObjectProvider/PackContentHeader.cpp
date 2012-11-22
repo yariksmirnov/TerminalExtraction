@@ -10,7 +10,7 @@
 #include "BinaryReader.h"
 #include "Sys.h"
 
-MeshContentadditionalheader::MeshContentadditionalheader(BinaryReader* inputStream, int type)
+MeshContentAdditionalHeader::MeshContentAdditionalHeader(BinaryReader* inputStream, int type)
 {
     switch (type)
     {
@@ -37,11 +37,6 @@ MeshContentadditionalheader::MeshContentadditionalheader(BinaryReader* inputStre
 
 PackContentHeader::PackContentHeader(BinaryReader* inputStream, int index)
 {
-    if (index == 63) {
-        int a = 0;
-        a++;
-    }
-    
     _userCount = 0;
     _index = index;
     _name = inputStream->ReadString();
@@ -54,7 +49,7 @@ PackContentHeader::PackContentHeader(BinaryReader* inputStream, int index)
     //когдато я был молодой и глупый и теперь пишу этот кастыль
     if (_format == PackContentHeader::MeshOptimazedForLoading || _format == PackContentHeader::MeshOptimazedForStore)
     {
-        _mh = new MeshContentadditionalheader(inputStream, _format);
+        _mh = new MeshContentAdditionalHeader(inputStream, _format);
     }
     else
     {

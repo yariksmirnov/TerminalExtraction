@@ -201,6 +201,7 @@
 		D137ED501657FCF100AF8172 /* Pack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D137ED4E1657FCF000AF8172 /* Pack.cpp */; };
 		D165BD401657FF3000FA1E26 /* Descriptions.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */; };
 		D165BD7B165BF4A800FA1E26 /* Data.pack in Resources */ = {isa = PBXBuildFile; fileRef = D165BD7A165BF4A800FA1E26 /* Data.pack */; };
+		D165BE1A165E737600FA1E26 /* PackObjectInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D165BE18165E737100FA1E26 /* PackObjectInterface.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -716,6 +717,8 @@
 		D137ED4F1657FCF100AF8172 /* Pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pack.h; sourceTree = "<group>"; };
 		D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Descriptions.sqlite; sourceTree = "<group>"; };
 		D165BD7A165BF4A800FA1E26 /* Data.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = Data.pack; sourceTree = "<group>"; };
+		D165BE18165E737100FA1E26 /* PackObjectInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PackObjectInterface.cpp; sourceTree = "<group>"; };
+		D165BE19165E737300FA1E26 /* PackObjectInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackObjectInterface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1621,6 +1624,8 @@
 				D137ED4F1657FCF100AF8172 /* Pack.h */,
 				9D5605F6165BE01700AA767C /* PackContentHeader.cpp */,
 				9D5605F7165BE01800AA767C /* PackContentHeader.h */,
+				D165BE18165E737100FA1E26 /* PackObjectInterface.cpp */,
+				D165BE19165E737300FA1E26 /* PackObjectInterface.h */,
 			);
 			path = ObjectProvider;
 			sourceTree = "<group>";
@@ -1888,6 +1893,7 @@
 				9D5605C6165A806700AA767C /* LevelObjectDescription.cpp in Sources */,
 				9D5605ED165A82B100AA767C /* BinaryReader.cpp in Sources */,
 				9D5605F8165BE01900AA767C /* PackContentHeader.cpp in Sources */,
+				D165BE1A165E737600FA1E26 /* PackObjectInterface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
