@@ -14,7 +14,9 @@ Pack::Pack(std::string filename)
 {
     _filename = filename;
     _reader = new BinaryReader(filename);
+    SysLogInfo("pack name:       %s", filename.c_str());
     this->ReadPack();
+    SysLogInfo("pack header size:        %d", _headersize);
 }
 
 void Pack::ReadPack()
@@ -64,6 +66,18 @@ void Pack::ReadPack()
         shared_ptr<PackContentHeader> next = _objects.at(pch->_index + 1);
         pch->_size = next->_offset - pch->_offset;
     }
+}
+
+shared_ptr<PackContentHeader> Pack::FindObject(string name)
+{
+    for (std::vector<shared_ptr<PackContentHeader>>::iterator i = _objects.begin(); i != _objects.end(); ++i)
+    {
+        shared_ptr<PackContentHeader> p = *i;
+        if (p->_name == name) {
+            return p;
+        }
+    }
+    return shared_ptr<PackContentHeader>(nullptr);
 }
 
 Pack::~Pack()

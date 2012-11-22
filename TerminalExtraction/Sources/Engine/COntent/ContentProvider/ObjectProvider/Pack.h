@@ -24,7 +24,7 @@ public:
     std::vector<shared_ptr<PackContentHeader>> _objects;
     int _headersize;
     BinaryReader* _reader;
-    
+    shared_ptr<PackContentHeader> FindObject(string name);
     Pack(std::string filename);
     ~Pack();
     

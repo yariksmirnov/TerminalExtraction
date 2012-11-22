@@ -8,7 +8,7 @@
 
 #include "ContentProvider.h"
 #include "FileManger.h"
-#include "Pack.h"
+#include "PackList.h"
 
 ContentProvider::ContentProvider()
 {
@@ -19,9 +19,8 @@ ContentProvider::ContentProvider()
     
     
     
-    Pack* p = new Pack(std::string("Data.pack"));
-    p = p;
-    
+    PackList* p = PackList::SharedInstance();
+    p=p;
     delete fm;
 }
 
