@@ -34,6 +34,7 @@ public:
     int ReadInt();
     float ReadSingle();
     char ReadChar();
+    std::string ReadBadString();
     std::string ReadString();
 	void ReadBuffer(int length, char *buf);
     void SetPosition(int position);

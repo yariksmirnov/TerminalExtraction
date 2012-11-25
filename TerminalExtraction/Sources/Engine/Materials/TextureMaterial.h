@@ -22,12 +22,14 @@ class TextureMaterial : public Material {
 
 public:
     
+    TextureMaterial();
     TextureMaterial(string name);
     ~TextureMaterial();
     
     void ApplyLod(int lod, Shader *shader);
     
-    Texture *GetTexture();
+    void SetTexture(Texture* texture);
+    Texture *GetTexture() const { return _texture; };
     
     virtual void SetFrame(int frame);
     virtual void StopBackgroundLoading();

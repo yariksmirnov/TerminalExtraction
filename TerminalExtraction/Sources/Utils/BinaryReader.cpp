@@ -74,6 +74,7 @@ int BinaryReader::ReadInt()
     }
     int retVal = *(int*)_currentBuffer;
     _currentBuffer += sizeof(int);
+    _position += sizeof(int);
     return retVal;
 }
 
@@ -85,8 +86,10 @@ float BinaryReader::ReadSingle()
         fread(&retVal, sizeof(float), 1, _file);
         return retVal;
     }
-    float retVal = *(float*)_currentBuffer;
-    _currentBuffer += sizeof(float);
+    float retVal;// = *reinterpret_cast<float*>(_currentBuffer);
+    memcpy(&retVal, _currentBuffer, 4);
+    _currentBuffer += 4;
+    _position += 4;
     return retVal;
 }
 
@@ -99,7 +102,8 @@ char BinaryReader::ReadChar()
         return retVal;
     }
     char retVal = *_currentBuffer;
-    _currentBuffer += sizeof(char);
+    _currentBuffer += 1;
+    _position += 1;
     return retVal;
 }
 
@@ -107,36 +111,42 @@ void BinaryReader::ReadBuffer(int length, char *buf)
 {
     if (_file)
     {
-        size_t readed = fread(buf, sizeof(char), length, _file);
-        readed = readed;
+        fread(buf, sizeof(char), length, _file);
         return;
     }
     memcpy(buf, _currentBuffer, length);
     _currentBuffer += length;
+    _position += length;
     return;
+}
+
+string BinaryReader::ReadBadString()
+{
+    int length = ReadInt();
+    char *data = (char*) malloc (sizeof(char)*length+1);
+    ReadBuffer(length+1, data);
+    string str = string(data);
+    free(data);
+    return str;
 }
 
 string BinaryReader::ReadString()
 {
-    if(_file)
+    int length = ReadInt();
+    char *data = (char*) malloc (sizeof(char)*length+1);
+    ReadBuffer(length+1, data);
+    if (data[length] != '\0')
     {
-        int length = ReadInt();
-        char *data = (char*) malloc (sizeof(char)*length+1);
-        fread (data,sizeof(char),length+1,_file);
-        if (data[length] != '\0')
-        {
-            ReadChar();
-            char *dataold = data;
-            data = (char*) malloc (sizeof(char)*length+2);
-            memcpy(data, dataold, length+1);
-            data[length+1]='\0';
-            free(dataold);
-        }
-        string str = string(data);
-        free(data);
-        return str;
+        ReadChar();
+        char *dataold = data;
+        data = (char*) malloc (sizeof(char)*length+2);
+        memcpy(data, dataold, length+1);
+        data[length+1]='\0';
+        free(dataold);
     }
-    return "";
+    string str = string(data);
+    free(data);
+    return str;
 }
 
 BinaryReader::~BinaryReader()

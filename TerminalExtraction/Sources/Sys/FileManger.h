@@ -26,6 +26,7 @@ public:
     virtual const char *  GetFilePath(string filename);
     virtual string * GetContent(string filename);
     virtual GLubyte * CreateBitmapData(string filename, GLfloat *width, GLfloat *heigth);
+    virtual GLubyte * CreateBitmapData(char* data, size_t size, GLfloat *width, GLfloat *heigth);
 };
 
 #endif /* defined(__TerminalExtraction__FileManger__) */

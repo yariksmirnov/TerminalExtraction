@@ -9,7 +9,13 @@
 #include "Texture.h"
 #include "FileManger.h"
 
-Texture::Texture(string filename) {
+Texture::Texture()
+{
+    
+}
+
+Texture::Texture(string filename)
+{
     
     FileManager *fm = FileManager::CreateManager();
     GLubyte *textureData = fm->CreateBitmapData(filename, &_texWidth, &_texHeight);
@@ -20,8 +26,8 @@ Texture::Texture(string filename) {
 }
 
 
-GLuint Texture::SetupTexture(GLubyte *spriteData) {
-
+GLuint Texture::SetupTexture(GLubyte *spriteData)
+{
     GLuint texName;
     
     glGenTextures(1, &texName);
@@ -40,15 +46,17 @@ GLuint Texture::SetupTexture(GLubyte *spriteData) {
     if (err != GL_NO_ERROR)
         printf("Error uploading texture. glError: 0x%04X", err);
     
+    _disposed = false;
     return texName;
-
 }
 
-GLuint Texture::GetTextureName() {
+GLuint Texture::GetTextureName()
+{
     return _name;
 }
 
-void Texture::Dispose() {
+void Texture::Dispose()
+{
     if(_disposed)
         return;
     
@@ -57,6 +65,16 @@ void Texture::Dispose() {
     _disposed = true;
 }
 
-Texture::~Texture() {
+void Texture::LoadFromBuffer(char *buffer, unsigned int bufferLength)
+{
+    FileManager *fm = FileManager::CreateManager();
+    GLubyte *textureData = fm->CreateBitmapData(buffer, bufferLength, &_texWidth, &_texHeight);
+    
+    _name = SetupTexture(textureData);
+    _disposed = false;
+}
+
+Texture::~Texture()
+{
     Dispose();
 }

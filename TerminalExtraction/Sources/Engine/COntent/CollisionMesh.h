@@ -21,8 +21,6 @@ class CollisionMesh : public PackObjectInterface {
     int _verticesCount;
     int _indicesCount;
     
-    bool _disposed;
-    
 public:
     
     GLKVector3* GetVertices() const {return _vertices; };

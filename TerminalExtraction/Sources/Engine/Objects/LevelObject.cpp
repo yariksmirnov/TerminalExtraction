@@ -21,6 +21,7 @@
 #include "PackContentHeader.h"
 #include "CollisionMesh.h"
 #include "bulletAddons.h"
+#include "Texture.h"
 
 LevelObject::LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behaviorModel, Material *material):PivotObject(behaviorModel) {
     _renderAspect = renderObject;
@@ -29,26 +30,52 @@ LevelObject::LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behav
 
 LevelObject * LevelObject::CreateCube()
 {
-    const EngineMesh * mesh = EngineMesh::CreateCube();
-    Material *material = new TextureMaterial("woodbox.jpg");
-    btCollisionShape *shape = NULL;
-    
-    shared_ptr<PackContentHeader> pch = PackList::SharedInstance()->FindObject("WoodenCrate10CollisionMesh");
-    if(pch)
+    EngineMesh * mesh = new EngineMesh();
     {
-        CollisionMesh* cm = new CollisionMesh();
-        char* buffer = (char*)malloc(pch->_size);
-        pch->_pack->ReadObjectFromPack(buffer, pch);
-        cm->LoadFromBuffer(buffer, pch->_size);
-        free(buffer);
-        
-        shape = btCollisionShapeFromCollisionMesh(cm);
-        delete cm;
+        shared_ptr<PackContentHeader> pch = PackList::SharedInstance()->FindObject("SCMarineMeshFull");
+        if(pch)
+        {
+            char* buffer = (char*)malloc(pch->_size);
+            pch->_pack->ReadObjectFromPack(buffer, pch);
+            mesh->LoadFromBuffer(buffer, pch->_size);
+            free(buffer);
+        }
+    }
+
+    
+    TextureMaterial *material = new TextureMaterial();
+    Texture * texture = new Texture();
+    {
+        shared_ptr<PackContentHeader> pch = PackList::SharedInstance()->FindObject("SCMarineTextureDiffuse");
+        if(pch)
+        { 
+            char* buffer = (char*)malloc(pch->_size);
+            pch->_pack->ReadObjectFromPack(buffer, pch);
+            texture->LoadFromBuffer(buffer, pch->_size);
+            free(buffer);
+            material->SetTexture(texture);
+        }
     }
     
-    if (!shape)
-        shape = new btBoxShape(btVector3(0.5, 0.5, 0.5));
     
+    btCollisionShape *shape = NULL;
+    {
+        shared_ptr<PackContentHeader> pch = PackList::SharedInstance()->FindObject("WoodenCrate10CollisionMesh");
+        if(pch)
+        {
+            CollisionMesh* cm = new CollisionMesh();
+            char* buffer = (char*)malloc(pch->_size);
+            pch->_pack->ReadObjectFromPack(buffer, pch);
+            cm->LoadFromBuffer(buffer, pch->_size);
+            free(buffer);
+            
+            shape = btCollisionShapeFromCollisionMesh(cm);
+            delete cm;
+        }
+        
+        if (!shape)
+            shape = new btBoxShape(btVector3(0.5, 0.5, 0.5));
+    }
 	btVector3 fallInertia(0,0,0);
     shape->calculateLocalInertia(10, fallInertia);
     

@@ -10,12 +10,11 @@
 #define __TerminalExtraction__EngineMesh__
 
 #include <iostream>
-
+#include "PackObjectInterface.h"
 #include "Geometry.h"
 
-class EngineMesh {
+class EngineMesh: public PackObjectInterface {
     
-    bool            _disposed;
     
     GLuint          _indexBuffer;
     GLuint          _vertexBuffer;
@@ -35,7 +34,11 @@ public:
     void Bind() const;
     void Render() const;
     void Unbind() const;
-    void Dispose();
+    
+    
+    virtual void Dispose();
+    virtual void LoadFromBuffer(char *buffer, unsigned int bufferLength);
+    
     
     static const EngineMesh * CreateCube(void);
     static const EngineMesh * CreateFullscreenQuad(void);

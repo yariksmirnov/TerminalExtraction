@@ -10,14 +10,13 @@
 #define __TerminalExtraction__Texture__
 
 #include <iostream>
-
+#include "PackObjectInterface.h"
 #include "Geometry.h"
 
 using namespace std;
 
-class Texture {
+class Texture : public PackObjectInterface {
     
-    bool            _disposed;
     GLuint          _name;
     bool            _fromFile;
     
@@ -30,12 +29,15 @@ class Texture {
     
 public:
     
+    Texture();
     Texture(string filename);
     
     GLuint GetTextureName();
     
     
-    void Dispose();
+    virtual void Dispose();
+    virtual void LoadFromBuffer(char *buffer, unsigned int bufferLength);
+    
     ~Texture();
 };
 
