@@ -36,7 +36,7 @@ public:
     char ReadChar();
     std::string ReadString();
 	void ReadBuffer(int length, char *buf);
-    void SetPosition(long position);
+    void SetPosition(int position);
     
 	long GetLength() { return _filesize; };
 };

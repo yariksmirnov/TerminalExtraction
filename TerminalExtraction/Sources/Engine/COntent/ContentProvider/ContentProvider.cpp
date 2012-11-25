@@ -8,7 +8,10 @@
 
 #include "ContentProvider.h"
 #include "FileManger.h"
+#include "PackContentHeader.h"
+#include "Pack.h"
 #include "PackList.h"
+#include "CollisionMesh.h"
 
 ContentProvider::ContentProvider()
 {
@@ -20,7 +23,18 @@ ContentProvider::ContentProvider()
     
     
     PackList* p = PackList::SharedInstance();
-    p=p;
+    
+    shared_ptr<PackContentHeader> pch = p->FindObject("WoodenCrate10CollisionMesh");
+    if(pch)
+    {
+        CollisionMesh* cm = new CollisionMesh();
+        char* buffer = (char*)malloc(pch->_size);
+        pch->_pack->ReadObjectFromPack(buffer, pch);
+        cm->LoadFromBuffer(buffer, pch->_size);
+        free(buffer);
+        delete cm;
+    }
+    
     delete fm;
 }
 

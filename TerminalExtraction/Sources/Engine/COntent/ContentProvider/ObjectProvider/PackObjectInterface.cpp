@@ -8,3 +8,8 @@
 
 #include "PackObjectInterface.h"
 
+void PackObjectInterface::Dispose()
+{}
+
+void PackObjectInterface::LoadFromBuffer(char *buffer, unsigned int bufferLength)
+{}

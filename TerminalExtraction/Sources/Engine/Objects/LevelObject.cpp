@@ -16,6 +16,12 @@
 #include "btBoxShape.h"
 #include "btDefaultMotionState.h"
 
+#include "PackList.h"
+#include "Pack.h"
+#include "PackContentHeader.h"
+#include "CollisionMesh.h"
+#include "bulletAddons.h"
+
 LevelObject::LevelObject(RenderObject *renderObject, ObjectBehaviourModel *behaviorModel, Material *material):PivotObject(behaviorModel) {
     _renderAspect = renderObject;
     _material = material;
@@ -25,8 +31,24 @@ LevelObject * LevelObject::CreateCube()
 {
     const EngineMesh * mesh = EngineMesh::CreateCube();
     Material *material = new TextureMaterial("woodbox.jpg");
+    btCollisionShape *shape = NULL;
     
-    btCollisionShape *shape = new btBoxShape(btVector3(0.5, 0.5, 0.5));
+    shared_ptr<PackContentHeader> pch = PackList::SharedInstance()->FindObject("WoodenCrate10CollisionMesh");
+    if(pch)
+    {
+        CollisionMesh* cm = new CollisionMesh();
+        char* buffer = (char*)malloc(pch->_size);
+        pch->_pack->ReadObjectFromPack(buffer, pch);
+        cm->LoadFromBuffer(buffer, pch->_size);
+        free(buffer);
+        
+        shape = btCollisionShapeFromCollisionMesh(cm);
+        delete cm;
+    }
+    
+    if (!shape)
+        shape = new btBoxShape(btVector3(0.5, 0.5, 0.5));
+    
 	btVector3 fallInertia(0,0,0);
     shape->calculateLocalInertia(10, fallInertia);
     

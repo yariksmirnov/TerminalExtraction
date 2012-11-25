@@ -39,6 +39,7 @@ void Pack::ReadPack()
         if (pch->_size == 0)
             needcalcsize.push_back(pch);
         
+        pch->_pack = this;
         _objects.push_back(pch);
         
     }
@@ -80,17 +81,21 @@ shared_ptr<PackContentHeader> Pack::FindObject(string name)
     return shared_ptr<PackContentHeader>(nullptr);
 }
 
-bool Pack::ReadObjectBuffer(char* buffer, string name)
+bool Pack::ReadObjectFromPack(char* buffer, string name)
 {
     shared_ptr<PackContentHeader> pch = FindObject(name);
     if (!pch)
         return false;
     
-    if(sizeof(buffer) != pch->_size)
-        return false;
-    
     _reader->SetPosition(_headersize + pch->_offset);
     _reader->ReadBuffer(pch->_size, buffer);
+    return true;
+}
+
+bool Pack::ReadObjectFromPack(char* buffer, shared_ptr<PackContentHeader> object)
+{
+    _reader->SetPosition(_headersize + object->_offset);
+    _reader->ReadBuffer(object->_size, buffer);
     return true;
 }
 

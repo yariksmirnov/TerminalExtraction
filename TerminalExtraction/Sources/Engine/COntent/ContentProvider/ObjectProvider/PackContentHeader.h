@@ -16,6 +16,7 @@ using namespace std;
 
 class BinaryReader;
 class PackObjectInterface;
+class Pack;
 
 //urgly rudiment
 class MeshContentAdditionalHeader {
@@ -77,6 +78,8 @@ public:
     //additional info for meshes
     MeshContentAdditionalHeader* _mh;
     int _disposeCount;
+    
+    Pack* _pack;
     
     PackContentHeader(BinaryReader* inputStream, int index);
     ~PackContentHeader();

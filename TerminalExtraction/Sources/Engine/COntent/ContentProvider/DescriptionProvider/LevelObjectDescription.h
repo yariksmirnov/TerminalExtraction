@@ -16,18 +16,10 @@ using namespace std;
 
 class LevelObjectDescription : public BaseDescription {
     
-    string          _RCCMName;
-    string          _materialName;
-    string          _RODName;
-    string          _characterName;
-    string          _defaultAnimationName;
-    string          _physicCollisionName;
-    
-    bool            _isRCCMEnabled;
-    bool            _isRCCMAnimated;
-    bool            _isAnimated;
-    bool            _isStatic;
-    
+    int          _RCBOId;
+    int          _matId;
+    int          _RODId;
+    int          _BMDId;
     
 public:
     

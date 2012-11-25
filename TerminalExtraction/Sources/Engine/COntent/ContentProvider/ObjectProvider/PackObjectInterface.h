@@ -12,9 +12,11 @@
 #include <iostream>
 
 class PackObjectInterface {
+protected:
+    bool _disposed;
 public:
-    virtual void Dispose() = 0;
-    virtual void LoadFromBuffer(char *buffer);
+    virtual void Dispose();
+    virtual void LoadFromBuffer(char *buffer, unsigned int bufferLength);
 };
 
 #endif /* defined(__TerminalExtraction__PackObjectInterface__) */
