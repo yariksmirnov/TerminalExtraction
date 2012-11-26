@@ -25,11 +25,22 @@ typedef struct _vertexStruct
 } vertexStruct;
 
 
+typedef struct _vertexAnimStruct
+{
+    GLfloat position[3];
+    GLfloat normal[3];
+    GLfloat tcoord[2];
+    GLint indices[3];
+    GLfloat coefficients[3];
+} vertexAnimStruct;
+
 enum
 {
     ATTRIB_VERTEX,
     ATTRIB_NORMAL,
     ATTRIB_TCOORD,
+    ATTRIB_INDICES,
+    ATTRIB_COEFFICIENTS,
     NUM_ATTRIBUTES
 };
 

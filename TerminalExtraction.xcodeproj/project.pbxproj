@@ -203,6 +203,8 @@
 		D165BD401657FF3000FA1E26 /* Descriptions.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D165BD3F1657FF3000FA1E26 /* Descriptions.sqlite */; };
 		D165BD7B165BF4A800FA1E26 /* Data.pack in Resources */ = {isa = PBXBuildFile; fileRef = D165BD7A165BF4A800FA1E26 /* Data.pack */; };
 		D165BE1A165E737600FA1E26 /* PackObjectInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D165BE18165E737100FA1E26 /* PackObjectInterface.cpp */; };
+		D165BE371663422900FA1E26 /* EngineSkinnedMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D165BE351663422800FA1E26 /* EngineSkinnedMesh.cpp */; };
+		D165BE3B1663437A00FA1E26 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D165BE391663437A00FA1E26 /* Character.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -722,6 +724,10 @@
 		D165BD7A165BF4A800FA1E26 /* Data.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = Data.pack; sourceTree = "<group>"; };
 		D165BE18165E737100FA1E26 /* PackObjectInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PackObjectInterface.cpp; path = ObjectProvider/PackObjectInterface.cpp; sourceTree = "<group>"; };
 		D165BE19165E737300FA1E26 /* PackObjectInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackObjectInterface.h; path = ObjectProvider/PackObjectInterface.h; sourceTree = "<group>"; };
+		D165BE351663422800FA1E26 /* EngineSkinnedMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EngineSkinnedMesh.cpp; path = Sources/Engine/COntent/Meshes/EngineSkinnedMesh.cpp; sourceTree = "<group>"; };
+		D165BE361663422800FA1E26 /* EngineSkinnedMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EngineSkinnedMesh.h; path = Sources/Engine/COntent/Meshes/EngineSkinnedMesh.h; sourceTree = "<group>"; };
+		D165BE391663437A00FA1E26 /* Character.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
+		D165BE3A1663437A00FA1E26 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -800,6 +806,7 @@
 		9D60B575164536320074081D /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				D165BE381663433D00FA1E26 /* Character */,
 				D137ED3F1657EDDB00AF8172 /* ContentProvider */,
 				9D60B576164536400074081D /* Meshes */,
 				9D60B58316453FB20074081D /* Texture.cpp */,
@@ -818,6 +825,8 @@
 			children = (
 				9D60B5771645367A0074081D /* EngineMesh.cpp */,
 				9D60B5781645367A0074081D /* EngineMesh.h */,
+				D165BE351663422800FA1E26 /* EngineSkinnedMesh.cpp */,
+				D165BE361663422800FA1E26 /* EngineSkinnedMesh.h */,
 			);
 			name = Meshes;
 			sourceTree = "<group>";
@@ -1635,6 +1644,16 @@
 			path = ObjectProvider;
 			sourceTree = "<group>";
 		};
+		D165BE381663433D00FA1E26 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				D165BE391663437A00FA1E26 /* Character.cpp */,
+				D165BE3A1663437A00FA1E26 /* Character.h */,
+			);
+			name = Character;
+			path = Sources/Engine/COntent/Character;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1900,6 +1919,8 @@
 				9D5605F8165BE01900AA767C /* PackContentHeader.cpp in Sources */,
 				D165BE1A165E737600FA1E26 /* PackObjectInterface.cpp in Sources */,
 				8B9CE2401661850E008BF5CB /* CollisionMesh.cpp in Sources */,
+				D165BE371663422900FA1E26 /* EngineSkinnedMesh.cpp in Sources */,
+				D165BE3B1663437A00FA1E26 /* Character.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

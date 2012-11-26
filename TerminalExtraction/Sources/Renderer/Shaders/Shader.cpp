@@ -77,6 +77,8 @@ bool Shader::LoadShader(string vertexName, string fragmentName) {
     glBindAttribLocation(_program, ATTRIB_VERTEX, "position");
     glBindAttribLocation(_program, ATTRIB_NORMAL, "normal");
     glBindAttribLocation(_program, ATTRIB_TCOORD, "tcoord");
+    glBindAttribLocation(_program, ATTRIB_INDICES, "indices");
+    glBindAttribLocation(_program, ATTRIB_COEFFICIENTS, "coefficients");
     
     // Link program.
     if (!LinkProgram(_program))
