@@ -14,12 +14,14 @@
 
 using namespace std;
 
+class BehaviourModelDescription;
+
 class LevelObjectDescription : public BaseDescription {
     
     int          _RCBOId;
     int          _matId;
     int          _RODId;
-    int          _BMDId;
+    BehaviourModelDescription          *_behavourModelDescription;
     
 public:
     

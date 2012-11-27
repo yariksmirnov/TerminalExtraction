@@ -7,3 +7,12 @@
 //
 
 #include "BaseDescription.h"
+
+
+BaseDescription::BaseDescription(unsigned int id):_id(id)
+{
+}
+
+void BaseDescription::mapValueWithName(void *value, string name)
+{
+}

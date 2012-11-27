@@ -10,6 +10,9 @@
 #define __TerminalExtraction__PEBaseDescription__
 
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 class BaseDescription {
     
@@ -17,8 +20,11 @@ class BaseDescription {
 
 public:
     
+    unsigned int GetId () const { return _id; };
     
+    BaseDescription(unsigned int id);
     
+    virtual void mapValueWithName(void* value, string name);
 };
 
 #endif /* defined(__TerminalExtraction__PEBaseDescription__) */

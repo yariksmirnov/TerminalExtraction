@@ -211,6 +211,7 @@
 		D1F8A20E1664893D0005AB7B /* AnimationGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1F8A20C1664893D0005AB7B /* AnimationGraph.cpp */; };
 		D1F8A21116648C300005AB7B /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1F8A20F16648C2F0005AB7B /* Animation.cpp */; };
 		D1F8A215166494DF0005AB7B /* AnimationFull.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1F8A213166494DF0005AB7B /* AnimationFull.cpp */; };
+		D1F8A218166498260005AB7B /* BehaviourModelDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1F8A216166498260005AB7B /* BehaviourModelDescription.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -746,6 +747,8 @@
 		D1F8A21016648C300005AB7B /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
 		D1F8A213166494DF0005AB7B /* AnimationFull.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationFull.cpp; sourceTree = "<group>"; };
 		D1F8A214166494DF0005AB7B /* AnimationFull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationFull.h; sourceTree = "<group>"; };
+		D1F8A216166498260005AB7B /* BehaviourModelDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BehaviourModelDescription.cpp; sourceTree = "<group>"; };
+		D1F8A217166498260005AB7B /* BehaviourModelDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BehaviourModelDescription.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -824,8 +827,8 @@
 		9D60B575164536320074081D /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				D165BE381663433D00FA1E26 /* Character */,
 				D137ED3F1657EDDB00AF8172 /* ContentProvider */,
+				D165BE381663433D00FA1E26 /* Character */,
 				9D60B576164536400074081D /* Meshes */,
 				9D60B58316453FB20074081D /* Texture.cpp */,
 				9D60B58416453FB20074081D /* Texture.h */,
@@ -1646,6 +1649,8 @@
 				D137ED461657F30200AF8172 /* BaseDescription.h */,
 				9D5605C4165A806600AA767C /* LevelObjectDescription.cpp */,
 				9D5605C5165A806600AA767C /* LevelObjectDescription.h */,
+				D1F8A216166498260005AB7B /* BehaviourModelDescription.cpp */,
+				D1F8A217166498260005AB7B /* BehaviourModelDescription.h */,
 			);
 			path = DescriptionProvider;
 			sourceTree = "<group>";
@@ -1974,6 +1979,7 @@
 				D1F8A20E1664893D0005AB7B /* AnimationGraph.cpp in Sources */,
 				D1F8A21116648C300005AB7B /* Animation.cpp in Sources */,
 				D1F8A215166494DF0005AB7B /* AnimationFull.cpp in Sources */,
+				D1F8A218166498260005AB7B /* BehaviourModelDescription.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

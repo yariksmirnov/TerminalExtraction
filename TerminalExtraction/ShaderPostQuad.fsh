@@ -12,6 +12,6 @@ varying mediump vec2 tcoordVarying;
 
 void main()
 {
-    mediump vec4 colortexturevalue = vec4(1.0,1.0,1.0,1.0);// texture2D(colorTexture, tcoordVarying);
+    mediump vec4 colortexturevalue = texture2D(colorTexture, tcoordVarying);
     gl_FragColor = vec4(colortexturevalue.xyz, 0.0);
 }
