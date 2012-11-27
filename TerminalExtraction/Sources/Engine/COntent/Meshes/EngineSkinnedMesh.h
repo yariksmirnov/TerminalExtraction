@@ -13,7 +13,7 @@
 #include "PackObjectInterface.h"
 #include "Geometry.h"
 
-class Character;
+class CharacterController;
 
 class EngineSkinnedMesh: public PackObjectInterface {
     
@@ -25,12 +25,12 @@ class EngineSkinnedMesh: public PackObjectInterface {
     long            _iSize;
     long            _primitivesCount;
     
-    Character      *_character;
+    CharacterController      *_character;
     
 public:
     
-    void SetCharacter(Character* character) {_character = character; }
-    Character *GetCharacter() const { return _character; }
+    void SetCharacter(CharacterController* character) {_character = character; }
+    CharacterController *GetCharacter() const { return _character; }
     
     EngineSkinnedMesh();
     EngineSkinnedMesh(void * vertices, long vSize, void *indices, long iSize);

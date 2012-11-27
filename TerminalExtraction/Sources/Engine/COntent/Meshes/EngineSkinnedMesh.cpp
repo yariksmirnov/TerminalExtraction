@@ -8,7 +8,7 @@
 
 #include "EngineSkinnedMesh.h"
 #include "BinaryReader.h"
-#include "Character.h"
+#include "CharacterController.h"
 
 
 const int vertexAnimSize = sizeof(vertexAnimStruct);

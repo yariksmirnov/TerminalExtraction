@@ -1,0 +1,12 @@
+//
+//  AnimationFull.cpp
+//  TerminalExtraction
+//
+//  Created by Anton Katekov on 27.11.12.
+//
+//
+
+#include "AnimationFull.h"
+
+AnimationFull::AnimationFull()
+{}
